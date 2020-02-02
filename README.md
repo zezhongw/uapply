@@ -15,10 +15,16 @@ U报名第二代后端代码
 * JWT
 * Lombok
 * SpringAOP(进行日志记录)
+* fastJSON
 
 ## 项目进度
 
 ## 项目部署
 
-## API文档
 
+## 开发文档
+
+1.[微信小程序登录文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)
+
+2.从微信服务器获得seesion_key和openid
+根据openid生成自定义的token,存入redis
