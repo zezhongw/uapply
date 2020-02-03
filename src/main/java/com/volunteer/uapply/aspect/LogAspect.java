@@ -37,7 +37,6 @@ public class LogAspect {
         // 通过反射来获取注解内容
         ToLog toLog = signature.getMethod().getAnnotation(ToLog.class);
         String description = toLog.value();
-        //log.info("方法名称："+ description + " Before: " + signature + " 参数：" + Arrays.toString(args));
         Object result = null;
 
         long start = System.currentTimeMillis();

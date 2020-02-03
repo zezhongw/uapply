@@ -3,10 +3,9 @@ package com.volunteer.uapply.pojo;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
-import java.util.Date;
 
 /**
- * 微信用户对象
+ * 用户对象
  * @author 郭树耸
  * @version 1.0
  * @date 2020/2/1 13:26
@@ -15,20 +14,33 @@ import java.util.Date;
 public class User {
 
     /**
-     * 数据递增Id
-     * @ignore
+     * 用户唯一id
      */
-    @JSONField(serialize = false)
     private Integer userId;
 
-    /**
-     * 用户唯一标识
-     */
-    private String openid;
 
+    /**
+     * 用户姓名
+     */
+    private String userName;
+
+    /**
+     * 电话
+     */
+    private String userTel;
 
     /**
      * 权限Id
      */
     private Integer permissionId;
+
+    /**
+     * 部门Id
+     */
+    private Integer departmentId;
+
+    /**
+     * PC端登录密码
+     */
+    private String userPwd;
 }

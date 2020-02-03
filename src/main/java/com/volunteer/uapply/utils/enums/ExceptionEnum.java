@@ -1,5 +1,7 @@
 package com.volunteer.uapply.utils.enums;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
+
 /**
  * 返回结果数据字典
  * @author 郭树耸
@@ -15,6 +17,7 @@ public enum ExceptionEnum {
     PARAM_IS_INVALID(1002,"参数无效"),
     PARAM_IS_BLANK(1003,"参数为空"),
     PARAM_TYPE_BIND_ERROR(1004,"参数类型错误"),
+    CODE_IS_INVALID(1005,"Code无效"),
     /**
      * 用户错误 2001-2999
      */

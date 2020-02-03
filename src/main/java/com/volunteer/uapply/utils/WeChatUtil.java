@@ -6,6 +6,7 @@ import com.volunteer.uapply.pojo.WxResponseInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
  * @version 1.0
  * @date 2020/2/2 13:17
  */
+@Component
 @Slf4j
 public class WeChatUtil {
 
@@ -38,14 +40,4 @@ public class WeChatUtil {
         return getWeChatResponseBody(code).getOpenid();
     }
 
-    /**
-     * 将微信返回数据转换为User对象
-     * @param wxResponseInfo
-     * @return
-     */
-    public User wxResponseToUser(WxResponseInfo wxResponseInfo){
-        User user = new User();
-        user.setOpenid(wxResponseInfo.getOpenid());
-        return user;
-    }
 }

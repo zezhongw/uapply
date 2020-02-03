@@ -1,5 +1,6 @@
 package com.volunteer.uapply.service;
 
+import com.volunteer.uapply.pojo.TokenPO;
 import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 
@@ -16,12 +17,23 @@ public interface UserService {
      * @return
      * @throws Exception
      */
-    UniversalResponseBody<User> userWxLogin(String code) throws Exception;
+    UniversalResponseBody<TokenPO> userWxLogin(String code) throws Exception;
 
     /**
      * 通过openId来查找用户
-     * @param openid
+     * @param userId
      * @return
      */
-    User findUserByOpenId(String openid);
+    User findUserByUserId(Integer userId);
+
+    /**
+     * 根据openid来查找对应的token
+     * @param userId
+     * @return
+     */
+    String findTokenByUserId(Integer userId);
+
+    /**
+     *
+     */
 }

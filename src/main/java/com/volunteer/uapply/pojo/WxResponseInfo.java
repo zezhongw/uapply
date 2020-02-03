@@ -12,6 +12,11 @@ import lombok.Data;
 public class WxResponseInfo {
 
     /**
+     * 用户id
+     */
+    private Integer userId;
+
+    /**
      * 用户唯一标识
      */
     private String openid;

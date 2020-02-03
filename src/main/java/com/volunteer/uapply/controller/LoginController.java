@@ -1,12 +1,17 @@
 package com.volunteer.uapply.controller;
 
+import com.volunteer.uapply.annotation.PassToken;
 import com.volunteer.uapply.annotation.ToLog;
-import com.volunteer.uapply.pojo.User;
+import com.volunteer.uapply.annotation.UserLoginToken;
+import com.volunteer.uapply.pojo.TokenPO;
 import com.volunteer.uapply.service.impl.UserServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * 登录相关接口
@@ -17,11 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
+    @Resource
     private UserServiceImpl userService;
 
-    @ToLog("用户首次登录")
+    @PassToken
     @PostMapping("/login")
-    public UniversalResponseBody<User> userLogin(@RequestBody String code){
+    public UniversalResponseBody<TokenPO> userLogin(@RequestBody String code){
         return userService.userWxLogin(code);
     }
 

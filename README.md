@@ -19,12 +19,21 @@ U报名第二代后端代码
 
 ## 项目进度
 
+1.微信小程序登录功能(已完成，待测试)
+
 ## 项目部署
 
+## 数据库设计
 
-## 开发文档
+### wxresponse(微信返回结果数据表)
 
-1.[微信小程序登录文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)
+此表存储调用微信接口返回的openid，session_key等一系列数据
+* user_id 用户全局唯一id
+* openid
+* session_key
+* unionid
 
-2.从微信服务器获得seesion_key和openid
-根据openid生成自定义的token,存入redis
+### token
+
+* user_id 用户全局唯一id
+* token token
