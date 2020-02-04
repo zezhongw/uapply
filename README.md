@@ -21,9 +21,19 @@ U报名第二代后端代码
 
 1.微信小程序登录功能(已完成，待测试)
 
+2.PC端登录功能(已经完成测试)
+
 ## 项目部署
 
 ## 数据库设计
+
+### user(存储用户基本信息)
+* user_id 用户全局唯一id
+* user_name
+* user_tel
+* permission_id(权限id)
+* department_id(部门id)
+* user_pwd(用户密码)
 
 ### wxresponse(微信返回结果数据表)
 
@@ -33,7 +43,7 @@ U报名第二代后端代码
 * session_key
 * unionid
 
-### token
+### usertoken(存储用户token)
 
 * user_id 用户全局唯一id
 * token token

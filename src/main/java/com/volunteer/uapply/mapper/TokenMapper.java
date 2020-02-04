@@ -1,6 +1,7 @@
 package com.volunteer.uapply.mapper;
 
 import com.volunteer.uapply.pojo.TokenPO;
+import com.volunteer.uapply.pojo.User;
 
 /**
  * @author 郭树耸
@@ -15,4 +16,12 @@ public interface TokenMapper {
      * @return
      */
     int insertToken(TokenPO tokenPO);
+
+    /**
+     * 根据userId查找token
+     * @param userId
+     * @return
+     */
+    String findTokenByUserId(Integer userId);
+
 }

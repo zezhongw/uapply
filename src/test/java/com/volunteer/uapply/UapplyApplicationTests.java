@@ -4,7 +4,7 @@ import com.power.doc.builder.ApiDocBuilder;
 import com.power.doc.model.ApiConfig;
 import com.power.doc.model.ApiDataDictionary;
 import com.power.doc.model.ApiErrorCodeDictionary;
-import com.volunteer.uapply.utils.enums.ExceptionEnum;
+import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.enums.PermissionIdEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,7 +28,7 @@ class UapplyApplicationTests {
         config.setPackageFilters("com.volunteer.uapply.controller");
         //1.7.9 优化了错误码处理，用于下面替代遍历枚举设置错误码
         config.setErrorCodeDictionaries(
-                ApiErrorCodeDictionary.dict().setEnumClass(ExceptionEnum.class)
+                ApiErrorCodeDictionary.dict().setEnumClass(ResponseResultEnum.class)
                         .setCodeField("code") //错误码值字段名
                         .setDescField("msg")//错误码描述
         );

@@ -7,12 +7,16 @@ import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.volunteer.uapply.annotation.PassToken;
 import com.volunteer.uapply.annotation.UserLoginToken;
+import com.volunteer.uapply.mapper.TokenMapper;
+import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.service.impl.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
@@ -24,7 +28,13 @@ import java.lang.reflect.Method;
  */
 public class AuthenticationInterceptor implements HandlerInterceptor {
 
-        private UserServiceImpl userService;
+    @Resource
+    private UserMapper userMapper;
+    @Resource
+    private TokenMapper tokenMapper;
+
+    public AuthenticationInterceptor() {
+    }
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object) throws Exception {
@@ -58,13 +68,13 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                 } catch (JWTDecodeException j) {
                     throw new RuntimeException("401");
                 }
-                User user = userService.findUserByUserId(userId);
+                User user =userMapper.findUserByUserId(userId);
                 if (user == null) {
                     //用户不存在
                     return false;
                 }
                 //将请求中带有的token与数据库中的token进行比较
-                String trueToken = userService.findTokenByUserId(userId);
+                String trueToken = tokenMapper.findTokenByUserId(userId);
                 if (trueToken.equals(token)){
                     return true;
                 }else {

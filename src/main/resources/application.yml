@@ -4,8 +4,8 @@ mybatis-plus:
 
 
 wx:
-  appid: wx6b1087ac6340c5cb
-  secret: 97466ec125a4ee8bf7193818906f547e
+  appid:
+  secret:
   templateId:
   url: https://api.weixin.qq.com/sns/jscode2session?appid=${wx.appid}&secret=${wx.secret}&grant_type=authorization_code&js_code=
 

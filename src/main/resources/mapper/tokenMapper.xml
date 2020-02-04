@@ -6,8 +6,12 @@
     <result column="token" jdbcType="VARCHAR"/>
 </resultMap>
     <insert id="insertToken" parameterType="com.volunteer.uapply.pojo.TokenPO"  useGeneratedKeys="true" keyProperty="userId">
-        INSERT INTO token(user_id,token)
+        INSERT INTO usertoken(user_id,token)
         VALUES
         (#{userId,jdbcType=INTEGER},#{token,jdbcType=VARCHAR})
     </insert>
+
+    <select id="findTokenByUserId" resultType="java.lang.String">
+        SELECT token FROM usertoken WHERE user_id = #{userId,jdbcType=INTEGER}
+    </select>
 </mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.volunteer.uapply.mapper.UserMapper">
+
+
+
+    <select id="findUserByUserId" resultType="com.volunteer.uapply.pojo.User">
+        SELECT user_id,user_name,user_tel,permission_id,department_id,user_pwd
+        FROM usermessage
+        WHERE user_id = #{userId,jdbcType=INTEGER}
+    </select>
+
+    <select id="findUserByUserTel" resultType="com.volunteer.uapply.pojo.User" parameterType="string">
+        SELECT user_id,user_name,user_tel,permission_id,department_id,user_pwd
+        FROM usermessage
+        WHERE user_tel = #{userTel,jdbcType=VARCHAR}
+    </select>
+
+</mapper>
