@@ -6,6 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 
+/**
+ * @author GuoShuSong
+ */
 @MapperScan("com.volunteer.uapply.mapper")
 @SpringBootApplication
 public class UapplyApplication {

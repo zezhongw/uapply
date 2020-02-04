@@ -15,10 +15,25 @@ U报名第二代后端代码
 * JWT
 * Lombok
 * SpringAOP(进行日志记录)
+* fastJSON
 
 ## 项目进度
 
+1.微信小程序登录功能(已完成，待测试)
+
 ## 项目部署
 
-## API文档
+## 数据库设计
 
+### wxresponse(微信返回结果数据表)
+
+此表存储调用微信接口返回的openid，session_key等一系列数据
+* user_id 用户全局唯一id
+* openid
+* session_key
+* unionid
+
+### token
+
+* user_id 用户全局唯一id
+* token token

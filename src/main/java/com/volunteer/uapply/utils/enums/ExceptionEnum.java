@@ -1,5 +1,7 @@
 package com.volunteer.uapply.utils.enums;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
+
 /**
  * 返回结果数据字典
  * @author 郭树耸
@@ -7,6 +9,7 @@ package com.volunteer.uapply.utils.enums;
  * @date 2020/1/31 11:12
  */
 public enum ExceptionEnum {
+    FAILED(0,"失败"),
     SUCCESS(1,"成功"),
     /**
      * 参数错误 1001-1999
@@ -14,6 +17,7 @@ public enum ExceptionEnum {
     PARAM_IS_INVALID(1002,"参数无效"),
     PARAM_IS_BLANK(1003,"参数为空"),
     PARAM_TYPE_BIND_ERROR(1004,"参数类型错误"),
+    CODE_IS_INVALID(1005,"Code无效"),
     /**
      * 用户错误 2001-2999
      */
@@ -34,6 +38,22 @@ public enum ExceptionEnum {
 
     ExceptionEnum(Integer code, String msg) {
         this.code = code;
+        this.msg = msg;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
         this.msg = msg;
     }
 }
