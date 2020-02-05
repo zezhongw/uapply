@@ -25,6 +25,7 @@ public enum ResponseResultEnum {
     USER_NOT_EXIST(2004,"用户不存在"),
     USER_HAS_EXISTED(2005,"用户已存在");
 
+
     /**
      * 返回结果代码
      */

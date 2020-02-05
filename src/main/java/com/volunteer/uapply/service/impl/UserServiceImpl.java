@@ -60,29 +60,5 @@ public class UserServiceImpl implements UserService {
         return new UniversalResponseBody<TokenPO>(1,"success",tokenPO);
     }
 
-    @Override
-    public UniversalResponseBody<TokenPO> userPcLogin(String userTel, String userPwd) {
-        User user = userMapper.findUserByUserTel(userTel);
-        if(user == null){
-            return new UniversalResponseBody(ResponseResultEnum.USER_LOGIN_ERROR.getCode(),ResponseResultEnum.USER_LOGIN_ERROR.getMsg());
-        }
-        Integer userId = user.getUserId();
-        String truePwd = user.getUserPwd();
-        //密码相同
-        if (truePwd.equals(userPwd)){
-            String trueToken = tokenMapper.findTokenByUserId(userId);
-            //已经存在该用户的token
-            if (trueToken!=null){
-                return new UniversalResponseBody<TokenPO>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(),new TokenPO(userId,trueToken));
-            }else{
-                String token = tokenutil.TokenByUserId(userId);
-                TokenPO tokenPO = new TokenPO(userId,token);
-                tokenMapper.insertToken(tokenPO);
-                //返回token和userId
-                return new UniversalResponseBody<TokenPO>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(),tokenPO);
-            }
-        }else{
-            return new UniversalResponseBody(ResponseResultEnum.USER_LOGIN_ERROR.getCode(), ResponseResultEnum.USER_LOGIN_ERROR.getMsg());
-        }
-    }
+
 }

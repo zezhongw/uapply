@@ -10,6 +10,7 @@ import com.volunteer.uapply.service.impl.AliyunMessageServiceImpl;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.enums.PermissionIdEnum;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
