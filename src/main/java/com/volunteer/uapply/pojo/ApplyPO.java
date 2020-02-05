@@ -23,4 +23,23 @@ public class ApplyPO {
      */
     private String userTel;
 
+    /**
+     * 专业
+     */
+    private String profession;
+
+    /**
+     * 学院
+     */
+    private String college;
+
+    /**
+     * 意向部门一(部门Id）
+     */
+    private Integer intentionDepartmentId;
+
+    /**
+     * 自我介绍
+     */
+    private String selfIntroduction;
 }

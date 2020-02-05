@@ -1,14 +1,12 @@
 package com.volunteer.uapply.utils.enums;
 
-import com.baomidou.mybatisplus.annotation.EnumValue;
-
 /**
  * 返回结果数据字典
  * @author 郭树耸
  * @version 1.0
  * @date 2020/1/31 11:12
  */
-public enum ExceptionEnum {
+public enum ResponseResultEnum {
     FAILED(0,"失败"),
     SUCCESS(1,"成功"),
     /**
@@ -36,7 +34,7 @@ public enum ExceptionEnum {
      */
     private String msg;
 
-    ExceptionEnum(Integer code, String msg) {
+    ResponseResultEnum(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }

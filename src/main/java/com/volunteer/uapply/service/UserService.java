@@ -12,7 +12,7 @@ import com.volunteer.uapply.utils.response.UniversalResponseBody;
 public interface UserService {
 
     /**
-     * 用户微信登录服务层
+     * 用户微信登录
      * @param code
      * @return
      * @throws Exception
@@ -20,20 +20,10 @@ public interface UserService {
     UniversalResponseBody<TokenPO> userWxLogin(String code) throws Exception;
 
     /**
-     * 通过openId来查找用户
-     * @param userId
+     * 用户Pc端登录
+     * @param userTel
+     * @param userPwd
      * @return
      */
-    User findUserByUserId(Integer userId);
-
-    /**
-     * 根据openid来查找对应的token
-     * @param userId
-     * @return
-     */
-    String findTokenByUserId(Integer userId);
-
-    /**
-     *
-     */
+    UniversalResponseBody<TokenPO> userPcLogin(String userTel,String userPwd);
 }

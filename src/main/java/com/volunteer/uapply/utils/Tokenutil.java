@@ -18,7 +18,7 @@ public class Tokenutil {
      * @param userId
      * @return
      */
-    public String TokenByOpenid(Integer userId){
+    public String TokenByUserId(Integer userId){
         String token="";
         /**
          * Algorithm.HMAC256():使用HS256生成token,密钥则是用户的密码，唯一密钥的话可以保存在服务端。
