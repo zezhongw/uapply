@@ -7,7 +7,7 @@ U报名第二代后端代码
 
 2.采用SpringBoot(2.2.4.RELEASE)(JDK版本11)框架
 
-依赖:
+集成:
 * [Mybatis-plus](https://mp.baomidou.com/guide/#%E7%89%B9%E6%80%A7)
 * [Smart-doc](https://gitee.com/sunyurepository/smart-doc/wikis/Home?sort_id=1652800)
 * validation参数校验框架
@@ -16,6 +16,7 @@ U报名第二代后端代码
 * Lombok
 * SpringAOP(进行日志记录)
 * fastJSON
+* 阿里云短信服务
 
 ## 项目进度
 
@@ -23,9 +24,14 @@ U报名第二代后端代码
 
 2.PC端登录功能(已经完成测试)
 
+3.阿里云短信发送功能(待测试)
+
+
 ## 项目部署
 
 ## 数据库设计
+
+数据库名称:uapply
 
 ### user(存储用户基本信息)
 * user_id 用户全局唯一id

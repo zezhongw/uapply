@@ -5,14 +5,13 @@ import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.mapper.WxResponseMapper;
 import com.volunteer.uapply.pojo.TokenPO;
 import com.volunteer.uapply.pojo.User;
-import com.volunteer.uapply.pojo.WxResponseInfo;
+import com.volunteer.uapply.pojo.info.WxResponseInfo;
 import com.volunteer.uapply.service.UserService;
 import com.volunteer.uapply.utils.Tokenutil;
 import com.volunteer.uapply.utils.WeChatUtil;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

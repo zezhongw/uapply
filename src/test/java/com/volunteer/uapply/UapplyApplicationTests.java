@@ -1,16 +1,24 @@
 package com.volunteer.uapply;
 
+import com.aliyuncs.exceptions.ClientException;
 import com.power.doc.builder.ApiDocBuilder;
 import com.power.doc.model.ApiConfig;
 import com.power.doc.model.ApiDataDictionary;
 import com.power.doc.model.ApiErrorCodeDictionary;
+import com.volunteer.uapply.pojo.info.AliyunRequsetParamInfo;
+import com.volunteer.uapply.service.impl.AliyunMessageServiceImpl;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.enums.PermissionIdEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.annotation.Resource;
+
 @SpringBootTest
 class UapplyApplicationTests {
+
+    @Resource
+    AliyunMessageServiceImpl aliyunMessageService;
 
     @Test
     void contextLoads() {
@@ -41,6 +49,18 @@ class UapplyApplicationTests {
 
         //生成Markdown文件
         ApiDocBuilder.buildApiDoc(config);
+    }
+
+    @Test
+    public void MessageTest() throws ClientException {
+        AliyunRequsetParamInfo aliyunRequsetParamInfo = new AliyunRequsetParamInfo();
+        aliyunRequsetParamInfo.setTimeSlot("中午12点-10点");
+        aliyunRequsetParamInfo.setPhoneNumbers("15176193717");
+        aliyunRequsetParamInfo.setTelNo("15176193717");
+        aliyunRequsetParamInfo.setPlace("图书馆");
+        aliyunRequsetParamInfo.setDepartmentId(0);
+        aliyunRequsetParamInfo.setName("你好");
+        aliyunMessageService.SendMessage(aliyunRequsetParamInfo);
     }
 
 }

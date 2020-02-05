@@ -1,17 +1,12 @@
 package com.volunteer.uapply.config;
 
 import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTVerifier;
-import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
-import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.volunteer.uapply.annotation.PassToken;
 import com.volunteer.uapply.annotation.UserLoginToken;
 import com.volunteer.uapply.mapper.TokenMapper;
 import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.pojo.User;
-import com.volunteer.uapply.service.impl.UserServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

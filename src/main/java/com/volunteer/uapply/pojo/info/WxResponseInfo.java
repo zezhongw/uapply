@@ -1,4 +1,4 @@
-package com.volunteer.uapply.pojo;
+package com.volunteer.uapply.pojo.info;
 
 import lombok.Data;
 

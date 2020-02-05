@@ -1,8 +1,7 @@
 package com.volunteer.uapply.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.volunteer.uapply.pojo.User;
-import com.volunteer.uapply.pojo.WxResponseInfo;
+import com.volunteer.uapply.pojo.info.WxResponseInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +18,7 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 public class WeChatUtil {
 
-    @Value("${wx.url}")
-    private String WECHAT_OPENID_URL;
+    private String WECHAT_OPENID_URL = "https://api.weixin.qq.com/sns/jscode2session?appid=${wx.appid}&secret=${wx.secret}&grant_type=authorization_code&js_code=";
 
     private static RestTemplate restTemplate = new RestTemplate();
 

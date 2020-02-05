@@ -3,12 +3,6 @@ mybatis-plus:
   type-aliases-package: com/volunteer/uapply.pojo
 
 
-wx:
-  appid:
-  secret:
-  templateId:
-  url: https://api.weixin.qq.com/sns/jscode2session?appid=${wx.appid}&secret=${wx.secret}&grant_type=authorization_code&js_code=
-
 spring:
   profiles:
     active: dev

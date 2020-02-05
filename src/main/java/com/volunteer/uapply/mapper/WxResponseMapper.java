@@ -1,6 +1,6 @@
 package com.volunteer.uapply.mapper;
 
-import com.volunteer.uapply.pojo.WxResponseInfo;
+import com.volunteer.uapply.pojo.info.WxResponseInfo;
 
 /**
  * 微信返回结果相关的数据库操作
