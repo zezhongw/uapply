@@ -15,6 +15,7 @@ public class User {
 
     /**
      * 用户唯一id
+     * @required
      */
     private Integer userId;
 
