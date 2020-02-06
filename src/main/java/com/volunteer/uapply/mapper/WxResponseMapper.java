@@ -16,4 +16,11 @@ public interface WxResponseMapper {
      * @return
      */
     int InsertWxResponse(WxResponseInfo wxResponseInfo);
+
+    /**
+     * 根据openid查找之前用户是否已经授权过，并查找userid
+     * @param openid
+     * @return
+     */
+    WxResponseInfo searchByOpenid(String openid);
 }

@@ -4,6 +4,7 @@ import com.aliyuncs.exceptions.ClientException;
 import com.volunteer.uapply.annotation.PassToken;
 import com.volunteer.uapply.annotation.UserLoginToken;
 import com.volunteer.uapply.pojo.TokenPO;
+import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.pojo.info.AliyunRequsetParamInfo;
 import com.volunteer.uapply.service.AliyunMessageService;
 import com.volunteer.uapply.service.impl.ManagerServiceImpl;
@@ -31,6 +32,15 @@ public class ManagerController {
     private AliyunMessageService aliyunMessageService;
 
     /**
+     * 管理员与部员PC端用户激活
+     */
+    @PassToken
+    @PostMapping("/pc/activate")
+    public UniversalResponseBody ManagerPcActivate( User user,String inviteCode){
+        return managerService.userPcActivation(user,inviteCode);
+    }
+
+    /**
      * 管理员PC端登录接口
      * @param userTel
      * @param userPwd
@@ -50,4 +60,5 @@ public class ManagerController {
     public UniversalResponseBody SendInterviewMessage(@RequestBody AliyunRequsetParamInfo aliyunRequsetParamInfo) throws ClientException {
         return aliyunMessageService.SendMessage(aliyunRequsetParamInfo);
     }
+
 }

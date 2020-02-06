@@ -20,7 +20,7 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @RestController
-public class LoginController {
+public class UserController {
 
     @Resource
     private UserServiceImpl userService;

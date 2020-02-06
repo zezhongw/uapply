@@ -1,5 +1,6 @@
 package com.volunteer.uapply.service.impl;
 
+import com.volunteer.uapply.mapper.ManaggerMapper;
 import com.volunteer.uapply.mapper.TokenMapper;
 import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.mapper.WxResponseMapper;
@@ -23,13 +24,13 @@ import javax.annotation.Resource;
 public class ManagerServiceImpl implements ManagerService {
 
     @Resource
-    private WeChatUtil weChatUtil;
-    @Resource
     private Tokenutil tokenutil;
     @Resource
     private TokenMapper tokenMapper;
     @Resource
     private UserMapper userMapper;
+    @Resource
+    private ManaggerMapper managgerMapper;
 
     @Override
     public UniversalResponseBody<TokenPO> userPcLogin(String userTel, String userPwd) {
@@ -54,6 +55,23 @@ public class ManagerServiceImpl implements ManagerService {
             }
         }else{
             return new UniversalResponseBody(ResponseResultEnum.USER_LOGIN_ERROR.getCode(), ResponseResultEnum.USER_LOGIN_ERROR.getMsg());
+        }
+    }
+
+    @Override
+    public UniversalResponseBody userPcActivation(User user,String inviteCode) {
+        String trueInviteCode = managgerMapper.searchCodeByDepartId(user.getDepartmentId());
+        if (trueInviteCode.equals(inviteCode)){
+            if (userMapper.InsertUser(user) > 0){
+                return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg());
+            }else{
+                //添加用户失败
+                return new UniversalResponseBody(ResponseResultEnum.USER_INSERT_FAILED.getCode(),ResponseResultEnum.USER_INSERT_FAILED.getMsg());
+            }
+        }
+        else{
+            //激活码无效
+            return new UniversalResponseBody(ResponseResultEnum.CODE_IS_INVALID.getCode(),ResponseResultEnum.CODE_IS_INVALID.getMsg());
         }
     }
 }

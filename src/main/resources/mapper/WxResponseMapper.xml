@@ -8,4 +8,9 @@
         (#{openid,jdbcType=VARCHAR},#{session_key,jdbcType=VARCHAR},#{unionid,jdbcType=VARCHAR})
     </insert>
 
+    <select id="searchByOpenid" resultType="com.volunteer.uapply.pojo.info.WxResponseInfo">
+    SELECT user_id,openid,session_key,unionid
+    FROM WHERE openid = #{openid,jdbcType=VARCHAR}
+    </select>
+
 </mapper>

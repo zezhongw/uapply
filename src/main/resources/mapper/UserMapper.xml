@@ -3,6 +3,12 @@
 <mapper namespace="com.volunteer.uapply.mapper.UserMapper">
 
 
+    <insert id="InsertUser" parameterType="com.volunteer.uapply.pojo.User">
+        INSERT INTO usermessage(user_id,user_name,user_tel,permission_id,department_id,user_pwd)
+        VALUES
+        (#{userId,jdbcType=INTEGER},#{userName,jdbcType=VARCHAR},#{userTel,jdbcType=VARCHAR},#{permissionId,jdbcType=INTEGER},#{departmentId,jdbcType=INTEGER},#{userPwd,jdbcType=VARCHAR})
+    </insert>
+
 
     <select id="findUserByUserId" resultType="com.volunteer.uapply.pojo.User">
         SELECT user_id,user_name,user_tel,permission_id,department_id,user_pwd

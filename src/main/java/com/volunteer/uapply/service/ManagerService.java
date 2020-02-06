@@ -1,6 +1,7 @@
 package com.volunteer.uapply.service;
 
 import com.volunteer.uapply.pojo.TokenPO;
+import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 
 /**
@@ -18,4 +19,11 @@ public interface ManagerService {
     UniversalResponseBody<TokenPO> userPcLogin(String userTel, String userPwd);
 
 
+    /**
+     * 管理员与部员PC端用户激活
+     * @param user
+     * @param inviteCode
+     * @return
+     */
+    UniversalResponseBody userPcActivation(User user,String inviteCode);
 }
