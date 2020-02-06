@@ -20,7 +20,7 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @RestController
-public class LoginController {
+public class UserController {
 
     @Resource
     private UserServiceImpl userService;
@@ -36,17 +36,6 @@ public class LoginController {
         return userService.userWxLogin(code);
     }
 
-    /**
-     * 用户PC端登录接口
-     * @param userTel
-     * @param userPwd
-     * @return
-     */
-    @PassToken
-    @PostMapping("/pc/login")
-    public UniversalResponseBody<TokenPO> userPcLogin( @RequestParam("userTel")String userTel,@RequestParam("userPwd") String userPwd){
-        log.info(userTel);
-        return userService.userPcLogin(userTel,userPwd);
-    }
+
 
 }

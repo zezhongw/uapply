@@ -24,4 +24,9 @@ public interface UserMapper {
      * @return
      */
     User findUserByUserTel(String userTel);
+
+    /**
+     * 插入用户
+     */
+    int InsertUser(User user);
 }

@@ -19,11 +19,5 @@ public interface UserService {
      */
     UniversalResponseBody<TokenPO> userWxLogin(String code) throws Exception;
 
-    /**
-     * 用户Pc端登录
-     * @param userTel
-     * @param userPwd
-     * @return
-     */
-    UniversalResponseBody<TokenPO> userPcLogin(String userTel,String userPwd);
+
 }

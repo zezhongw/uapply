@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.volunteer.uapply.mapper.ManaggerMapper">
+
+    <insert id="insertInviteCode">
+        INSERT INTO invitecode(invite_code,department_id)
+        VALUES
+        (#{inviteCode,jdbcType=VARCHAR},#{departmentId,jdbcType=INTEGER})
+    </insert>
+
+    <select id="searchCodeByDepartId" resultType="java.lang.String">
+        SELECT invite_code FROM invitecode
+        WHERE department_id = #{departmentId,jdbcType=INTEGER}
+    </select>
+
+</mapper>

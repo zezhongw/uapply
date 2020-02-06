@@ -2,6 +2,7 @@ package com.volunteer.uapply.service;
 
 import com.aliyuncs.exceptions.ClientException;
 import com.volunteer.uapply.pojo.info.AliyunRequsetParamInfo;
+import com.volunteer.uapply.utils.response.UniversalResponseBody;
 
 /**
  * @author 郭树耸
@@ -9,5 +10,11 @@ import com.volunteer.uapply.pojo.info.AliyunRequsetParamInfo;
  * @date 2020/2/5 12:43
  */
 public interface AliyunMessageService {
-    void SendMessage(AliyunRequsetParamInfo aliyunRequsetParamInfo) throws ClientException;
+    /**
+     * 发送短信
+     * @param aliyunRequsetParamInfo
+     * @return
+     * @throws ClientException
+     */
+    UniversalResponseBody SendMessage(AliyunRequsetParamInfo aliyunRequsetParamInfo) throws ClientException;
 }

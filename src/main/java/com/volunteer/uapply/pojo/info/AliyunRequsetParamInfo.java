@@ -29,8 +29,6 @@ public class AliyunRequsetParamInfo {
      */
     private Integer departmentId;
 
-
-
     /**
      * 时间
      */

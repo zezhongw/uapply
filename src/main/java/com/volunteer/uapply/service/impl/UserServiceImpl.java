@@ -50,39 +50,26 @@ public class UserServiceImpl implements UserService {
             log.error(code+wxResponseInfo.getErrcode()+ wxResponseInfo.getErrmsg());
             return new UniversalResponseBody(ResponseResultEnum.CODE_IS_INVALID.getCode(), ResponseResultEnum.CODE_IS_INVALID.getMsg());
         }
-        //将微信返回结果插入数据库并返回数据库递增id(userId)
-        wxResponseMapper.InsertWxResponse(wxResponseInfo);
-        Integer userId =  wxResponseInfo.getUserId();
-        String token = tokenutil.TokenByUserId(userId);
-        TokenPO tokenPO = new TokenPO(userId,token);
-        tokenMapper.insertToken(tokenPO);
-       //返回token和userId
+        Integer userId = null;
+        String token = null;
+        TokenPO tokenPO = null;
+        //该用户在数据库中的数据
+        WxResponseInfo wxResponseInfoDB = wxResponseMapper.searchByOpenid(wxResponseInfo.getOpenid());
+        //数据库中已经存在该用户
+        if(wxResponseInfoDB!=null){
+            userId=wxResponseInfoDB.getUserId();
+            token = tokenMapper.findTokenByUserId(wxResponseInfoDB.getUserId());
+            tokenPO = new TokenPO(userId,token);
+        }else{
+            //将微信返回结果插入数据库并返回数据库递增id(userId)
+            wxResponseMapper.InsertWxResponse(wxResponseInfo);
+            userId =  wxResponseInfo.getUserId();
+            token = tokenutil.TokenByUserId(userId);
+            tokenPO = new TokenPO(userId,token);
+            tokenMapper.insertToken(tokenPO);
+        }
         return new UniversalResponseBody<TokenPO>(1,"success",tokenPO);
     }
 
-    @Override
-    public UniversalResponseBody<TokenPO> userPcLogin(String userTel, String userPwd) {
-        User user = userMapper.findUserByUserTel(userTel);
-        if(user == null){
-            return new UniversalResponseBody(ResponseResultEnum.USER_LOGIN_ERROR.getCode(),ResponseResultEnum.USER_LOGIN_ERROR.getMsg());
-        }
-        Integer userId = user.getUserId();
-        String truePwd = user.getUserPwd();
-        //密码相同
-        if (truePwd.equals(userPwd)){
-            String trueToken = tokenMapper.findTokenByUserId(userId);
-            //已经存在该用户的token
-            if (trueToken!=null){
-                return new UniversalResponseBody<TokenPO>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(),new TokenPO(userId,trueToken));
-            }else{
-                String token = tokenutil.TokenByUserId(userId);
-                TokenPO tokenPO = new TokenPO(userId,token);
-                tokenMapper.insertToken(tokenPO);
-                //返回token和userId
-                return new UniversalResponseBody<TokenPO>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(),tokenPO);
-            }
-        }else{
-            return new UniversalResponseBody(ResponseResultEnum.USER_LOGIN_ERROR.getCode(), ResponseResultEnum.USER_LOGIN_ERROR.getMsg());
-        }
-    }
+
 }
