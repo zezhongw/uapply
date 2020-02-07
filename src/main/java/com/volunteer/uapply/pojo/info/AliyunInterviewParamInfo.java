@@ -3,7 +3,7 @@ package com.volunteer.uapply.pojo.info;
 import lombok.Data;
 
 /**
- * 短信内容参数对象
+ * 面试短信内容参数对象
  * 模板信息:
  * ${name}同学您好，${department}已收到您的报名信息，感谢你的报名。
  * ${activity}安排如下： 时间：${timeSlot} 。地点：${place} 。如因故不能及时到达，请及时与我们联系${telNo}
@@ -12,7 +12,7 @@ import lombok.Data;
  * @date 2020/2/4 20:25
  */
 @Data
-public class AliyunRequsetParamInfo {
+public class AliyunInterviewParamInfo {
 
     /**
      * 接收人手机号码

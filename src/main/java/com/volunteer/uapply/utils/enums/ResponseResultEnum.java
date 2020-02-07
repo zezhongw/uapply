@@ -24,9 +24,15 @@ public enum ResponseResultEnum {
     USER_ACCOUNT_FORBIDDEN(2003,"账号已被禁用"),
     USER_NOT_EXIST(2004,"用户不存在"),
     USER_HAS_EXISTED(2005,"用户已存在"),
-    USER_INSERT_FAILED(2000,"添加用户失败");
+    USER_INSERT_FAILED(2000,"添加用户失败"),
 
-
+    /**
+     * 面试状态 3000-3999
+     */
+    NOT_APPLY(3000,"还未报名"),
+    SUCCEED_APPLY(3001,"已经报名成功"),
+    FINISH_FIRST_INTERVIEW(3002,"完成一面"),
+    FINISH_SECOND_INTERVIEW(3003,"完成二面");
     /**
      * 返回结果代码
      */
