@@ -84,5 +84,29 @@ sql文件存储在sql文件夹里面
 * user_id
 * user_name
 * user_tel
+* user_stunum 用户学号
+* user_qq 用户qq
+* college 学院
+* profession 专业
+* firstIntention_id 第一志愿的部门id
+* secondIntention_id 第二志愿的部门id
+* user_hobby 爱好
+* user_introduction 自我介绍
+* first_interview 一面是否已经面试
+* second_interview 二面是否已经签到
+* secondDepartment_id 二面部门id
 
-.....
+### interviewmessge(存储面试信息)
+
+* uer_id
+* department_id
+* character 性格
+* param_score1
+* param_score2
+* param_score3
+* param_score4
+* param_score5
+* param_score6
+* note 备注
+* overview 综合评价
+

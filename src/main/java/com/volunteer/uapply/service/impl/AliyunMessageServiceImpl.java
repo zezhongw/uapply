@@ -9,9 +9,8 @@ import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
-import com.volunteer.uapply.pojo.info.AliyunRequsetParamInfo;
+import com.volunteer.uapply.pojo.info.AliyunInterviewParamInfo;
 import com.volunteer.uapply.pojo.info.AliyunResponseInfo;
-import com.volunteer.uapply.pojo.info.WxResponseInfo;
 import com.volunteer.uapply.service.AliyunMessageService;
 import com.volunteer.uapply.utils.enums.DepartmentEnum;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
@@ -47,7 +46,7 @@ public class AliyunMessageServiceImpl implements AliyunMessageService {
     private  String  accessKeySecret ;
 
     @Override
-    public UniversalResponseBody SendMessage(AliyunRequsetParamInfo aliyunRequsetParamInfo) throws ClientException {
+    public UniversalResponseBody SendMessage(AliyunInterviewParamInfo aliyunInterviewParamInfo) throws ClientException {
         IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou",accessKeyId,accessKeySecret);
         IAcsClient client = new DefaultAcsClient(profile);
         CommonRequest request = new CommonRequest();
@@ -56,14 +55,14 @@ public class AliyunMessageServiceImpl implements AliyunMessageService {
         request.setVersion("2017-05-25");
         request.setAction("SendSms");
         request.putQueryParameter("RegionId", "cn-hangzhou");
-        request.putQueryParameter("PhoneNumbers", aliyunRequsetParamInfo.getPhoneNumbers());
+        request.putQueryParameter("PhoneNumbers", aliyunInterviewParamInfo.getPhoneNumbers());
         request.putQueryParameter("SignName",SignName);
         request.putQueryParameter("TemplateCode",templateCode);
-        request.putQueryParameter("TemplateParam", "{\"name\":\""+aliyunRequsetParamInfo.getName()+"\","
-        +"\"timeSlot\":\""+aliyunRequsetParamInfo.getTimeSlot()+"\","
-        +"\"department\":\""+DepartmentEnum.getDepartmentNameById(aliyunRequsetParamInfo.getDepartmentId())+"\","
-        +"\"telNo\":\""+aliyunRequsetParamInfo.getTelNo()+"\","
-        +"\"place\":\""+aliyunRequsetParamInfo.getPlace()+"\","
+        request.putQueryParameter("TemplateParam", "{\"name\":\""+ aliyunInterviewParamInfo.getName()+"\","
+        +"\"timeSlot\":\""+ aliyunInterviewParamInfo.getTimeSlot()+"\","
+        +"\"department\":\""+DepartmentEnum.getDepartmentNameById(aliyunInterviewParamInfo.getDepartmentId())+"\","
+        +"\"telNo\":\""+ aliyunInterviewParamInfo.getTelNo()+"\","
+        +"\"place\":\""+ aliyunInterviewParamInfo.getPlace()+"\","
         +"\"activity\":\""+activity+"\","
         +"}");
         CommonResponse commonResponse = client.getCommonResponse(request);
@@ -72,7 +71,7 @@ public class AliyunMessageServiceImpl implements AliyunMessageService {
         if (aliyunResponseInfo.getCode().equals("OK")){
             return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(),"发送成功");
         }else{
-            log.error(aliyunRequsetParamInfo.toString());
+            log.error(aliyunInterviewParamInfo.toString());
             return new UniversalResponseBody(ResponseResultEnum.FAILED.getCode(),"发送失败，请联系系统管理员");
         }
     }
