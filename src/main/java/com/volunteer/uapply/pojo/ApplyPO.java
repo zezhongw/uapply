@@ -2,6 +2,7 @@ package com.volunteer.uapply.pojo;
 
 import lombok.Data;
 
+
 /**
  * 用户报名信息对应的数据库对象
  * @author 郭树耸

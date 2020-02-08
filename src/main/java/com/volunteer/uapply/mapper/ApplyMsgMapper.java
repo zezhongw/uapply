@@ -1,18 +1,27 @@
 package com.volunteer.uapply.mapper;
 
 import com.volunteer.uapply.pojo.User;
-
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import java.util.List;
 /**
  * 表applymessage相关的mapper
  * @author 郭树耸
  * @version 1.0
  * @date 2020/2/8 9:29
  */
+@Mapper
 public interface ApplyMsgMapper {
 
     int UpdateSecondDepartment(String userTel,Integer departmentId);
 
-
     User GetUserByUserId(Integer userId);
 
+    List<User> listUserUnSecondInterview(Integer departmentId);
+
+    List<User> listUserSecondedInterviewed(Integer departmentId);
+
+    List<User> listUserEnrollMembers(@Param("ids") Integer[] userId,@Param("departmentId") Integer departmentId);
+
+    int SecondEliminate(@Param("userId") Integer userId,@Param("departmentId") Integer departmentId);
 }

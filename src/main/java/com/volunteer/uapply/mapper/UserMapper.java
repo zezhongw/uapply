@@ -1,6 +1,9 @@
 package com.volunteer.uapply.mapper;
 
 import com.volunteer.uapply.pojo.User;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * User相关mapper
@@ -8,6 +11,7 @@ import com.volunteer.uapply.pojo.User;
  * @version 1.0
  * @date 2020/2/4 9:28
  */
+@Mapper
 public interface UserMapper {
 
     /**
@@ -29,4 +33,12 @@ public interface UserMapper {
      * 插入用户
      */
     int InsertUser(User user);
+
+    /**
+     * 批量插入数据
+     * created by 桂乙侨
+     * @param users
+     * @return
+     */
+    int insertBatch(List<User> users);
 }
