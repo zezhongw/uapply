@@ -5,4 +5,12 @@
     <update id="UpdateSecondDepartment">
         UPDATE applymessage SET secondDepartment_id = #{departmentId,jdbcType=INTEGER} WHERE user_tel = #{userTel,jdbcType=VARCHAR}
     </update>
+
+    <select id="GetUserByUserId" resultType="com.volunteer.uapply.pojo.User">
+        SELECT user_id,user_name,user_tel,user_stunum,user_qq,college,profession,firsiIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id
+        FROM applymessage
+        WHERE user_id = #{userd,jdbcType=VARCHAR}
+    </select>
+
+
 </mapper>

@@ -8,7 +8,7 @@ import lombok.Data;
  * @date 2020/2/8 11:53
  */
 @Data
-public class AliyunSecondMsgParamInfo {
+public class AliyunSecondInterviewParam {
 
     /**
      * 接受短信的用户Id

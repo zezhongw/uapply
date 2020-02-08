@@ -2,14 +2,17 @@ package com.volunteer.uapply.controller;
 
 import com.aliyuncs.exceptions.ClientException;
 import com.volunteer.uapply.annotation.UserLoginToken;
-import com.volunteer.uapply.pojo.info.AliyunEnrollParamInfo;
-import com.volunteer.uapply.pojo.info.AliyunInterviewParamInfo;
-import com.volunteer.uapply.pojo.info.AliyunSecondMsgParamInfo;
+import com.volunteer.uapply.pojo.info.AliyunEnrollParam;
+import com.volunteer.uapply.pojo.info.AliyunFisrtInterviewParam;
+import com.volunteer.uapply.pojo.info.AliyunSecondInterviewParam;
+import com.volunteer.uapply.service.impl.MessageServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * 短信
@@ -20,6 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/messages")
 public class MessagesController {
+
+    @Resource
+    MessageServiceImpl messageService;
+
     /**
      * 发送一面面试短信
      * @param aliyunInterviewParamInfo
@@ -28,9 +35,8 @@ public class MessagesController {
      */
     @UserLoginToken
     @PostMapping("/interview/first")
-    public UniversalResponseBody SendFirstInterviewMessage(@RequestBody AliyunInterviewParamInfo aliyunInterviewParamInfo) throws ClientException {
-        //此处逻辑得改一下
-        return null;
+    public UniversalResponseBody SendFirstInterviewMessage(@RequestBody AliyunFisrtInterviewParam aliyunInterviewParamInfo) throws ClientException {
+        return messageService.FirstInterviewMessage(aliyunInterviewParamInfo);
     }
 
     /**
@@ -40,8 +46,8 @@ public class MessagesController {
      */
     @UserLoginToken
     @PostMapping("/interview/second")
-    public UniversalResponseBody SendSecondInterviewMessage(AliyunSecondMsgParamInfo aliyunSecondMsgParamInfo){
-        return null;
+    public UniversalResponseBody SendSecondInterviewMessage(AliyunSecondInterviewParam aliyunSecondMsgParamInfo) throws ClientException {
+        return messageService.SecondInterviewMessage(aliyunSecondMsgParamInfo);
     }
 
     /**
@@ -52,7 +58,7 @@ public class MessagesController {
      */
     @UserLoginToken
     @PostMapping("/enroll")
-    public UniversalResponseBody SendFirstInterviewMessage(AliyunEnrollParamInfo aliyunEnrollParamInfo) throws ClientException {
-        return null;
+    public UniversalResponseBody SendFirstInterviewMessage(AliyunEnrollParam aliyunEnrollParamInfo) throws ClientException {
+        return messageService.EnrollMessage(aliyunEnrollParamInfo);
     }
 }
