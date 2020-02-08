@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -91,7 +89,7 @@ public class InterviewController {
      * @param departmentId
      * @return
      */
-    //@UserLoginToken
+    @UserLoginToken
     @GetMapping("/second/un")
     public UniversalResponseBody<List<User>> UnSecondInterview(Integer departmentId){
         return secondInterviewService.listUserUnSecondInterview(departmentId);
@@ -102,7 +100,7 @@ public class InterviewController {
      * @param departmentId
      * @return
      */
-    //@UserLoginToken
+    @UserLoginToken
     @GetMapping("/second/finish")
     public UniversalResponseBody<List<User>> SecondedInterviewed(Integer departmentId){
         return secondInterviewService.listUserSecondedInterviewed(departmentId);
@@ -115,7 +113,7 @@ public class InterviewController {
      * @param departmentId
      * @return
      */
-    //@UserLoginToken
+    @UserLoginToken
     @PostMapping("/second/eliminate")
     public UniversalResponseBody SecondEliminate(Integer userId,Integer departmentId){
         return secondInterviewService.SecondEliminate(userId,departmentId);
