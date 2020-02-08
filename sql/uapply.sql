@@ -11,7 +11,7 @@
  Target Server Version : 80016
  File Encoding         : 65001
 
- Date: 07/02/2020 16:43:06
+ Date: 08/02/2020 10:35:49
 */
 
 SET NAMES utf8mb4;
@@ -29,12 +29,10 @@ CREATE TABLE `applymessage`  (
   `user_qq` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `college` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `profession` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `firstIntention_id` int(11) DEFAULT NULL,
+  `firstIntention_id` int(11) NOT NULL,
   `secondIntention_id` int(11) DEFAULT NULL,
   `user_hobby` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `user_introduction` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `fisrt_interview` int(11) DEFAULT NULL,
-  `second_interview` int(11) DEFAULT NULL,
   `secondDepartment_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
@@ -46,13 +44,13 @@ DROP TABLE IF EXISTS `interviewmessage`;
 CREATE TABLE `interviewmessage`  (
   `user_id` int(11) NOT NULL,
   `department_id` int(11) DEFAULT NULL,
-  `character` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `param_score1` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `param_score2` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `param_score3` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `param_score4` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `param_score5` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `param_score6` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `user_character` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `param_score1` int(11) DEFAULT NULL,
+  `param_score2` int(11) DEFAULT NULL,
+  `param_score3` int(11) DEFAULT NULL,
+  `param_score4` int(11) DEFAULT NULL,
+  `param_score5` int(11) DEFAULT NULL,
+  `param_score6` int(11) DEFAULT NULL,
   `note` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `overview` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `interview_pass` int(11) DEFAULT NULL

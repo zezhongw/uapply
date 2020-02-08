@@ -15,14 +15,9 @@ import lombok.Data;
 public class AliyunInterviewParamInfo {
 
     /**
-     * 接收人手机号码
+     * 要发送短信的用户Id
      */
-    private String PhoneNumbers;
-
-    /**
-     * 接收人姓名
-     */
-    private String name;
+    private Integer[] userId;
 
     /**
      * 部门，后面将部门id改为字符

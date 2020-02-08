@@ -92,9 +92,7 @@ sql文件存储在sql文件夹里面
 * secondIntention_id 第二志愿的部门id
 * user_hobby 爱好
 * user_introduction 自我介绍
-* first_interview 一面是否已经面试
-* second_interview 二面是否已经签到
-* secondDepartment_id 二面部门id
+* secondDepartment_id 二面在哪一个部门面试
 
 ### interviewmessge(存储面试信息)
 
@@ -109,4 +107,5 @@ sql文件存储在sql文件夹里面
 * param_score6
 * note 备注
 * overview 综合评价
-
+* user_name 评价人
+* interview_pass 此次面试是否通过

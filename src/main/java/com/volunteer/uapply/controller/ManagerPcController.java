@@ -31,7 +31,10 @@ public class ManagerPcController {
 
 
     /**
-     * 管理员PC端用户激活
+     * 管理员Pc端激活
+     * @param user
+     * @param inviteCode
+     * @return
      */
     @PassToken
     @PostMapping("/activate")
@@ -54,6 +57,7 @@ public class ManagerPcController {
 
     /**
      * 发送录取短信短信
+     * @param aliyunEnrollParamInfo
      * @return
      * @throws ClientException
      */
@@ -64,6 +68,13 @@ public class ManagerPcController {
     }
 
 
+    /**
+     * 分页查询部员数据
+     * @param departmentId
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
     @UserLoginToken
     @PostMapping("/members")
     public UniversalResponseBody FindMembers(@RequestParam("departmentId")Integer departmentId, @RequestParam("pageNum")Integer pageNum, @RequestParam("pageSize")Integer pageSize){

@@ -7,5 +7,15 @@ package com.volunteer.uapply.pojo.info;
  * @date 2020/2/7 16:32
  */
 public class AliyunEnrollParamInfo {
-    //模板还未申请
+
+    /**
+     * 接受短信的用户Id
+     */
+    private Integer[] userId;
+
+
+    /**
+     * QQ群号
+     */
+    private String GroupNumber;
 }

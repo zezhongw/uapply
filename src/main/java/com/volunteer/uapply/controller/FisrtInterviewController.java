@@ -5,7 +5,8 @@ import com.aliyuncs.exceptions.ClientException;
 import com.volunteer.uapply.annotation.UserLoginToken;
 import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.pojo.info.AliyunInterviewParamInfo;
-import com.volunteer.uapply.service.impl.AliyunMessageServiceImpl;
+import com.volunteer.uapply.service.FirstInterviewService;
+import com.volunteer.uapply.service.impl.FirstInterviewServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,8 +23,6 @@ import java.util.List;
 @RequestMapping("/pc/first")
 public class FisrtInterviewController {
 
-    @Resource
-    private AliyunMessageServiceImpl aliyunMessageService;
 
 
     /**
@@ -35,7 +34,8 @@ public class FisrtInterviewController {
     @UserLoginToken
     @PostMapping("/message")
     public UniversalResponseBody SendFirstInterviewMessage(@RequestBody AliyunInterviewParamInfo aliyunInterviewParamInfo) throws ClientException {
-        return aliyunMessageService.SendMessage(aliyunInterviewParamInfo);
+        //此处逻辑得改一下
+        return null;
     }
 
     /**
@@ -60,18 +60,12 @@ public class FisrtInterviewController {
         return null;
     }
 
-    /**
-     * 将一面人员录取为二面人员
-     * @return
-     */
-    @UserLoginToken
-    @PostMapping("/tosecond")
-    public UniversalResponseBody FirstToSecond(Integer userId,Integer departmentId){
-        return null;
-    }
+
 
     /**
      * 一面淘汰
+     * @param userId
+     * @param departmentId
      * @return
      */
     @UserLoginToken

@@ -11,7 +11,7 @@ import com.volunteer.uapply.utils.response.UniversalResponseBody;
  */
 public interface ManagerService {
     /**
-     * 用户Pc端登录
+     * 管理员Pc端登录
      * @param userTel
      * @param userPwd
      * @return
@@ -26,4 +26,6 @@ public interface ManagerService {
      * @return
      */
     UniversalResponseBody userPcActivation(User user,String inviteCode);
+
+
 }

@@ -9,7 +9,7 @@ wx:
   url: https://api.weixin.qq.com/sns/jscode2session?appid=${wx.appid}&secret=${wx.secret}&grant_type=authorization_code&js_code=
 
 aliyun:
-  templateCode: SMS_174022636
+  interviewTemplateCode: SMS_174022636
   SignName: U报名
   accessKeySecret:
   accessKeyId:
