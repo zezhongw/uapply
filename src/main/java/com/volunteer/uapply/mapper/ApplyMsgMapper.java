@@ -1,5 +1,7 @@
 package com.volunteer.uapply.mapper;
 
+import com.volunteer.uapply.pojo.User;
+
 /**
  * 表applymessage相关的mapper
  * @author 郭树耸
@@ -9,4 +11,8 @@ package com.volunteer.uapply.mapper;
 public interface ApplyMsgMapper {
 
     int UpdateSecondDepartment(String userTel,Integer departmentId);
+
+
+    User GetUserByUserId(Integer userId);
+
 }

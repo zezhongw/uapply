@@ -12,7 +12,7 @@ import lombok.Data;
  * @date 2020/2/4 20:25
  */
 @Data
-public class AliyunInterviewParamInfo {
+public class AliyunFisrtInterviewParam {
 
     /**
      * 要发送短信的用户Id

@@ -1,12 +1,6 @@
 package com.volunteer.uapply.controller;
 
-import com.aliyuncs.exceptions.ClientException;
-import com.volunteer.uapply.annotation.PassToken;
 import com.volunteer.uapply.annotation.UserLoginToken;
-import com.volunteer.uapply.pojo.TokenPO;
-import com.volunteer.uapply.pojo.User;
-import com.volunteer.uapply.pojo.info.AliyunEnrollParamInfo;
-import com.volunteer.uapply.pojo.info.AliyunInterviewParamInfo;
 import com.volunteer.uapply.service.impl.ManagerServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import lombok.extern.slf4j.Slf4j;

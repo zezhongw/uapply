@@ -9,14 +9,11 @@ import com.power.doc.model.ApiConfig;
 import com.power.doc.model.ApiDataDictionary;
 import com.power.doc.model.ApiErrorCodeDictionary;
 import com.power.doc.model.ApiReqHeader;
-import com.volunteer.uapply.pojo.info.AliyunInterviewParamInfo;
 import com.volunteer.uapply.utils.enums.DepartmentEnum;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.enums.PermissionIdEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import javax.annotation.Resource;
 
 @SpringBootTest
 class UapplyApplicationTests {
