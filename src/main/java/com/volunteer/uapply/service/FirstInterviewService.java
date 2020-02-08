@@ -1,7 +1,11 @@
 package com.volunteer.uapply.service;
 
+import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
+
+import java.util.List;
 
 /**
  * 一面相关服务层
@@ -18,4 +22,20 @@ public interface FirstInterviewService {
      * @return
      */
     UniversalResponseBody scoreResume(InterviewPO interviewPO);
+    /**
+     * 查询待一面
+     */
+    UniversalResponseBody<List<User>> SelectUnfirstInterview(Integer departmentId);
+    /**
+     * 查询已一面
+     */
+    UniversalResponseBody<List<User>> SelectFirstInterviewed(Integer departmentId);
+
+    /**
+     * 淘汰一面
+     * @param userId
+     * @param departmentId
+     * @return
+     */
+    UniversalResponseBody EliminateFirst(Integer userId,Integer departmentId);
 }
