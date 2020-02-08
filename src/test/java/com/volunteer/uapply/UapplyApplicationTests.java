@@ -41,18 +41,9 @@ class UapplyApplicationTests {
                         .setCodeField("code") //错误码值字段名
                         .setDescField("msg")//错误码描述
         );
-        //导出权限Id数据字典
-        config.setDataDictionaries(
-                ApiDataDictionary.dict().setTitle("用户权限Id").setEnumClass(PermissionIdEnum.class)
-                        .setCodeField("permissionId") //字典码值字段名
-                        .setDescField("permissionName") //字段码
-        );
 
-        config.setDataDictionaries(
-                ApiDataDictionary.dict().setTitle("部门Id").setEnumClass(DepartmentEnum.class)
-                        .setCodeField("departmentId") //字典码值字段名
-                        .setDescField("departmentName") //字段码
-        );
+
+
         //生成Markdown文件
         ApiDocBuilder.buildApiDoc(config);
     }
@@ -90,17 +81,15 @@ class UapplyApplicationTests {
                         .setDescField("msg")//错误码描述
         );
 
-        //导出权限Id数据字典
-        config.setDataDictionaries(
-                ApiDataDictionary.dict().setTitle("用户权限Id").setEnumClass(PermissionIdEnum.class)
-                        .setCodeField("permissionId") //字典码值字段名
-                        .setDescField("permissionName") //字段码
-        );
+
 
         config.setDataDictionaries(
                 ApiDataDictionary.dict().setTitle("部门Id").setEnumClass(DepartmentEnum.class)
                         .setCodeField("departmentId") //字典码值字段名
-                        .setDescField("departmentName") //字段码
+                        .setDescField("departmentName"),
+                ApiDataDictionary.dict().setTitle("用户权限Id").setEnumClass(PermissionIdEnum.class)
+                        .setCodeField("permissionId") //字典码值字段名
+                        .setDescField("permissionName") //字段码
         );
 
 

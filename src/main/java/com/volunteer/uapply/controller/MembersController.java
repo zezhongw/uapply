@@ -16,54 +16,30 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 管理员PC端相关接口
+ *
+ * 部员
  * @author 郭树耸
  * @version 1.0
  * @date 2020/2/5 18:40
  */
 @Slf4j
 @RestController
-@RequestMapping("/pc")
-public class ManagerPcController {
+@RequestMapping("/manager")
+public class MembersController {
 
     @Resource
     private ManagerServiceImpl managerService;
 
 
     /**
-     * 管理员Pc端激活
-     * @param user
-     * @param inviteCode
+     * 录取为部员
+     * @param userId
+     * @param departmentId
      * @return
-     */
-    @PassToken
-    @PostMapping("/activate")
-    public UniversalResponseBody ManagerPcActivate( User user,String inviteCode){
-        return managerService.userPcActivation(user,inviteCode);
-    }
-
-    /**
-     * 管理员PC端登录接口
-     * @param userTel
-     * @param userPwd
-     * @return
-     */
-    @PassToken
-    @PostMapping("/login")
-    public UniversalResponseBody<TokenPO> ManagerPcLogin(@RequestParam("userTel")String userTel, @RequestParam("userPwd") String userPwd){
-        return managerService.userPcLogin(userTel,userPwd);
-    }
-
-
-    /**
-     * 发送录取短信短信
-     * @param aliyunEnrollParamInfo
-     * @return
-     * @throws ClientException
      */
     @UserLoginToken
-    @PostMapping("/message")
-    public UniversalResponseBody SendFirstInterviewMessage(AliyunEnrollParamInfo aliyunEnrollParamInfo) throws ClientException {
+    @PostMapping("/enroll")
+    public UniversalResponseBody EnrollMembers(Integer[] userId,Integer departmentId){
         return null;
     }
 
