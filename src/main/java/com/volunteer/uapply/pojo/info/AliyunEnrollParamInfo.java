@@ -1,7 +1,7 @@
 package com.volunteer.uapply.pojo.info;
 
 /**
- * 面试短信参数对象
+ * 录取短信
  * @author 郭树耸
  * @version 1.0
  * @date 2020/2/7 16:32
@@ -15,7 +15,11 @@ public class AliyunEnrollParamInfo {
 
 
     /**
-     * QQ群号
+     * 部门Id
      */
-    private String GroupNumber;
+    private Integer departmentId;
+    /**
+     * QQ群号,阿里云审核不通过，只能这样命名了
+     */
+    private String secret;
 }
