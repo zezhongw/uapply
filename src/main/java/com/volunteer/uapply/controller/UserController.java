@@ -47,7 +47,7 @@ public class UserController {
     }
 
     /**
-     * 查询面试状态状态
+     * 查询面试状态
      * @param userId
      * @return
      */
