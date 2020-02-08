@@ -59,11 +59,12 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
         List<User> unfirstInterview=new LinkedList<>();
         for(User user :allunfirstInterview){
             List<User> temp=interviewMsgMapper.JudgeUnfirstInterview(user.getUserId());
-            if(temp.size()==2)
+            if(temp.size()==2) {
                 continue;
-            else if(temp.size()==1){
-                if(departmentId!=temp.get(0).getDepartmentId())
+            } else if(temp.size()==1){
+                if(!departmentId.equals(temp.get(0).getDepartmentId())) {
                     unfirstInterview.add(user);
+                }
             }
             else if(temp==null){
                 unfirstInterview.add(user);
