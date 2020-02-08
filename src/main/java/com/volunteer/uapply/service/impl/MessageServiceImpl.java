@@ -32,18 +32,7 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public UniversalResponseBody FirstInterviewMessage(AliyunFisrtInterviewParam aliyunFisrtInterviewParam) throws ClientException {
-        User user;
-        AliyunResponseInfo aliyunResponseInfo;
-        for (Integer i:aliyunFisrtInterviewParam.getUserId()
-             ) {
-            user = applyMsgMapper.GetUserByUserId(i);
-            aliyunResponseInfo =  aliyunMessageUtil.SendMessage(user.getUserTel(),user.getUserName(),aliyunFisrtInterviewParam.getTimeSlot(),aliyunFisrtInterviewParam.getDepartmentId()
-            ,aliyunFisrtInterviewParam.getTelNo(),aliyunFisrtInterviewParam.getPlace());
-            if (!("OK".equals(aliyunResponseInfo.getCode()))){
-                log.error(user.getUserTel()+user.getUserName()+aliyunFisrtInterviewParam.getDepartmentId()+"一面短信发送失败");
-            }
-        }
-        return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(),"发送成功");
+    return null;
     }
 
     /**
@@ -54,40 +43,12 @@ public class MessageServiceImpl implements MessageService {
      */
     @Override
     public UniversalResponseBody SecondInterviewMessage(AliyunSecondInterviewParam aliyunSecondInterviewParam) throws ClientException {
-        User user = null;
-        AliyunResponseInfo aliyunResponseInfo;
-        for (Integer i:aliyunSecondInterviewParam.getUserId()
-        ) {
-            user = applyMsgMapper.GetUserByUserId(i);
-           if(user == null){
 
-           }else{
-               aliyunResponseInfo =  aliyunMessageUtil.SendMessage(user.getUserTel(),user.getUserName(),aliyunSecondInterviewParam.getTimeSlot(),aliyunSecondInterviewParam.getDepartmentId()
-                       ,aliyunSecondInterviewParam.getTelNo(),aliyunSecondInterviewParam.getPlace());
-               if (!("OK".equals(aliyunResponseInfo.getCode()))){
-                   log.error(user.getUserTel()+user.getUserName()+aliyunSecondInterviewParam.getDepartmentId()+"二面短信发送失败");
-               }
-           }
-        }
-        return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(),"发送成功");
+        return null;
     }
 
     @Override
     public UniversalResponseBody EnrollMessage(AliyunEnrollParam enrollParam) throws ClientException {
-        User user = null;
-        AliyunResponseInfo aliyunResponseInfo;
-        for (Integer i:enrollParam.getUserId()
-        ) {
-            user = applyMsgMapper.GetUserByUserId(i);
-            if(user == null){
-
-            }else{
-                aliyunResponseInfo =  aliyunMessageUtil.SendEnrollMessage(user.getUserTel(),user.getUserName(),enrollParam.getDepartmentId(),enrollParam.getSecret());
-                if (!("OK".equals(aliyunResponseInfo.getCode()))){
-                    log.error(user.getUserTel()+user.getUserName()+enrollParam.getDepartmentId()+"录取短信发送失败");
-                }
-            }
-        }
-        return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(),"发送成功");
+       return null;
     }
 }
