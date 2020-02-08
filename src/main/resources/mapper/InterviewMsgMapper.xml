@@ -7,7 +7,7 @@
         VALUES
         (#{userd,jdbcType=INTEGER},#{departmentId,jdbcType=INTEGER},#{user_character,jdbcType=VARCHAR},
         #{paramScore1,jdbcType=INTEGER},#{paramScore2,jdbcType=INTEGER},#{paramScore3,jdbcType=INTEGER},#{paramScore4,jdbcType=INTEGER},#{paramScore5,jdbcType=INTEGER},#{paramScore6,jdbcType=INTEGER},
-        #{note,jdbcType=VARCHAR},#{overview,jdbcType=VARCHAR},#{userName,jdBC=VARCHAR})
+        #{note,jdbcType=VARCHAR},#{overview,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR})
     </insert>
 
     <select id="SelectUnfirstInterviewByDepartmentId" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.User">

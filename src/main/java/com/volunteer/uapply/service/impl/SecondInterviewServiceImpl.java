@@ -15,6 +15,7 @@ import javax.annotation.Resource;
  */
 @Service
 public class SecondInterviewServiceImpl implements SecondInterviewService {
+
     @Resource
     ApplyMsgMapper applyMsgMapper;
 

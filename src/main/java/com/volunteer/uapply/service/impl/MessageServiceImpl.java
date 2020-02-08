@@ -12,6 +12,7 @@ import com.volunteer.uapply.utils.AliyunMessageUtil;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
@@ -20,6 +21,7 @@ import javax.annotation.Resource;
  * @version 1.0
  * @date 2020/2/8 16:20
  */
+@Service
 @Slf4j
 public class MessageServiceImpl implements MessageService {
 

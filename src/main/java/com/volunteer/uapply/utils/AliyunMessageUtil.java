@@ -28,7 +28,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AliyunMessageUtil {
 
-    @Value("${aliyun.interviewTemplateCode}")
+    @Value("${aliyun.firstInterviewTemplateCode}")
     private  String firstInterviewTemplateCode;
 
     @Value("${aliyun.SignName}")
