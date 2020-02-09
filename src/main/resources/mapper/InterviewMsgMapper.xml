@@ -9,4 +9,5 @@
         #{paramScore1,jdbcType=INTEGER},#{paramScore2,jdbcType=INTEGER},#{paramScore3,jdbcType=INTEGER},#{paramScore4,jdbcType=INTEGER},#{paramScore5,jdbcType=INTEGER},#{paramScore6,jdbcType=INTEGER},
         #{note,jdbcType=VARCHAR},#{overview,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR})
     </insert>
+
 </mapper>
