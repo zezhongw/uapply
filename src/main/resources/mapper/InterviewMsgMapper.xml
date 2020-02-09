@@ -5,8 +5,32 @@
     <insert id="InsertInterview">
         INSERT INTO interviewmessage(user_id,department_id,user_character,param_score1,param_score2,param_score3,param_score4,param_score5,param_score6,note,overview,user_name)
         VALUES
-        (#{userId,jdbcType=INTEGER},#{departmentId,jdbcType=INTEGER},#{user_character,jdbcType=VARCHAR},
+        (#{userId,jdbcType=INTEGER},#{departmentId,jdbcType=INTEGER},#{userCharacter,jdbcType=VARCHAR},
         #{paramScore1,jdbcType=INTEGER},#{paramScore2,jdbcType=INTEGER},#{paramScore3,jdbcType=INTEGER},#{paramScore4,jdbcType=INTEGER},#{paramScore5,jdbcType=INTEGER},#{paramScore6,jdbcType=INTEGER},
         #{note,jdbcType=VARCHAR},#{overview,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR})
     </insert>
+
+    <select id="SelectUnfirstInterviewByDepartmentId" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.User">
+        SELECT user_id,user_name,user_tel
+        FROM applymessage
+        WHERE firstIntention_id=#{departmentId,jdbcType=INTEGER} OR secondIntention_id=#{departmentId,jdbcType=INTEGER}
+    </select>
+
+    <select id="JudgeUnfirstInterview" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.User">
+        SELECT user_id,department_id
+        FROM interviewmessge
+        WHERE user_id=#{userId,jdbcType=INTEGER}
+    </select>
+
+    <select id="SelectFirstInterviewed" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.User">
+        SELECT user_id,department_id
+        FROM interviewmessge
+        WHERE department_id=#{departmentId,jdbcType=INTEGER}
+    </select>
+
+    <update id="EliminateFirst" >
+        UPDATE interviewmessge
+        SET interview_pass=0
+        WHERE user_id=#{userId,jdbcType=INTEGER} AND department_id=#{departmentId,jdbcType=INTEGER}
+    </update>
 </mapper>

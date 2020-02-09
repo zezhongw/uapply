@@ -34,7 +34,7 @@ public class MembersController {
     private SecondInterviewService secondInterviewService;
 
     /**
-     *
+     * 录取部员
      * @param enrollMembersDTO
      * @return
      */

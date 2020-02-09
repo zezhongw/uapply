@@ -23,6 +23,11 @@ public class ApplyPO {
     private String sex;
 
     /**
+     * 姓名
+     */
+    private String userName;
+
+    /**
      * 学号
      */
     private String userStunum;
@@ -68,17 +73,6 @@ public class ApplyPO {
      */
     private String userIntroduction;
 
-    /**
-     * 一面是否已经面试
-     * @mock 1是 0否
-     */
-    private Integer firstInterview;
-
-    /**
-     * 二面是否已经签到
-     * @mock 1是 0否
-     */
-    private Integer secondInterview;
 
     /**
      * 二面部门
