@@ -20,8 +20,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="hcloooo" />
         <option value="hcloooo &lt;1358646561@qq.com&gt;" />
+        <option value="hcloooo" />
       </list>
     </option>
     <option name="PUSH_TAGS">
@@ -168,7 +168,7 @@
       <workItem from="1581145332732" duration="833000" />
       <workItem from="1581220395133" duration="908000" />
       <workItem from="1581222121298" duration="2759000" />
-      <workItem from="1581224915640" duration="27491000" />
+      <workItem from="1581224915640" duration="27739000" />
     </task>
     <task id="LOCAL-00001" summary="第一次push,完成简历查看，用户报名，查询面试状态">
       <created>1581264019647</created>
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581264331657</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="第一次push,完成简历查看，用户报名，查询面试状态">
+      <created>1581264783286</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581264783286</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,10 +223,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1581143267651" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581264330641">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581264782291">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581264330641" />
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581264782291" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1581239189288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -264,10 +271,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581225553905" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1581264614449">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1581264798208">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581264614449" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581264798208" />
     <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581251369207">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
