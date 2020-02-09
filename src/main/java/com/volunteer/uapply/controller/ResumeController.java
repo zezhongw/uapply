@@ -3,8 +3,11 @@ package com.volunteer.uapply.controller;
 import com.volunteer.uapply.annotation.UserLoginToken;
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.service.impl.FirstInterviewServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * 简历
@@ -15,6 +18,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/resume")
 public class ResumeController {
+
+    @Resource
+    FirstInterviewServiceImpl firstInterviewService;
 
     /**
      * 用户报名
@@ -48,6 +54,6 @@ public class ResumeController {
     @PostMapping("/score")
     @UserLoginToken
     public UniversalResponseBody managerScore(InterviewPO interviewPO){
-        return null;
+        return firstInterviewService.scoreResume(interviewPO);
     }
 }
