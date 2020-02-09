@@ -9,7 +9,9 @@ wx:
   url: https://api.weixin.qq.com/sns/jscode2session?appid=${wx.appid}&secret=${wx.secret}&grant_type=authorization_code&js_code=
 
 aliyun:
-  interviewTemplateCode: SMS_174022636
+  firstInterviewTemplateCode: SMS_174022636
+  secondInterviewTemplateCode: SMS_183245782
+  enrollTemplateCode: SMS_183265591
   SignName: U报名
   accessKeySecret:
   accessKeyId:
@@ -42,7 +44,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/uapply?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    password: shumaosha2
+    password: Gzsnb@666
   #设置开启热部署
   devtools:
     restart:

@@ -23,6 +23,12 @@ public interface InterviewMsgMapper {
      * 查询未一面，先在 applymessage查询全部，再根据interviewmessge筛选
     */
     List<User> SelectUnfirstInterviewByDepartmentId(Integer departmentId);
+
+    /**
+     * 
+     * @param userId
+     * @return
+     */
     List<User> JudgeUnfirstInterview(Integer userId);
     /**
      * 查询已一面

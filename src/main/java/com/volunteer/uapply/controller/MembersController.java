@@ -1,15 +1,14 @@
 package com.volunteer.uapply.controller;
 
-import com.aliyuncs.exceptions.ClientException;
-import com.volunteer.uapply.annotation.PassToken;
+
 import com.volunteer.uapply.annotation.UserLoginToken;
-import com.volunteer.uapply.pojo.TokenPO;
-import com.volunteer.uapply.pojo.User;
-import com.volunteer.uapply.pojo.info.AliyunEnrollParamInfo;
-import com.volunteer.uapply.pojo.info.AliyunInterviewParamInfo;
+import com.volunteer.uapply.pojo.dto.EnrollMembersDTO;
+import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.service.impl.ManagerServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -30,17 +29,19 @@ public class MembersController {
     @Resource
     private ManagerServiceImpl managerService;
 
+    @Autowired
+    @Qualifier("secondInterviewServiceImpl")
+    private SecondInterviewService secondInterviewService;
 
     /**
-     * 录取为部员
-     * @param userId
-     * @param departmentId
+     *
+     * @param enrollMembersDTO
      * @return
      */
     @UserLoginToken
     @PostMapping("/enroll")
-    public UniversalResponseBody EnrollMembers(Integer[] userId,Integer departmentId){
-        return null;
+    public UniversalResponseBody EnrollMembers(@RequestBody EnrollMembersDTO enrollMembersDTO){
+        return secondInterviewService.EnrollMembers(enrollMembersDTO.getUserId(),enrollMembersDTO.getDepartmentId());
     }
 
 
