@@ -1,7 +1,6 @@
 package com.volunteer.uapply.service.impl;
 
 import com.volunteer.uapply.mapper.ApplyMsgMapper;
-import com.volunteer.uapply.mapper.FirstInterviewMapper;
 import com.volunteer.uapply.mapper.InterviewMsgMapper;
 import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.pojo.ApplyPO;
@@ -33,8 +32,6 @@ import java.util.List;
 public class FirstInterviewServiceImpl implements FirstInterviewService {
 
     @Resource
-    FirstInterviewMapper firstInterviewMsgMapper;
-    @Resource
     InterviewMsgMapper interviewMsgMapper;
 
     /**
@@ -58,10 +55,10 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
      */
     @Override
     public UniversalResponseBody<List<User>> SelectUnfirstInterview(Integer departmentId) {
-        List<User> allunfirstInterview=firstInterviewMsgMapper.SelectUnfirstInterviewByDepartmentId(departmentId);
+        List<User> allunfirstInterview=interviewMsgMapper.SelectUnfirstInterviewByDepartmentId(departmentId);
         List<User> unfirstInterview=new LinkedList<>();
         for(User user :allunfirstInterview){
-            List<User> temp=firstInterviewMsgMapper.JudgeUnfirstInterview(user.getUserId());
+            List<User> temp=interviewMsgMapper.JudgeUnfirstInterview(user.getUserId());
             if(temp.size()==2) {
                 continue;
             } else if(temp.size()==1){
@@ -83,7 +80,7 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
      */
     @Override
     public UniversalResponseBody<List<User>> SelectFirstInterviewed(Integer departmentId) {
-        List<User> users=firstInterviewMsgMapper.SelectFirstInterviewed(departmentId);
+        List<User> users=interviewMsgMapper.SelectFirstInterviewed(departmentId);
         return new UniversalResponseBody<>(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg(),users);
     }
 
@@ -95,7 +92,7 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
      */
     @Override
     public UniversalResponseBody EliminateFirst(Integer userId, Integer departmentId) {
-        int result=firstInterviewMsgMapper.EliminateFirst(userId,departmentId);
+        int result=interviewMsgMapper.EliminateFirst(userId,departmentId);
         if (result!=0){
             return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg());
         }else{
