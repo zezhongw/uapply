@@ -20,6 +20,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="hcloooo &lt;1358646561@qq.com&gt;" />
         <option value="hcloooo" />
       </list>
     </option>
@@ -193,10 +194,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1581143267651" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581264015900">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581264236922">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581264015900" />
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581264236922" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1581239189288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -241,10 +242,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581225553905" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1581264032648">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1581264243932">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581264032648" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581264243932" />
     <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581251369207">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
