@@ -1,12 +1,15 @@
 package com.volunteer.uapply.service;
 
+import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
+
+import java.util.List;
 
 /**
  * 二面相关服务层
- * @author 郭树耸
+ * @author 桂乙侨
  * @version 1.0
- * @date 2020/2/8 10:14
+ * @date 2020/2/8 14:12
  */
 public interface SecondInterviewService {
     /**
@@ -15,5 +18,13 @@ public interface SecondInterviewService {
      * @param departmentId
      * @return
      */
-    public UniversalResponseBody SecondCheck(String userTel, Integer departmentId);
+    UniversalResponseBody SecondCheck(String userTel, Integer departmentId);
+
+    UniversalResponseBody<List<User>> listUserUnSecondInterview(Integer departmentId);
+
+    UniversalResponseBody<List<User>> listUserSecondedInterviewed(Integer departmentId);
+
+    UniversalResponseBody EnrollMembers(Integer[] userId,Integer departmentId);
+
+    UniversalResponseBody SecondEliminate(Integer userId,Integer departmentId);
 }

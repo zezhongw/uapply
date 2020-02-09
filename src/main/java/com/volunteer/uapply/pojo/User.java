@@ -1,7 +1,7 @@
 package com.volunteer.uapply.pojo;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
+
 
 
 /**

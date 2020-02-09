@@ -2,14 +2,14 @@ package com.volunteer.uapply.controller;
 
 import com.volunteer.uapply.annotation.UserLoginToken;
 import com.volunteer.uapply.pojo.User;
-import com.volunteer.uapply.service.impl.SecondInterviewServiceImpl;
+import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,9 +22,9 @@ import java.util.List;
 @RequestMapping("/interview")
 public class InterviewController {
 
-    @Resource
-    SecondInterviewServiceImpl secondInterviewService;
-
+    @Autowired
+    @Qualifier("secondInterviewServiceImpl")
+    private SecondInterviewService secondInterviewService;
 
     /**
      * 查询面试状态
@@ -92,7 +92,7 @@ public class InterviewController {
     @UserLoginToken
     @GetMapping("/second/un")
     public UniversalResponseBody<List<User>> UnSecondInterview(Integer departmentId){
-        return null;
+        return secondInterviewService.listUserUnSecondInterview(departmentId);
     }
 
     /**
@@ -103,7 +103,7 @@ public class InterviewController {
     @UserLoginToken
     @GetMapping("/second/finish")
     public UniversalResponseBody<List<User>> SecondedInterviewed(Integer departmentId){
-        return null;
+        return secondInterviewService.listUserSecondedInterviewed(departmentId);
     }
 
 
@@ -116,6 +116,6 @@ public class InterviewController {
     @UserLoginToken
     @PostMapping("/second/eliminate")
     public UniversalResponseBody SecondEliminate(Integer userId,Integer departmentId){
-        return null;
+        return secondInterviewService.SecondEliminate(userId,departmentId);
     }
 }
