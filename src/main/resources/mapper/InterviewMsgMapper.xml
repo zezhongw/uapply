@@ -5,8 +5,9 @@
     <insert id="InsertInterview">
         INSERT INTO interviewmessage(user_id,department_id,user_character,param_score1,param_score2,param_score3,param_score4,param_score5,param_score6,note,overview,user_name)
         VALUES
-        (#{userd,jdbcType=INTEGER},#{departmentId,jdbcType=INTEGER},#{user_character,jdbcType=VARCHAR},
+        (#{userId,jdbcType=INTEGER},#{departmentId,jdbcType=INTEGER},#{user_character,jdbcType=VARCHAR},
         #{paramScore1,jdbcType=INTEGER},#{paramScore2,jdbcType=INTEGER},#{paramScore3,jdbcType=INTEGER},#{paramScore4,jdbcType=INTEGER},#{paramScore5,jdbcType=INTEGER},#{paramScore6,jdbcType=INTEGER},
         #{note,jdbcType=VARCHAR},#{overview,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR})
     </insert>
+
 </mapper>
