@@ -68,9 +68,5 @@
         SELECT * FROM applymessage
         WHERE user_tel = #{usertel,jdbcType=VARCHAR}
     </select>
-
-    <select id="findApplyMsgByUserId" resultType="com.volunteer.uapply.pojo.ApplyPO">
-        SELECT * FROM applymessage WHERE user_id=#{userId,jdbcType=INTEGER}
-    </select>
 </mapper>
 

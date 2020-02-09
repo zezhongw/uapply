@@ -3,7 +3,9 @@ package com.volunteer.uapply.controller;
 import com.volunteer.uapply.annotation.UserLoginToken;
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.service.ResumeService;
 import com.volunteer.uapply.service.impl.FirstInterviewServiceImpl;
+import com.volunteer.uapply.service.impl.ResumeServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +23,8 @@ public class ResumeController {
 
     @Resource
     FirstInterviewServiceImpl firstInterviewService;
-
+    @Resource
+    ResumeServiceImpl resumeService;
     /**
      * 用户报名
      * @param applyPO
@@ -30,7 +33,7 @@ public class ResumeController {
     @PostMapping("/apply")
     @UserLoginToken
     public UniversalResponseBody applyMessage(ApplyPO applyPO){
-        return null;
+        return resumeService.applyMessage(applyPO);
     }
 
 
@@ -43,7 +46,7 @@ public class ResumeController {
     @GetMapping("/view")
     @UserLoginToken
     public UniversalResponseBody<ApplyPO> managerResume(@RequestParam("departmentId")  Integer departmentId, @RequestParam("userTel") String userTel){
-        return null;
+        return resumeService.viewApplyMessage(departmentId,userTel);
     }
 
     /**

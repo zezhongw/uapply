@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ccc582e-73e9-4917-8dec-5c7202a7fb0e" name="Default Changelist" comment="第一次push,完成简历查看，用户报名，查询面试状态">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/ResumeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/impl/ResumeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/annotation/PassToken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/annotation/ToLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/annotation/UserLoginToken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/aspect/LogAspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/config/AuthenticationInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/config/InterceptorConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/InterviewController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/LoginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/MembersController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/MessagesController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/ResumeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/ApplyMsgMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/InterviewMsgMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/ManaggerMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/TokenMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/WxResponseMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/ApplyPO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/InterviewPO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/TokenPO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunEnrollParamInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunInterviewParamInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunResponseInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunSecondMsgParamInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/InviteCodeInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/WxResponseInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/FirstInterviewService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/ManagerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/SecondInterviewService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/FirstInterviewServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/ManagerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/SecondInterviewServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/AliyunMessageUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/Tokenutil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/WeChatUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/DepartmentEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/PermissionIdEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/ResponseResultEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/response/UniversalResponseBody.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ApplyMsgMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/InterviewMsgMapper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ManagerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/WxResponseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/tokenMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/doc/AllInOne.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/doc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/ResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/ResumeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/mapper/ApplyMsgMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/mapper/ApplyMsgMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/mapper/InterviewMsgMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/mapper/InterviewMsgMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ApplyMsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ApplyMsgMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/InterviewMsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/InterviewMsgMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/volunteer/uapply/UapplyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/volunteer/uapply/UapplyApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/UapplyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/UapplyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/volunteer/uapply/UapplyApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/volunteer/uapply/UapplyApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uapply.iml" beforeDir="false" afterPath="$PROJECT_DIR$/uapply.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hcloooo" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Wandou\Repository" />
+        <option name="mavenHome" value="D:/Wandou/apache-maven-3.6.2" />
+        <option name="userSettingsFile" value="D:\Wandou\apache-maven-3.6.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XVscZz3OEoi7kiLXGqaQiLB6Og" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RunManager" selected="JUnit.UapplyApplicationTests">
+    <configuration name="UapplyApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="uapply" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.volunteer.uapply.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.volunteer.uapply" />
+      <option name="MAIN_CLASS_NAME" value="com.volunteer.uapply.UapplyApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UapplyApplicationTests.applyMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="uapply" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.volunteer.uapply.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.volunteer.uapply" />
+      <option name="MAIN_CLASS_NAME" value="com.volunteer.uapply.UapplyApplicationTests" />
+      <option name="METHOD_NAME" value="applyMessageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UapplyApplicationTests.viewResume" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="uapply" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.volunteer.uapply.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.volunteer.uapply" />
+      <option name="MAIN_CLASS_NAME" value="com.volunteer.uapply.UapplyApplicationTests" />
+      <option name="METHOD_NAME" value="viewResume" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UapplyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="uapply" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.volunteer.uapply.UapplyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UapplyApplicationTests.viewResume" />
+        <item itemvalue="JUnit.UapplyApplicationTests.applyMessageTest" />
+        <item itemvalue="JUnit.UapplyApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ccc582e-73e9-4917-8dec-5c7202a7fb0e" name="Default Changelist" comment="" />
+      <created>1581142677011</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581142677011</updated>
+      <workItem from="1581142678723" duration="2348000" />
+      <workItem from="1581145032645" duration="297000" />
+      <workItem from="1581145332732" duration="833000" />
+      <workItem from="1581220395133" duration="908000" />
+      <workItem from="1581222121298" duration="2759000" />
+      <workItem from="1581224915640" duration="26737000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次push,完成简历查看，用户报名，查询面试状态" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次push,完成简历查看，用户报名，查询面试状态" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581222099004">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1581222099004" />
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1581261959691">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1581261959691" />
+    <state x="339" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1581143267651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1581143267651" />
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581264000530">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581264000530" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1581239189288">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581239189288" />
+    <state width="1323" height="17" key="GridCell.Tab.0.bottom" timestamp="1581261766075">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="17" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581261766075" />
+    <state width="1323" height="17" key="GridCell.Tab.0.center" timestamp="1581261766075">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="17" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581261766075" />
+    <state width="1323" height="17" key="GridCell.Tab.0.left" timestamp="1581261766075">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="17" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581261766075" />
+    <state width="1323" height="17" key="GridCell.Tab.0.right" timestamp="1581261766075">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="17" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581261766075" />
+    <state width="1306" height="29" key="GridCell.Tab.1.bottom" timestamp="1581150570432">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="29" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581150570432" />
+    <state width="1306" height="29" key="GridCell.Tab.1.center" timestamp="1581150570432">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="29" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1581150570432" />
+    <state width="1306" height="29" key="GridCell.Tab.1.left" timestamp="1581150570432">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="29" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1581150570432" />
+    <state width="1306" height="29" key="GridCell.Tab.1.right" timestamp="1581150570432">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="29" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1581150570432" />
+    <state x="392" y="83" key="MultipleFileMergeDialog" timestamp="1581251394274">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="392" y="83" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1581251394274" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1581225553905">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581225553905" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1581263598311">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581263598311" />
+    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581251369207">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1581251369207" />
+    <state x="371" y="155" key="git4idea.merge.GitPullDialog" timestamp="1581240026335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="371" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1581240026334" />
+    <state x="57" y="65" key="new project wizard" timestamp="1581239309192">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="57" y="65" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1581239309192" />
+  </component>
+</project>

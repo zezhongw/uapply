@@ -9,11 +9,18 @@ import com.power.doc.model.ApiConfig;
 import com.power.doc.model.ApiDataDictionary;
 import com.power.doc.model.ApiErrorCodeDictionary;
 import com.power.doc.model.ApiReqHeader;
+import com.volunteer.uapply.mapper.ApplyMsgMapper;
+import com.volunteer.uapply.pojo.ApplyPO;
+import com.volunteer.uapply.service.impl.ResumeServiceImpl;
 import com.volunteer.uapply.utils.enums.DepartmentEnum;
-import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.enums.PermissionIdEnum;
+import com.volunteer.uapply.utils.enums.ResponseResultEnum;
+import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import javax.annotation.Resource;
 
 @SpringBootTest
 class UapplyApplicationTests {
@@ -104,5 +111,6 @@ class UapplyApplicationTests {
     public void MessageTest() throws ClientException {
 
     }
+
 
 }
