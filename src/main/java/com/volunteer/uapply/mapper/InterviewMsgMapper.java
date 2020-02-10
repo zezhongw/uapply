@@ -1,5 +1,6 @@
 package com.volunteer.uapply.mapper;
 
+import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
 import com.volunteer.uapply.pojo.User;
 
@@ -22,7 +23,7 @@ public interface InterviewMsgMapper {
     /**
      * 查询未一面，先在 applymessage查询全部，再根据interviewmessge筛选
     */
-    List<User> SelectUnfirstInterviewByDepartmentId(Integer departmentId);
+    List<ApplyPO> SelectUnfirstInterviewByDepartmentId(Integer departmentId);
 
     /**
      *
@@ -33,7 +34,7 @@ public interface InterviewMsgMapper {
     /**
      * 查询已一面
      */
-    List<User> SelectFirstInterviewed(Integer departmentId);
+    List<ApplyPO> SelectFirstInterviewed(Integer departmentId);
     /**
      * 淘汰一面
      */
