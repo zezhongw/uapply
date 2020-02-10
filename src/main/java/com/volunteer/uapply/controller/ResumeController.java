@@ -1,9 +1,11 @@
 package com.volunteer.uapply.controller;
 
-import com.volunteer.uapply.annotation.UserLoginToken;
+import com.volunteer.uapply.annotation.UserLogin;
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.service.ResumeService;
 import com.volunteer.uapply.service.impl.FirstInterviewServiceImpl;
+import com.volunteer.uapply.service.impl.ResumeServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,16 +23,17 @@ public class ResumeController {
 
     @Resource
     FirstInterviewServiceImpl firstInterviewService;
-
+    @Resource
+    ResumeServiceImpl resumeService;
     /**
      * 用户报名
      * @param applyPO
      * @return
      */
     @PostMapping("/apply")
-    @UserLoginToken
+    @UserLogin
     public UniversalResponseBody applyMessage(ApplyPO applyPO){
-        return null;
+        return resumeService.applyMessage(applyPO);
     }
 
 
@@ -41,9 +44,9 @@ public class ResumeController {
      * @return
      */
     @GetMapping("/view")
-    @UserLoginToken
+    @UserLogin
     public UniversalResponseBody<ApplyPO> managerResume(@RequestParam("departmentId")  Integer departmentId, @RequestParam("userTel") String userTel){
-        return null;
+        return resumeService.viewApplyMessage(departmentId,userTel);
     }
 
     /**
@@ -52,7 +55,7 @@ public class ResumeController {
      * @return
      */
     @PostMapping("/score")
-    @UserLoginToken
+    @UserLogin
     public UniversalResponseBody managerScore(InterviewPO interviewPO){
         return firstInterviewService.scoreResume(interviewPO);
     }

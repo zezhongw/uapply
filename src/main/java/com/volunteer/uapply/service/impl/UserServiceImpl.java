@@ -71,5 +71,10 @@ public class UserServiceImpl implements UserService {
         return new UniversalResponseBody<TokenPO>(1,"success",tokenPO);
     }
 
+    @Override
+    public User findUserByUserTel(String userTel) {
+        return userMapper.findUserByUserTel(userTel);
+    }
+
 
 }

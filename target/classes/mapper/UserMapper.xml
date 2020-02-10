@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.volunteer.uapply.mapper.UserMapper">
+
+
+    <insert id="InsertUser" parameterType="com.volunteer.uapply.pojo.User">
+        INSERT INTO usermessage(user_id,user_name,user_tel,permission_id,department_id,user_pwd)
+        VALUES
+        (#{userId,jdbcType=INTEGER},#{userName,jdbcType=VARCHAR},#{userTel,jdbcType=VARCHAR},#{permissionId,jdbcType=INTEGER},#{departmentId,jdbcType=INTEGER},#{userPwd,jdbcType=VARCHAR})
+    </insert>
+
+
+    <select id="findUserByUserId" resultType="com.volunteer.uapply.pojo.User">
+        SELECT user_id,user_name,user_tel,permission_id,department_id,user_pwd
+        FROM usermessage
+        WHERE user_id = #{userId,jdbcType=INTEGER}
+    </select>
+
+    <select id="findUserByUserTel" resultType="com.volunteer.uapply.pojo.User" parameterType="string">
+        SELECT user_id,user_name,user_tel,permission_id,department_id,user_pwd
+        FROM usermessage
+        WHERE user_tel = #{userTel,jdbcType=VARCHAR}
+    </select>
+
+    <insert id="insertBatch" useGeneratedKeys="false" keyProperty="userId" parameterType="com.volunteer.uapply.pojo.User" >
+        INSERT INTO
+        usermessage(user_id,user_name,user_tel,permission_id,department_id,user_pwd)
+        VALUES
+        <foreach collection="list" item="user" index="index" separator=",">
+            (#{user.userId,jdbcType=INTEGER}, #{user.userName,jdbcType=VARCHAR}, #{user.userTel,jdbcType=VARCHAR},
+            #{user.permissionId,jdbcType=INTEGER},#{user.departmentId,jdbcType=INTEGER},#{user.userPwd,jdbcType=VARCHAR})
+        </foreach>
+    </insert>
+</mapper>

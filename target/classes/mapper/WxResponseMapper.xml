@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.volunteer.uapply.mapper.WxResponseMapper">
+
+    <insert id="InsertWxResponse"  useGeneratedKeys="true" keyProperty="userId">
+        INSERT INTO wxresponse(openid,session_key,unionid)
+        VALUES
+        (#{openid,jdbcType=VARCHAR},#{session_key,jdbcType=VARCHAR},#{unionid,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="searchByOpenid" resultType="com.volunteer.uapply.pojo.info.WxResponseInfo">
+    SELECT user_id,openid,session_key,unionid
+    FROM WHERE openid = #{openid,jdbcType=VARCHAR}
+    </select>
+
+</mapper>
