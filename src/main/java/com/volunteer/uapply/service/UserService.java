@@ -18,6 +18,6 @@ public interface UserService {
      * @throws Exception
      */
     UniversalResponseBody<TokenPO> userWxLogin(String code) throws Exception;
-
+    User findUserByUserTel(String userTel);
 
 }
