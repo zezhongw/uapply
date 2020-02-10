@@ -38,4 +38,11 @@ public interface InterviewMsgMapper {
      * 淘汰一面
      */
     int EliminateFirst(Integer userId,Integer departmentId);
+
+    /**
+     * 通过userId查interviewmessage
+     * @param userId
+     * @return
+     */
+    InterviewPO findInterviewMsgByUserId(int userId);
 }

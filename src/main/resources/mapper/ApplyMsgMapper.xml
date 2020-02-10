@@ -53,4 +53,24 @@
             #{item,jdbcType=INTEGER}
         </foreach>
     </select>
+
+    <insert id="insertApplyMsg">
+        INSERT  INTO applymessage (user_id,user_tel,user_name,sex,user_stunum,user_qq,college,profession,firstIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id)
+        VALUES
+        (#{userId,jdbcType=INTEGER},#{userTel,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR},
+        #{sex,jdbcType=VARCHAR},#{userStunum,jdbcType=VARCHAR},#{userQq,jdbcType=VARCHAR},
+        #{college,jdbcType=VARCHAR},#{profession,jdbcType=VARCHAR},#{firstIntentionId,jdbcType=INTEGER},
+        #{secondIntentionId,jdbcType=INTEGER},#{userHobby,jdbcType=VARCHAR},#{userIntroduction,jdbcType=VARCHAR},
+        #{secondDepartmentId,jdbcType=INTEGER})
+    </insert>
+
+    <select id="findApplyMsgByUserTel" resultType="com.volunteer.uapply.pojo.ApplyPO">
+        SELECT * FROM applymessage
+        WHERE user_tel = #{usertel,jdbcType=VARCHAR}
+    </select>
+
+    <select id="findApplyMsgByUserId" resultType="com.volunteer.uapply.pojo.ApplyPO">
+        SELECT * FROM applymessage WHERE user_id=#{userId,jdbcType=INTEGER}
+    </select>
 </mapper>
+
