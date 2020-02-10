@@ -1,7 +1,8 @@
 package com.volunteer.uapply.controller;
 
 import com.aliyuncs.exceptions.ClientException;
-import com.volunteer.uapply.annotation.UserLoginToken;
+import com.volunteer.uapply.annotation.MinisterLogin;
+import com.volunteer.uapply.annotation.UserLogin;
 import com.volunteer.uapply.pojo.info.AliyunEnrollParam;
 import com.volunteer.uapply.pojo.info.AliyunFisrtInterviewParam;
 import com.volunteer.uapply.pojo.info.AliyunSecondInterviewParam;
@@ -33,7 +34,7 @@ public class MessagesController {
      * @return
      * @throws ClientException
      */
-    @UserLoginToken
+    @MinisterLogin
     @PostMapping("/interview/first")
     public UniversalResponseBody SendFirstInterviewMessage(@RequestBody AliyunFisrtInterviewParam aliyunInterviewParamInfo) throws ClientException {
         return messageService.FirstInterviewMessage(aliyunInterviewParamInfo);
@@ -44,7 +45,7 @@ public class MessagesController {
      * @param aliyunSecondMsgParamInfo
      * @return
      */
-    @UserLoginToken
+    @MinisterLogin
     @PostMapping("/interview/second")
     public UniversalResponseBody SendSecondInterviewMessage(AliyunSecondInterviewParam aliyunSecondMsgParamInfo) throws ClientException {
         return messageService.SecondInterviewMessage(aliyunSecondMsgParamInfo);
@@ -56,7 +57,7 @@ public class MessagesController {
      * @return
      * @throws ClientException
      */
-    @UserLoginToken
+    @MinisterLogin
     @PostMapping("/enroll")
     public UniversalResponseBody SendFirstInterviewMessage(AliyunEnrollParam aliyunEnrollParamInfo) throws ClientException {
         return messageService.EnrollMessage(aliyunEnrollParamInfo);

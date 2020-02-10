@@ -2,8 +2,9 @@ package com.volunteer.uapply.config;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.exceptions.JWTDecodeException;
+import com.volunteer.uapply.annotation.MinisterLogin;
 import com.volunteer.uapply.annotation.PassToken;
-import com.volunteer.uapply.annotation.UserLoginToken;
+import com.volunteer.uapply.annotation.UserLogin;
 import com.volunteer.uapply.mapper.TokenMapper;
 import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.pojo.User;
@@ -49,12 +50,12 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
             }
         }
         //检查有没有需要用户权限的注解
-        if (method.isAnnotationPresent(UserLoginToken.class)) {
-            UserLoginToken userLoginToken = method.getAnnotation(UserLoginToken.class);
-            if (userLoginToken.required()) {
+        if (method.isAnnotationPresent(UserLogin.class)) {
+            UserLogin userLogin = method.getAnnotation(UserLogin.class);
+            if (userLogin.required()) {
                 // 执行认证
                 if (token == null) {
-                    return false;
+                    throw new Exception("用户Token为空");
                 }
                 // 获取 token 中的userId
                 Integer userId;
@@ -76,8 +77,46 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                     return false;
                 }
             }
+
+
         }
 
+        //检查有没有需要部长权限的注解
+        if (method.isAnnotationPresent(MinisterLogin.class)) {
+            MinisterLogin ministerLogin = method.getAnnotation(MinisterLogin.class);
+            if (ministerLogin.required()) {
+                // 执行认证
+                if (token == null) {
+                    throw new Exception("用户Token为空");
+                }
+                // 获取 token 中的userId
+                Integer userId;
+                try {
+                    userId = Integer.valueOf(JWT.decode(token).getAudience().get(0));
+                } catch (JWTDecodeException j) {
+                    throw new RuntimeException("401");
+                }
+                User user = userMapper.findUserByUserId(userId);
+                if (user == null) {
+                    //用户不存在
+                    return false;
+                }
+                //此处还需要检查用户权限
+                if(user.getDepartmentId()<=2){
+                    //将请求中带有的token与数据库中的token进行比较
+                    String trueToken = tokenMapper.findTokenByUserId(userId);
+                    if (trueToken.equals(token)) {
+                        return true;
+                    } else {
+                        throw new Exception("用户权限不足");
+                    }
+                }else{
+                    return false;
+                }
+
+
+            }
+        }
         return true;
     }
 
