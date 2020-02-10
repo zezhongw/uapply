@@ -33,4 +33,5 @@
         SET interview_pass=0
         WHERE user_id=#{userId,jdbcType=INTEGER} AND department_id=#{departmentId,jdbcType=INTEGER}
     </update>
+
 </mapper>

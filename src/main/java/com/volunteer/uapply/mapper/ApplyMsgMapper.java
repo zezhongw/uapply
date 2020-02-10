@@ -1,5 +1,6 @@
 package com.volunteer.uapply.mapper;
 
+import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -17,9 +18,9 @@ public interface ApplyMsgMapper {
 
     User GetUserByUserId(Integer userId);
 
-    List<User> listUserUnSecondInterview(Integer departmentId);
+    List<ApplyPO> listApplyPOUnSecondInterview(Integer departmentId);
 
-    List<User> listUserSecondedInterviewed(Integer departmentId);
+    List<ApplyPO> listApplyPOSecondedInterviewed(Integer departmentId);
 
     List<User> listUserEnrollMembers(@Param("ids") Integer[] userId,@Param("departmentId") Integer departmentId);
 
