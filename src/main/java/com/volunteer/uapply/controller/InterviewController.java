@@ -2,6 +2,7 @@ package com.volunteer.uapply.controller;
 
 import com.volunteer.uapply.annotation.MinisterLogin;
 import com.volunteer.uapply.annotation.UserLogin;
+import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
@@ -92,7 +93,7 @@ public class InterviewController {
      */
     @UserLogin
     @GetMapping("/second/un")
-    public UniversalResponseBody<List<User>> UnSecondInterview(Integer departmentId){
+    public UniversalResponseBody<List<ApplyPO>> UnSecondInterview(Integer departmentId){
         return secondInterviewService.listUserUnSecondInterview(departmentId);
     }
 
@@ -103,7 +104,7 @@ public class InterviewController {
      */
     @UserLogin
     @GetMapping("/second/finish")
-    public UniversalResponseBody<List<User>> SecondedInterviewed(Integer departmentId){
+    public UniversalResponseBody<List<ApplyPO>> SecondedInterviewed(Integer departmentId){
         return secondInterviewService.listUserSecondedInterviewed(departmentId);
     }
 
