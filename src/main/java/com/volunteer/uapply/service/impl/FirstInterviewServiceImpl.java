@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * @author 武泽中
  * @version 1.00
- * @date 2020/2/8/17:51
+ * @date 2020/2/10/10:18
  */
 @Slf4j
 @Service
@@ -54,20 +54,20 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
      * @return
      */
     @Override
-    public UniversalResponseBody<List<User>> SelectUnfirstInterview(Integer departmentId) {
-        List<User> allunfirstInterview=interviewMsgMapper.SelectUnfirstInterviewByDepartmentId(departmentId);
-        List<User> unfirstInterview=new LinkedList<>();
-        for(User user :allunfirstInterview){
-            List<User> temp=interviewMsgMapper.JudgeUnfirstInterview(user.getUserId());
+    public UniversalResponseBody<List<ApplyPO>> SelectUnfirstInterview(Integer departmentId) {
+        List<ApplyPO> allunfirstInterview=interviewMsgMapper.SelectUnfirstInterviewByDepartmentId(departmentId);
+        List<ApplyPO> unfirstInterview=new LinkedList<>();
+        for(ApplyPO applypo :allunfirstInterview){
+            List<User> temp=interviewMsgMapper.JudgeUnfirstInterview(applypo.getUserId());
             if(temp.size()==2) {
                 continue;
             } else if(temp.size()==1){
                 if(!departmentId.equals(temp.get(0).getDepartmentId())) {
-                    unfirstInterview.add(user);
+                    unfirstInterview.add(applypo);
                 }
             }
             else if(temp==null){
-                unfirstInterview.add(user);
+                unfirstInterview.add(applypo);
             }
         }
         return new UniversalResponseBody<>(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg(),unfirstInterview);
@@ -79,9 +79,9 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
      * @return
      */
     @Override
-    public UniversalResponseBody<List<User>> SelectFirstInterviewed(Integer departmentId) {
-        List<User> users=interviewMsgMapper.SelectFirstInterviewed(departmentId);
-        return new UniversalResponseBody<>(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg(),users);
+    public UniversalResponseBody<List<ApplyPO>> SelectFirstInterviewed(Integer departmentId) {
+        List<ApplyPO> applyPOs=interviewMsgMapper.SelectFirstInterviewed(departmentId);
+        return new UniversalResponseBody<>(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg(),applyPOs);
     }
 
     /**

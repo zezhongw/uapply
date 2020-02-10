@@ -1,7 +1,9 @@
 package com.volunteer.uapply.controller;
 
 import com.volunteer.uapply.annotation.UserLoginToken;
+import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.User;
+import com.volunteer.uapply.service.FirstInterviewService;
 import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,10 @@ public class InterviewController {
     @Qualifier("secondInterviewServiceImpl")
     private SecondInterviewService secondInterviewService;
 
+    @Autowired
+    @Qualifier("firstInterviewServiceImpl")
+    private FirstInterviewService firstInterviewService;
+
     /**
      * 查询面试状态
      * @param userId
@@ -43,8 +49,8 @@ public class InterviewController {
      */
     @UserLoginToken
     @GetMapping("/first/un")
-    public UniversalResponseBody<List<User>> UnFirstInterview(Integer departmentId){
-        return null;
+    public UniversalResponseBody<List<ApplyPO>> UnFirstInterview(Integer departmentId){
+        return firstInterviewService.SelectUnfirstInterview(departmentId);
     }
 
     /**
@@ -54,8 +60,8 @@ public class InterviewController {
      */
     @UserLoginToken
     @GetMapping("/first/finish")
-    public UniversalResponseBody<List<User>> FirstInterviewed(Integer departmentId){
-        return null;
+    public UniversalResponseBody<List<ApplyPO>> FirstInterviewed(Integer departmentId){
+        return firstInterviewService.SelectFirstInterviewed(departmentId);
     }
 
     /**
@@ -67,7 +73,7 @@ public class InterviewController {
     @UserLoginToken
     @PostMapping("/first/eliminate")
     public UniversalResponseBody FirstEliminate(Integer userId,Integer departmentId){
-        return null;
+        return firstInterviewService.EliminateFirst(userId,departmentId);
     }
 
 
