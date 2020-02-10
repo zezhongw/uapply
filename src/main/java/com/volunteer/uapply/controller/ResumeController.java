@@ -1,6 +1,6 @@
 package com.volunteer.uapply.controller;
 
-import com.volunteer.uapply.annotation.UserLoginToken;
+import com.volunteer.uapply.annotation.UserLogin;
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
 import com.volunteer.uapply.service.impl.FirstInterviewServiceImpl;
@@ -28,7 +28,7 @@ public class ResumeController {
      * @return
      */
     @PostMapping("/apply")
-    @UserLoginToken
+    @UserLogin
     public UniversalResponseBody applyMessage(ApplyPO applyPO){
         return null;
     }
@@ -41,7 +41,7 @@ public class ResumeController {
      * @return
      */
     @GetMapping("/view")
-    @UserLoginToken
+    @UserLogin
     public UniversalResponseBody<ApplyPO> managerResume(@RequestParam("departmentId")  Integer departmentId, @RequestParam("userTel") String userTel){
         return null;
     }
@@ -52,7 +52,7 @@ public class ResumeController {
      * @return
      */
     @PostMapping("/score")
-    @UserLoginToken
+    @UserLogin
     public UniversalResponseBody managerScore(InterviewPO interviewPO){
         return firstInterviewService.scoreResume(interviewPO);
     }

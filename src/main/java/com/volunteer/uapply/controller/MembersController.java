@@ -1,7 +1,8 @@
 package com.volunteer.uapply.controller;
 
 
-import com.volunteer.uapply.annotation.UserLoginToken;
+import com.volunteer.uapply.annotation.MinisterLogin;
+import com.volunteer.uapply.annotation.UserLogin;
 import com.volunteer.uapply.pojo.dto.EnrollMembersDTO;
 import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.service.impl.ManagerServiceImpl;
@@ -38,7 +39,7 @@ public class MembersController {
      * @param enrollMembersDTO
      * @return
      */
-    @UserLoginToken
+    @MinisterLogin
     @PostMapping("/enroll")
     public UniversalResponseBody EnrollMembers(@RequestBody EnrollMembersDTO enrollMembersDTO){
         return secondInterviewService.EnrollMembers(enrollMembersDTO.getUserId(),enrollMembersDTO.getDepartmentId());
@@ -52,7 +53,7 @@ public class MembersController {
      * @param pageSize
      * @return
      */
-    @UserLoginToken
+    @UserLogin
     @PostMapping("/members")
     public UniversalResponseBody FindMembers(@RequestParam("departmentId")Integer departmentId, @RequestParam("pageNum")Integer pageNum, @RequestParam("pageSize")Integer pageSize){
         return null;
