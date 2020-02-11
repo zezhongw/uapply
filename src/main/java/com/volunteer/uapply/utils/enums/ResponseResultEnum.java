@@ -21,6 +21,8 @@ public enum ResponseResultEnum {
      */
     USER_LOGIN_ERROR(2002,"账号不存在或密码错误"),
     USER_INSERT_FAILED(2000,"添加用户失败"),
+    USER_NO_TOKEN(2001,"用户token为空"),
+    USER_NO_PERMISSION(2003,"用户权限不足"),
     /**
      * 面试状态 3000-3999
      */

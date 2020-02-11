@@ -25,11 +25,11 @@ public interface FirstInterviewService {
     /**
      * 查询待一面
      */
-    UniversalResponseBody<List<User>> SelectUnfirstInterview(Integer departmentId);
+    UniversalResponseBody<List<ApplyPO>> SelectUnfirstInterview(Integer departmentId);
     /**
      * 查询已一面
      */
-    UniversalResponseBody<List<User>> SelectFirstInterviewed(Integer departmentId);
+    UniversalResponseBody<List<ApplyPO>> SelectFirstInterviewed(Integer departmentId);
 
     /**
      * 淘汰一面

@@ -11,7 +11,6 @@ import lombok.Data;
  */
 @Data
 public class ApplyPO {
-
     /**
      * 用户id
      */

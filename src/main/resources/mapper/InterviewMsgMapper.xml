@@ -10,8 +10,8 @@
         #{note,jdbcType=VARCHAR},#{overview,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR})
     </insert>
 
-    <select id="SelectUnfirstInterviewByDepartmentId" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.User">
-        SELECT user_id,user_name,user_tel
+    <select id="SelectUnfirstInterviewByDepartmentId" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.ApplyPO">
+        SELECT user_id,user_name,sex,user_tel,user_stunum,user_qq,college,profession,firstIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id
         FROM applymessage
         WHERE firstIntention_id=#{departmentId,jdbcType=INTEGER} OR secondIntention_id=#{departmentId,jdbcType=INTEGER}
     </select>
@@ -22,10 +22,14 @@
         WHERE user_id=#{userId,jdbcType=INTEGER}
     </select>
 
-    <select id="SelectFirstInterviewed" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.User">
-        SELECT user_id,department_id
-        FROM interviewmessge
-        WHERE department_id=#{departmentId,jdbcType=INTEGER}
+    <select id="SelectFirstInterviewed" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.ApplyPO">
+        SELECT user_id,user_name,sex,user_tel,user_stunum,user_qq,college,profession,firstIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id
+        FROM applymessage
+        WHERE user_id in (
+            SELECT user_id
+            FROM  interviewmessge
+            WHERE department_id=#{departmentId,jdbcType=INTEGER}
+        )
     </select>
 
     <update id="EliminateFirst" >
@@ -33,8 +37,9 @@
         SET interview_pass=0
         WHERE user_id=#{userId,jdbcType=INTEGER} AND department_id=#{departmentId,jdbcType=INTEGER}
     </update>
-
+  
     <select id="findInterviewMsgByUserId" resultType="com.volunteer.uapply.pojo.InterviewPO">
         SELECT * FROM interviewmessage WHERE user_id=#{userId,jdbcType=INTEGER}
     </select>
+
 </mapper>

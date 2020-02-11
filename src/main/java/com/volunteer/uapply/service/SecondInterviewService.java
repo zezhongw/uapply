@@ -1,6 +1,6 @@
 package com.volunteer.uapply.service;
 
-import com.volunteer.uapply.pojo.User;
+import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 
 import java.util.List;
@@ -20,9 +20,9 @@ public interface SecondInterviewService {
      */
     UniversalResponseBody SecondCheck(String userTel, Integer departmentId);
 
-    UniversalResponseBody<List<User>> listUserUnSecondInterview(Integer departmentId);
+    UniversalResponseBody<List<ApplyPO>> listUserUnSecondInterview(Integer departmentId);
 
-    UniversalResponseBody<List<User>> listUserSecondedInterviewed(Integer departmentId);
+    UniversalResponseBody<List<ApplyPO>> listUserSecondedInterviewed(Integer departmentId);
 
     UniversalResponseBody EnrollMembers(Integer[] userId,Integer departmentId);
 

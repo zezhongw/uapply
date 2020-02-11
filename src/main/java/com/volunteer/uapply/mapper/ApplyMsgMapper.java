@@ -19,9 +19,9 @@ public interface ApplyMsgMapper {
 
     User GetUserByUserId(Integer userId);
 
-    List<User> listUserUnSecondInterview(Integer departmentId);
+    List<ApplyPO> listApplyPOUnSecondInterview(Integer departmentId);
 
-    List<User> listUserSecondedInterviewed(Integer departmentId);
+    List<ApplyPO> listApplyPOSecondedInterviewed(Integer departmentId);
 
     List<User> listUserEnrollMembers(@Param("ids") Integer[] userId,@Param("departmentId") Integer departmentId);
 
