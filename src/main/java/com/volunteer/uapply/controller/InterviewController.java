@@ -1,8 +1,14 @@
 package com.volunteer.uapply.controller;
 
+
+import com.volunteer.uapply.annotation.UserLoginToken;
+
 import com.volunteer.uapply.annotation.MinisterLogin;
 import com.volunteer.uapply.annotation.UserLogin;
+
+import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.User;
+import com.volunteer.uapply.service.FirstInterviewService;
 import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +33,10 @@ public class InterviewController {
     @Qualifier("secondInterviewServiceImpl")
     private SecondInterviewService secondInterviewService;
 
+    @Autowired
+    @Qualifier("firstInterviewServiceImpl")
+    private FirstInterviewService firstInterviewService;
+
     /**
      * 查询面试状态
      * @param userId
@@ -44,8 +54,8 @@ public class InterviewController {
      */
     @UserLogin
     @GetMapping("/first/un")
-    public UniversalResponseBody<List<User>> UnFirstInterview(Integer departmentId){
-        return null;
+    public UniversalResponseBody<List<ApplyPO>> UnFirstInterview(Integer departmentId){
+        return firstInterviewService.SelectUnfirstInterview(departmentId);
     }
 
     /**
@@ -55,8 +65,8 @@ public class InterviewController {
      */
     @UserLogin
     @GetMapping("/first/finish")
-    public UniversalResponseBody<List<User>> FirstInterviewed(Integer departmentId){
-        return null;
+    public UniversalResponseBody<List<ApplyPO>> FirstInterviewed(Integer departmentId){
+        return firstInterviewService.SelectFirstInterviewed(departmentId);
     }
 
     /**
@@ -68,7 +78,7 @@ public class InterviewController {
     @MinisterLogin
     @PostMapping("/first/eliminate")
     public UniversalResponseBody FirstEliminate(Integer userId,Integer departmentId){
-        return null;
+        return firstInterviewService.EliminateFirst(userId,departmentId);
     }
 
 
@@ -92,7 +102,7 @@ public class InterviewController {
      */
     @UserLogin
     @GetMapping("/second/un")
-    public UniversalResponseBody<List<User>> UnSecondInterview(Integer departmentId){
+    public UniversalResponseBody<List<ApplyPO>> UnSecondInterview(Integer departmentId){
         return secondInterviewService.listUserUnSecondInterview(departmentId);
     }
 
@@ -103,7 +113,7 @@ public class InterviewController {
      */
     @UserLogin
     @GetMapping("/second/finish")
-    public UniversalResponseBody<List<User>> SecondedInterviewed(Integer departmentId){
+    public UniversalResponseBody<List<ApplyPO>> SecondedInterviewed(Integer departmentId){
         return secondInterviewService.listUserSecondedInterviewed(departmentId);
     }
 
