@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ccc582e-73e9-4917-8dec-5c7202a7fb0e" name="Default Changelist" comment="第一次push,完成简历查看，用户报名，查询面试状态">
+    <list default="true" id="1ccc582e-73e9-4917-8dec-5c7202a7fb0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/InterviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/InterviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ApplyMsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ApplyMsgMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +171,8 @@
       <workItem from="1581220395133" duration="908000" />
       <workItem from="1581222121298" duration="2759000" />
       <workItem from="1581224915640" duration="27907000" />
-      <workItem from="1581307347458" duration="1588000" />
+      <workItem from="1581307347458" duration="3113000" />
+      <workItem from="1581393974086" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="第一次push,完成简历查看，用户报名，查询面试状态">
       <created>1581264019647</created>
@@ -234,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581309156205</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="第一次push,完成简历查看，用户报名，查询面试状态">
+      <created>1581309822403</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581309822403</updated>
+    </task>
+    <task id="LOCAL-00011" summary="第一次push,完成简历查看，用户报名，查询面试状态">
+      <created>1581310802705</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1581310802705</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,14 +276,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1581143267651" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581309306065">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581396473822">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581309306065" />
-    <state x="152" y="60" key="DiffContextDialog" timestamp="1581309233062">
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581396473822" />
+    <state x="152" y="60" key="DiffContextDialog" timestamp="1581310816561">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="152" y="60" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1581309233062" />
+    <state x="152" y="60" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1581310816561" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1581239189288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -315,14 +332,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581225553905" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1581309170089">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1581310821370">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581309170089" />
-    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581307367735">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581310821370" />
+    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581395940392">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1581307367735" />
+    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1581395940392" />
     <state x="371" y="155" key="git4idea.merge.GitPullDialog" timestamp="1581240026335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
