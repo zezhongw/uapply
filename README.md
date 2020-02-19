@@ -4,7 +4,7 @@
 
 ### 微信小程序
 
-#### 1.登录
+#### 1.登录(已完成)
 
 前端传进code，调用微信的接口，得到回应，插入数据库，生成唯一的userId，以及token然后返回给前端。
 
@@ -24,25 +24,29 @@
 
 前端传进来用户的电话，根据电话去查usermessage里面的tel、sex、profession、college,然后根据电话去applymessage里面查用户的爱好，自我介绍组装成applymessage对象返回给前端。
 
-#### 6.	简历打分
+#### 6.	简历打分(已完成)
 
 将前端传过来的interviewmessage直接插入数据库，然后根据departmentId去查是第一志愿还是第二志愿，并修改相应的status
 
+#### 7.二面签到
+
+根据UserId将secondDepartmentId设置为departmentid
+
 ### PC端
 
-#### 1. 登录
+#### 1. 登录(已完成)
 
 检查有无token，前端传进来userTel和userPwd，去usermessage里面查对不对，如果对了，去token数据库里面查，返回token。
 
-#### 2.管理员激活
+#### 2.管理员激活(已完成)
 
-前端传进来user的信息和激活码，根据部门ID对比激活码，激活码一致，将信息插入usermessage数据库
+前端传进来user的信息和激活码，根据部门ID对比激活码，激活码一致，将信息插入usermessage数据库  
 
 #### 3.	查看我的部员
 
 在usermessage里面，根据departmentId和premessionId查询
 
-#### 4.	发送录取通知
+#### 4.	发送录取通知(已完成)
 
 用数组传进来电话或者userId，然后遍历数组，查询姓名，然后发送短信
 
@@ -50,7 +54,7 @@
 
 根据部门id和面试的status，返回applymessage对象
 
-#### 6.	发送面试短信
+#### 6.	发送面试短信(已完成)
 
 用数组传进来电话或者userId，然后遍历数组，查询姓名，然后发送短信
 
@@ -70,7 +74,7 @@
 
 根据部门二面，查询未面试的，然后根据userid遍历查询，各个部门一面的评价(评级以及各项评分)，组装成SearchInterview对象返回
 
-#### 11.发送二面通知短信
+#### 11.发送二面通知短信(已完成)
 
 用数组传进来电话或者userId，然后遍历数组，查询姓名，然后发送短信
 
@@ -85,7 +89,6 @@
 #### 14.淘汰
 
 更改status
-
 
 ## 数据库
 
@@ -104,6 +107,7 @@
 ### wxresponse(微信返回结果数据表)
 
 此表存储调用微信接口返回的openid，session_key等一系列数据
+
 * user_id 用户全局唯一id
 * openid
 * session_key
@@ -126,6 +130,7 @@
 * user_id
 * user_name
 * user_tel
+* user_sex 性别
 * userStu_num 用户学号
 * user_qq 用户qq
 * user_college 学院
