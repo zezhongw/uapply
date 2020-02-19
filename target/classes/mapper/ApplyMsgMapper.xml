@@ -7,34 +7,28 @@
     </update>
 
     <select id="GetUserByUserId" resultType="com.volunteer.uapply.pojo.User">
-        SELECT user_id,user_name,user_tel,user_stunum,user_qq,college,profession,firsiIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id
+        SELECT user_id,user_name,user_tel,user_stunum,user_qq,college,profession,firstIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id
         FROM applymessage
-        WHERE user_id = #{userd,jdbcType=VARCHAR}
+        WHERE user_id = #{userd,jdbcType=INTEGER}
     </select>
 
+    <!--user_id,sex,user_name,user_tel,user_stunum,user_qq,college,profession,
+        firstIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id-->
+    <select id="listApplyPOUnSecondInterview" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.ApplyPO">
+        SELECT a.*
+        FROM applymessage as a, interviewmessage as i
+        WHERE a.user_id = i.user_id
+        AND i.interview_pass = 1
+        AND i.department_id = #{departmentId,jdbcType=INTEGER}
+    </select>
 
-    <select id="listUserUnSecondInterview" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.User">
-        SELECT user_id,user_name,user_tel,permission_id,department_id
-        FROM usermessage
-        WHERE user_id in(
-            SELECT user_id
-            FROM applymessage
-            WHERE fisrt_interview = 1
-            AND second_interview = 0
-            AND secondDepartment_id = #{departmentId,jdbcType=INTEGER}
-        )
+    <select id="listApplyPOSecondedInterviewed" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.ApplyPO">
+        SELECT user_id,sex,user_name,user_tel,user_stunum,user_qq,college,profession,
+        firstIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id
+        FROM applymessage
+        WHERE secondDepartment_id = #{departmentId,jdbcType=INTEGER}
     </select>
-    <select id="listUserSecondedInterviewed" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.User">
-        SELECT user_id,user_name,user_tel,permission_id,department_id
-        FROM usermessage
-        WHERE user_id in(
-            SELECT user_id
-            FROM applymessage
-            WHERE fisrt_interview = 1
-            AND second_interview = 1
-            AND secondDepartment_id = #{departmentId,jdbcType=INTEGER}
-        )
-    </select>
+
     <update id="SecondEliminate" parameterType="java.lang.Integer" >
         UPDATE applymessage
         SET secondDepartment_id = -1
@@ -67,6 +61,10 @@
     <select id="findApplyMsgByUserTel" resultType="com.volunteer.uapply.pojo.ApplyPO">
         SELECT * FROM applymessage
         WHERE user_tel = #{usertel,jdbcType=VARCHAR}
+    </select>
+
+    <select id="findApplyMsgByUserId" resultType="com.volunteer.uapply.pojo.ApplyPO">
+        SELECT * FROM applymessage WHERE user_id=#{userId,jdbcType=INTEGER}
     </select>
 </mapper>
 

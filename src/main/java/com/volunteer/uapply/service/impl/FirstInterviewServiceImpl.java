@@ -17,12 +17,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author 郭树耸
- * @version 1.0
- * @date 2020/2/8 9:26
- */
-
-/**
  * @author 武泽中
  * @version 1.00
  * @date 2020/2/10/10:18

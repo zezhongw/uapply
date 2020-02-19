@@ -8,13 +8,12 @@ package com.volunteer.uapply.utils.enums;
  */
 public enum PermissionIdEnum {
 
-    SUP_MANGER(0,"超级管理员"),
-    CAPTAIN(1,"队长"),
-    MINISTER(2,"部长"),
-    DEPUTY_MINISTER(3,"副部长"),
-    STAFF(4,"部员"),
-    PENDING_INTERVIEW(5,"待面试人员"),
-    PENDING_APPLY(6,"待报名人员/默认");
+    SUP_MANGER(0, "超级管理员"),
+    CAPTAIN(1, "队长"),
+    MINISTER(2, "部长"),
+    DEPUTY_MINISTER(3, "副部长"),
+    STAFF(4, "部员"),
+    PENDING_APPLY(5, "已经报名");
 
     /**
      * 权限id

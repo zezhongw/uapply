@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
+    <list default="true" id="33dafe76-5bf6-40bc-af51-00167674868c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/InterviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/InterviewController.java" afterDir="false" />
+
     <list default="true" id="1ccc582e-73e9-4917-8dec-5c7202a7fb0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/InterviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/InterviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ApplyMsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ApplyMsgMapper.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +44,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Wandou\Repository" />
-        <option name="mavenHome" value="D:/Wandou/apache-maven-3.6.2" />
-        <option name="userSettingsFile" value="D:\Wandou\apache-maven-3.6.2\conf\settings.xml" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -50,7 +54,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1XVscZz3OEoi7kiLXGqaQiLB6Og" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -60,6 +64,7 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -78,7 +83,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunManager" selected="JUnit.UapplyApplicationTests">
     <configuration name="UapplyApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -112,6 +117,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UapplyApplicationTests.testBuilderControllersApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="uapply" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.volunteer.uapply.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.volunteer.uapply" />
+      <option name="MAIN_CLASS_NAME" value="com.volunteer.uapply.UapplyApplicationTests" />
+      <option name="METHOD_NAME" value="testBuilderControllersApi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UapplyApplicationTests.viewResume" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="uapply" />
       <extension name="coverage">
@@ -137,9 +158,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UapplyApplicationTests" />
+        <item itemvalue="JUnit.UapplyApplicationTests.testBuilderControllersApi" />
         <item itemvalue="JUnit.UapplyApplicationTests.viewResume" />
         <item itemvalue="JUnit.UapplyApplicationTests.applyMessageTest" />
-        <item itemvalue="JUnit.UapplyApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +182,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1ccc582e-73e9-4917-8dec-5c7202a7fb0e" name="Default Changelist" comment="" />
+      <changelist id="33dafe76-5bf6-40bc-af51-00167674868c" name="Default Changelist" comment="完善Token登录模块" />
       <created>1581142677011</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -171,8 +193,20 @@
       <workItem from="1581220395133" duration="908000" />
       <workItem from="1581222121298" duration="2759000" />
       <workItem from="1581224915640" duration="27907000" />
+
+      <workItem from="1581307347458" duration="1588000" />
+      <workItem from="1581339131221" duration="2070000" />
+      <workItem from="1581392040039" duration="170000" />
+      <workItem from="1581475017963" duration="189000" />
+      <workItem from="1581848359390" duration="347000" />
+      <workItem from="1581996761840" duration="1543000" />
+      <workItem from="1582002106258" duration="6063000" />
+      <workItem from="1582025326250" duration="1582000" />
+      <workItem from="1582069854479" duration="718000" />
+
       <workItem from="1581307347458" duration="3113000" />
       <workItem from="1581393974086" duration="1955000" />
+
     </task>
     <task id="LOCAL-00001" summary="第一次push,完成简历查看，用户报名，查询面试状态">
       <created>1581264019647</created>
@@ -237,6 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581309156205</updated>
     </task>
+
+    <task id="LOCAL-00010" summary="项目数据库重构">
+      <created>1582070461431</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582070461431</updated>
+    </task>
+    <task id="LOCAL-00011" summary="项目数据库重构">
+      <created>1582070517645</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582070517645</updated>
+
     <task id="LOCAL-00010" summary="第一次push,完成简历查看，用户报名，查询面试状态">
       <created>1581309822403</created>
       <option name="number" value="00010" />
@@ -250,6 +299,7 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1581310802705</updated>
+
     </task>
     <option name="localTasksCounter" value="12" />
     <servers />
@@ -259,8 +309,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="第一次push,完成简历查看，用户报名，查询面试状态" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次push,完成简历查看，用户报名，查询面试状态" />
+    <MESSAGE value="项目数据库重构" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目数据库重构" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -276,7 +328,23 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1581143267651" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581396473822">
+
+    <state x="587" y="310" width="427" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582007509717">
+      <screen x="0" y="0" width="1603" height="902" />
+    </state>
+    <state x="587" y="310" width="427" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1603.902@0.0.1603.902" timestamp="1582007509717" />
+    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1582070513055">
+      <screen x="0" y="0" width="1603" height="902" />
+    </state>
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581309306065" />
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1603.902@0.0.1603.902" timestamp="1582070513055" />
+    <state x="152" y="60" key="DiffContextDialog" timestamp="1581309233062">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="152" y="60" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1581309233062" />
+    <state x="543" y="147" key="FileChooserDialogImpl" timestamp="1581392166737">
+      <screen x="0" y="0" width="1603" height="902" />
+ <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1581396473822">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581396473822" />
@@ -286,24 +354,30 @@
     <state x="152" y="60" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1581310816561" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1581239189288">
       <screen x="0" y="0" width="1366" height="728" />
+
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581239189288" />
-    <state width="1323" height="17" key="GridCell.Tab.0.bottom" timestamp="1581265152222">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="543" y="147" key="FileChooserDialogImpl/0.0.1603.902@0.0.1603.902" timestamp="1581392166737" />
+    <state width="1559" height="236" key="GridCell.Tab.0.bottom" timestamp="1582070674637">
+      <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state width="1323" height="17" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581265152222" />
-    <state width="1323" height="17" key="GridCell.Tab.0.center" timestamp="1581265152222">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1559" height="236" key="GridCell.Tab.0.bottom/0.0.1603.902@0.0.1603.902" timestamp="1582070674637" />
+    <state width="1559" height="236" key="GridCell.Tab.0.center" timestamp="1582070674636">
+      <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state width="1323" height="17" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581265152222" />
-    <state width="1323" height="17" key="GridCell.Tab.0.left" timestamp="1581265152222">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1559" height="236" key="GridCell.Tab.0.center/0.0.1603.902@0.0.1603.902" timestamp="1582070674636" />
+    <state width="1559" height="236" key="GridCell.Tab.0.left" timestamp="1582070674636">
+      <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state width="1323" height="17" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581265152222" />
-    <state width="1323" height="17" key="GridCell.Tab.0.right" timestamp="1581265152222">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1559" height="236" key="GridCell.Tab.0.left/0.0.1603.902@0.0.1603.902" timestamp="1582070674636" />
+    <state width="1559" height="236" key="GridCell.Tab.0.right" timestamp="1582070674636">
+      <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state width="1323" height="17" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581265152222" />
+    <state width="1559" height="236" key="GridCell.Tab.0.right/0.0.1603.902@0.0.1603.902" timestamp="1582070674636" />
     <state width="1306" height="29" key="GridCell.Tab.1.bottom" timestamp="1581150570432">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -328,10 +402,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="558" y="74" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1581309225904" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1581225553905">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="216" y="0" key="SettingsEditor" timestamp="1581392189207">
+      <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581225553905" />
+  <state x="216" y="0" key="SettingsEditor/0.0.1603.902@0.0.1603.902" timestamp="1581392189207" />
+    <state x="323" y="120" key="Vcs.Push.Dialog.v2" timestamp="1582070521219">
+      <screen x="0" y="0" width="1603" height="902" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581309170089" />
+    <state x="323" y="120" key="Vcs.Push.Dialog.v2/0.0.1603.902@0.0.1603.902" timestamp="1582070521219" />
+    <state x="557" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581848444832">
+      <screen x="0" y="0" width="1603" height="902" />
+    </state>
+    <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1581307367735" />
+    <state x="557" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1603.902@0.0.1603.902" timestamp="1581848444832" />
+
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1581310821370">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -340,6 +426,7 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="475" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1581395940392" />
+
     <state x="371" y="155" key="git4idea.merge.GitPullDialog" timestamp="1581240026335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
