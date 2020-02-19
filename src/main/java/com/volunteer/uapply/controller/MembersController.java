@@ -3,6 +3,7 @@ package com.volunteer.uapply.controller;
 
 import com.volunteer.uapply.annotation.MinisterLogin;
 import com.volunteer.uapply.annotation.UserLogin;
+import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.pojo.dto.EnrollMembersDTO;
 import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.service.impl.ManagerServiceImpl;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  *
@@ -48,6 +50,7 @@ public class MembersController {
 
     /**
      * 分页查询部员数据
+     *
      * @param departmentId
      * @param pageNum
      * @param pageSize
@@ -55,7 +58,7 @@ public class MembersController {
      */
     @UserLogin
     @PostMapping("/members")
-    public UniversalResponseBody FindMembers(@RequestParam("departmentId")Integer departmentId, @RequestParam("pageNum")Integer pageNum, @RequestParam("pageSize")Integer pageSize){
+    public UniversalResponseBody<List<User>> FindMembers(@RequestParam("departmentId") Integer departmentId, @RequestParam("pageNum") Integer pageNum, @RequestParam("pageSize") Integer pageSize) {
         return null;
     }
 

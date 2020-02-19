@@ -29,7 +29,7 @@ public class ApplyPO {
     /**
      * 学号
      */
-    private String userStunum;
+    private String userStuNum;
 
     /**
      * QQ

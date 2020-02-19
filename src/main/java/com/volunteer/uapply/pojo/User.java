@@ -25,6 +25,12 @@ public class User {
      */
     private String userName;
 
+
+    /**
+     * 用户性别
+     */
+    private String userSex;
+
     /**
      * 电话
      */
@@ -44,4 +50,14 @@ public class User {
      * PC端登录密码
      */
     private String userPwd;
+
+    /**
+     * 用户专业
+     */
+    private String userProfession;
+
+    /**
+     * 学院
+     */
+    private String userCollege;
 }

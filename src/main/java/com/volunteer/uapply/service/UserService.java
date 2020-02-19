@@ -13,11 +13,19 @@ public interface UserService {
 
     /**
      * 用户微信登录
+     *
      * @param code
      * @return
      * @throws Exception
      */
     UniversalResponseBody<TokenPO> userWxLogin(String code) throws Exception;
+
+    /**
+     * 根据电话查找用户
+     *
+     * @param userTel
+     * @return
+     */
     User findUserByUserTel(String userTel);
 
 }

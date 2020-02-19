@@ -85,8 +85,6 @@ class UapplyApplicationTests {
                         .setDescField("msg")//错误码描述
         );
 
-
-
         config.setDataDictionaries(
                 ApiDataDictionary.dict().setTitle("部门Id").setEnumClass(DepartmentEnum.class)
                         .setCodeField("departmentId") //字典码值字段名

@@ -32,7 +32,7 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public UniversalResponseBody FirstInterviewMessage(AliyunFisrtInterviewParam aliyunFisrtInterviewParam) throws ClientException {
-    return null;
+        return null;
     }
 
     /**
@@ -43,7 +43,6 @@ public class MessageServiceImpl implements MessageService {
      */
     @Override
     public UniversalResponseBody SecondInterviewMessage(AliyunSecondInterviewParam aliyunSecondInterviewParam) throws ClientException {
-
         return null;
     }
 
