@@ -1,76 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33dafe76-5bf6-40bc-af51-00167674868c" name="Default Changelist" comment="完善Token登录模块">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/SearchInterviewPojo.java" afterDir="false" />
+    <list default="true" id="33dafe76-5bf6-40bc-af51-00167674868c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/InterviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/InterviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/MembersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/controller/MembersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/ApplyPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/ApplyPO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/InterviewPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/InterviewPO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/dto/EnrollMembersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/pojo/dto/EnrollMembersDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/impl/FirstInterviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/impl/FirstInterviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/service/impl/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/utils/enums/PermissionIdEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/volunteer/uapply/utils/enums/PermissionIdEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/UapplyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/UapplyApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/annotation/PassToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/annotation/PassToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/annotation/ToLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/annotation/ToLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/aspect/LogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/aspect/LogAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/config/AuthenticationInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/config/AuthenticationInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/config/InterceptorConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/config/InterceptorConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/InterviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/InterviewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/InterviewDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/InterviewDataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/MembersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/MembersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/MessagesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/MessagesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/ResumeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/controller/ResumeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/ApplyMsgMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/ApplyMsgMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/InterviewMsgMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/InterviewMsgMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/ManaggerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/ManaggerMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/TokenMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/TokenMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/WxResponseMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/mapper/WxResponseMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/ApplyPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/ApplyPO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/InterviewPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/InterviewPO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/TokenPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/TokenPO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/dto/EnrollMembersDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/dto/EnrollMembersDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunEnrollParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunEnrollParam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunFisrtInterviewParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunFisrtInterviewParam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunResponseInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunResponseInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunSecondInterviewParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/AliyunSecondInterviewParam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/InviteCodeInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/InviteCodeInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/WxResponseInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/pojo/info/WxResponseInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/FirstInterviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/FirstInterviewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/ManagerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/ManagerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/ResumeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/ResumeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/SecondInterviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/SecondInterviewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/FirstInterviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/FirstInterviewServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/ManagerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/ManagerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/MessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/ResumeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/ResumeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/SecondInterviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/SecondInterviewServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/AliyunMessageUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/AliyunMessageUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/Tokenutil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/Tokenutil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/WeChatUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/WeChatUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/DepartmentEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/DepartmentEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/PermissionIdEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/PermissionIdEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/ResponseResultEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/enums/ResponseResultEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/response/UniversalResponseBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/volunteer/uapply/utils/response/UniversalResponseBody.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ApplyMsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ApplyMsgMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/InterviewMsgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/InterviewMsgMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/volunteer/uapply/UapplyApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/volunteer/uapply/UapplyApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +194,7 @@
       <workItem from="1581996761840" duration="1543000" />
       <workItem from="1582002106258" duration="6063000" />
       <workItem from="1582025326250" duration="1582000" />
-      <workItem from="1582069854479" duration="436000" />
+      <workItem from="1582069854479" duration="718000" />
     </task>
     <task id="LOCAL-00001" summary="第一次push,完成简历查看，用户报名，查询面试状态">
       <created>1581264019647</created>
@@ -326,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581309156205</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="项目数据库重构">
+      <created>1582070461431</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582070461431</updated>
+    </task>
+    <task id="LOCAL-00011" summary="项目数据库重构">
+      <created>1582070517645</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582070517645</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +283,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="第一次push,完成简历查看，用户报名，查询面试状态" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次push,完成简历查看，用户报名，查询面试状态" />
+    <MESSAGE value="项目数据库重构" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目数据库重构" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -356,11 +304,11 @@
       <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state x="587" y="310" width="427" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1603.902@0.0.1603.902" timestamp="1582007509717" />
-    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1582070429752">
+    <state x="332" y="0" key="CommitChangelistDialog2" timestamp="1582070513055">
       <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581309306065" />
-    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1603.902@0.0.1603.902" timestamp="1582070429752" />
+    <state x="332" y="0" key="CommitChangelistDialog2/0.0.1603.902@0.0.1603.902" timestamp="1582070513055" />
     <state x="152" y="60" key="DiffContextDialog" timestamp="1581309233062">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -370,26 +318,26 @@
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581239189288" />
     <state x="543" y="147" key="FileChooserDialogImpl/0.0.1603.902@0.0.1603.902" timestamp="1581392166737" />
-    <state width="1559" height="236" key="GridCell.Tab.0.bottom" timestamp="1582012154099">
+    <state width="1559" height="236" key="GridCell.Tab.0.bottom" timestamp="1582070674637">
       <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state width="1323" height="17" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581265152222" />
-    <state width="1559" height="236" key="GridCell.Tab.0.bottom/0.0.1603.902@0.0.1603.902" timestamp="1582012154099" />
-    <state width="1559" height="236" key="GridCell.Tab.0.center" timestamp="1582012154099">
+    <state width="1559" height="236" key="GridCell.Tab.0.bottom/0.0.1603.902@0.0.1603.902" timestamp="1582070674637" />
+    <state width="1559" height="236" key="GridCell.Tab.0.center" timestamp="1582070674636">
       <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state width="1323" height="17" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581265152222" />
-    <state width="1559" height="236" key="GridCell.Tab.0.center/0.0.1603.902@0.0.1603.902" timestamp="1582012154099" />
-    <state width="1559" height="236" key="GridCell.Tab.0.left" timestamp="1582012154098">
+    <state width="1559" height="236" key="GridCell.Tab.0.center/0.0.1603.902@0.0.1603.902" timestamp="1582070674636" />
+    <state width="1559" height="236" key="GridCell.Tab.0.left" timestamp="1582070674636">
       <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state width="1323" height="17" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581265152222" />
-    <state width="1559" height="236" key="GridCell.Tab.0.left/0.0.1603.902@0.0.1603.902" timestamp="1582012154098" />
-    <state width="1559" height="236" key="GridCell.Tab.0.right" timestamp="1582012154099">
+    <state width="1559" height="236" key="GridCell.Tab.0.left/0.0.1603.902@0.0.1603.902" timestamp="1582070674636" />
+    <state width="1559" height="236" key="GridCell.Tab.0.right" timestamp="1582070674636">
       <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state width="1323" height="17" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581265152222" />
-    <state width="1559" height="236" key="GridCell.Tab.0.right/0.0.1603.902@0.0.1603.902" timestamp="1582012154099" />
+    <state width="1559" height="236" key="GridCell.Tab.0.right/0.0.1603.902@0.0.1603.902" timestamp="1582070674636" />
     <state width="1306" height="29" key="GridCell.Tab.1.bottom" timestamp="1581150570432">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -419,11 +367,11 @@
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581225553905" />
     <state x="216" y="0" key="SettingsEditor/0.0.1603.902@0.0.1603.902" timestamp="1581392189207" />
-    <state x="323" y="120" key="Vcs.Push.Dialog.v2" timestamp="1582070484539">
+    <state x="323" y="120" key="Vcs.Push.Dialog.v2" timestamp="1582070521219">
       <screen x="0" y="0" width="1603" height="902" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581309170089" />
-    <state x="323" y="120" key="Vcs.Push.Dialog.v2/0.0.1603.902@0.0.1603.902" timestamp="1582070484539" />
+    <state x="323" y="120" key="Vcs.Push.Dialog.v2/0.0.1603.902@0.0.1603.902" timestamp="1582070521219" />
     <state x="557" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581848444832">
       <screen x="0" y="0" width="1603" height="902" />
     </state>

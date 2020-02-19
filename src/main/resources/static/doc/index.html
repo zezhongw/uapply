@@ -7,7 +7,7 @@
 	<title>API Reference</title>
 	<link rel="stylesheet"
 		  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
-	<link rel="stylesheet" href="AllInOne.css?v=1582008423009"/>
+	<link rel="stylesheet" href="AllInOne.css?v=1582070685635"/>
 	<script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.js"></script>
 </head>
 <body class="book toc2 toc-left">
@@ -21,10 +21,11 @@
 					<li><a href="#_1_2_待一面">1.2.&nbsp;待一面</a></li>
 					<li><a href="#_1_3_已经一面">1.3.&nbsp;已经一面</a></li>
 					<li><a href="#_1_4_淘汰一面人员">1.4.&nbsp;淘汰一面人员</a></li>
-					<li><a href="#_1_5_二面签到">1.5.&nbsp;二面签到</a></li>
-					<li><a href="#_1_6_待二面">1.6.&nbsp;待二面</a></li>
-					<li><a href="#_1_7_已经二面">1.7.&nbsp;已经二面</a></li>
-					<li><a href="#_1_8_淘汰二面人员">1.8.&nbsp;淘汰二面人员</a></li>
+					<li><a href="#_1_5_通过一面人员">1.5.&nbsp;通过一面人员</a></li>
+					<li><a href="#_1_6_二面签到">1.6.&nbsp;二面签到</a></li>
+					<li><a href="#_1_7_待二面">1.7.&nbsp;待二面</a></li>
+					<li><a href="#_1_8_已经二面">1.8.&nbsp;已经二面</a></li>
+					<li><a href="#_1_9_淘汰二面人员">1.9.&nbsp;淘汰二面人员</a></li>
 				</ul>
 			</li>
 			<li><a class="dd" href="#_面试/报名数据">2.&nbsp;面试/报名数据</a>
@@ -152,7 +153,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/status?userId=992</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/status?userId=819</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -195,8 +196,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":589,
-	"msg":"3ufhca",
+	"code":598,
+	"msg":"f0wj1m",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -281,7 +282,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/first/un?departmentId=573</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/first/un?departmentId=876</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -403,23 +404,23 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":211,
-	"msg":"kzleu7",
+	"code":157,
+	"msg":"pn8gs9",
 	"data":[
 		{
-			"userId":25,
-			"sex":"w0gb6q",
-			"userName":"文.姚",
-			"userStuNum":"tvj9ew",
-			"userQq":"zyn5kf",
-			"userTel":"slk9tx",
-			"profession":"mpvrcx",
-			"college":"6c7u4x",
-			"firstIntentionId":220,
-			"secondIntentionId":295,
-			"userHobby":"h36nek",
-			"userIntroduction":"r6bax1",
-			"secondDepartmentId":853
+			"userId":752,
+			"sex":"dv8d48",
+			"userName":"文轩.赵",
+			"userStuNum":"o0heig",
+			"userQq":"fkxhs2",
+			"userTel":"7un1v2",
+			"profession":"sphtfe",
+			"college":"4rdwgz",
+			"firstIntentionId":662,
+			"secondIntentionId":275,
+			"userHobby":"dod4ke",
+			"userIntroduction":"5z57ly",
+			"secondDepartmentId":703
 		}
 	]
 }</pre>
@@ -503,7 +504,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/first/finish?departmentId=497</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/first/finish?departmentId=680</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -744,40 +745,40 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":796,
-	"msg":"7ev39r",
+	"code":402,
+	"msg":"b7gknj",
 	"data":[
 		{
-			"userId":808,
-			"userSex":"a6l6bd",
-			"userTel":"dl7v5v",
+			"userId":256,
+			"userSex":"zb3zc8",
+			"userTel":"yjqda6",
 			"myInterview":{
-				"userId":713,
-				"departmentId":312,
-				"userCharacter":"zw6xex",
-				"paramScore1":259,
-				"paramScore2":271,
-				"paramScore3":411,
-				"paramScore4":592,
-				"paramScore5":165,
-				"paramScore6":764,
-				"note":"jv0wes",
+				"userId":252,
+				"departmentId":188,
+				"userCharacter":"c25z38",
+				"paramScore1":422,
+				"paramScore2":105,
+				"paramScore3":578,
+				"paramScore4":104,
+				"paramScore5":974,
+				"paramScore6":401,
+				"note":"qmyfef",
 				"overview":"ABCD",
-				"userName":"文.姚"
+				"userName":"文轩.赵"
 			},
 			"elseInterview":{
-				"userId":32,
-				"departmentId":779,
-				"userCharacter":"wzn89w",
-				"paramScore1":304,
-				"paramScore2":369,
-				"paramScore3":125,
-				"paramScore4":475,
-				"paramScore5":787,
-				"paramScore6":268,
-				"note":"dcf9aj",
+				"userId":783,
+				"departmentId":169,
+				"userCharacter":"9krwhf",
+				"paramScore1":691,
+				"paramScore2":739,
+				"paramScore3":96,
+				"paramScore4":851,
+				"paramScore5":924,
+				"paramScore6":59,
+				"note":"bckj2m",
 				"overview":"ABCD",
-				"userName":"文.姚"
+				"userName":"文轩.赵"
 			}
 		}
 	]
@@ -869,7 +870,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/interview/first/eliminate  --data 'userId=917&departmentId=918'</pre>
+						<pre>curl -X POST -i http://localhost:8080/interview/first/eliminate  --data 'userId=430&departmentId=176'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -912,8 +913,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":143,
-	"msg":"mx2ind",
+	"code":243,
+	"msg":"ncouya",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -921,8 +922,144 @@
 					</div>
 				</div>
 			</div>
-			<div class="sect2"><h3 id="_1_5_二面签到"><a class="anchor" href="#_1_5_二面签到"></a><a class="link"
-																							 href="#_1_5_二面签到">1.5.&nbsp;二面签到</a>
+			<div class="sect2"><h3 id="_1_5_通过一面人员"><a class="anchor" href="#_1_5_通过一面人员"></a><a class="link"
+																								 href="#_1_5_通过一面人员">1.5.&nbsp;通过一面人员</a>
+			</h3>
+				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/interview/first/pass"
+																  class="bare">&nbsp;http://localhost:8080/interview/first/pass</a>
+				</p></div>
+				<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
+				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
+				</p></div>
+				<div class="paragraph"><p><strong>Description:</strong>&nbsp;通过一面人员</p></div>
+				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Header</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
+							credentials(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Parameter</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content">
+						<pre>curl -X POST -i http://localhost:8080/interview/first/pass  --data 'userId=20&departmentId=284'</pre>
+					</div>
+				</div>
+				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Field</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>{
+	"code":565,
+	"msg":"fdih5i",
+	"data":{
+		"waring":"You may have used non-display generics."
+	}
+}</pre>
+					</div>
+				</div>
+			</div>
+			<div class="sect2"><h3 id="_1_6_二面签到"><a class="anchor" href="#_1_6_二面签到"></a><a class="link"
+																							 href="#_1_6_二面签到">1.6.&nbsp;二面签到</a>
 			</h3>
 				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/interview/second/check"
 																  class="bare">&nbsp;http://localhost:8080/interview/second/check</a>
@@ -1005,7 +1142,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/interview/second/check  --data 'userTel=7wjdun&departmentId=439'</pre>
+						<pre>curl -X POST -i http://localhost:8080/interview/second/check  --data 'userTel=mj3t70&departmentId=442'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -1048,8 +1185,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":119,
-	"msg":"sudfvt",
+	"code":698,
+	"msg":"1n392v",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -1057,8 +1194,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="sect2"><h3 id="_1_6_待二面"><a class="anchor" href="#_1_6_待二面"></a><a class="link"
-																						   href="#_1_6_待二面">1.6.&nbsp;待二面</a>
+			<div class="sect2"><h3 id="_1_7_待二面"><a class="anchor" href="#_1_7_待二面"></a><a class="link"
+																						   href="#_1_7_待二面">1.7.&nbsp;待二面</a>
 			</h3>
 				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/interview/second/un"
 																  class="bare">&nbsp;http://localhost:8080/interview/second/un</a>
@@ -1134,7 +1271,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/second/un?departmentId=574</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/second/un?departmentId=56</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -1375,40 +1512,40 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":484,
-	"msg":"clbuso",
+	"code":432,
+	"msg":"zvgsce",
 	"data":[
 		{
-			"userId":500,
-			"userSex":"duk21u",
-			"userTel":"ka3xmn",
+			"userId":923,
+			"userSex":"qq6ifq",
+			"userTel":"qr4d4i",
 			"myInterview":{
-				"userId":327,
-				"departmentId":471,
-				"userCharacter":"9ns8rq",
-				"paramScore1":227,
-				"paramScore2":792,
-				"paramScore3":914,
-				"paramScore4":750,
-				"paramScore5":742,
-				"paramScore6":373,
-				"note":"p60grk",
+				"userId":755,
+				"departmentId":802,
+				"userCharacter":"p9khgg",
+				"paramScore1":45,
+				"paramScore2":285,
+				"paramScore3":99,
+				"paramScore4":710,
+				"paramScore5":429,
+				"paramScore6":54,
+				"note":"y0t11f",
 				"overview":"ABCD",
-				"userName":"文.姚"
+				"userName":"文轩.赵"
 			},
 			"elseInterview":{
-				"userId":508,
-				"departmentId":355,
-				"userCharacter":"1zqo5p",
-				"paramScore1":798,
-				"paramScore2":840,
-				"paramScore3":661,
-				"paramScore4":528,
-				"paramScore5":920,
-				"paramScore6":28,
-				"note":"n98ghs",
+				"userId":715,
+				"departmentId":129,
+				"userCharacter":"lqntf8",
+				"paramScore1":752,
+				"paramScore2":239,
+				"paramScore3":376,
+				"paramScore4":350,
+				"paramScore5":838,
+				"paramScore6":823,
+				"note":"q7cc2s",
 				"overview":"ABCD",
-				"userName":"文.姚"
+				"userName":"文轩.赵"
 			}
 		}
 	]
@@ -1416,8 +1553,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="sect2"><h3 id="_1_7_已经二面"><a class="anchor" href="#_1_7_已经二面"></a><a class="link"
-																							 href="#_1_7_已经二面">1.7.&nbsp;已经二面</a>
+			<div class="sect2"><h3 id="_1_8_已经二面"><a class="anchor" href="#_1_8_已经二面"></a><a class="link"
+																							 href="#_1_8_已经二面">1.8.&nbsp;已经二面</a>
 			</h3>
 				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/interview/second/finish"
 																  class="bare">&nbsp;http://localhost:8080/interview/second/finish</a>
@@ -1493,7 +1630,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/second/finish?departmentId=842</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/second/finish?departmentId=900</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -1734,40 +1871,40 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":569,
-	"msg":"ga90k1",
+	"code":396,
+	"msg":"6ldkw8",
 	"data":[
 		{
-			"userId":486,
-			"userSex":"v97iz0",
-			"userTel":"9ti1ql",
+			"userId":802,
+			"userSex":"s2irlg",
+			"userTel":"3ycs4m",
 			"myInterview":{
-				"userId":613,
-				"departmentId":669,
-				"userCharacter":"6btlkd",
-				"paramScore1":571,
-				"paramScore2":524,
-				"paramScore3":896,
-				"paramScore4":803,
-				"paramScore5":913,
-				"paramScore6":554,
-				"note":"skqzb3",
+				"userId":969,
+				"departmentId":282,
+				"userCharacter":"rrb1mk",
+				"paramScore1":552,
+				"paramScore2":896,
+				"paramScore3":521,
+				"paramScore4":852,
+				"paramScore5":887,
+				"paramScore6":142,
+				"note":"e1tvr8",
 				"overview":"ABCD",
-				"userName":"文.姚"
+				"userName":"文轩.赵"
 			},
 			"elseInterview":{
-				"userId":104,
-				"departmentId":866,
-				"userCharacter":"9tclzp",
-				"paramScore1":95,
-				"paramScore2":441,
-				"paramScore3":313,
-				"paramScore4":436,
-				"paramScore5":49,
-				"paramScore6":429,
-				"note":"7xm7aq",
+				"userId":351,
+				"departmentId":189,
+				"userCharacter":"syka1v",
+				"paramScore1":211,
+				"paramScore2":7,
+				"paramScore3":378,
+				"paramScore4":800,
+				"paramScore5":405,
+				"paramScore6":745,
+				"note":"waot1c",
 				"overview":"ABCD",
-				"userName":"文.姚"
+				"userName":"文轩.赵"
 			}
 		}
 	]
@@ -1775,8 +1912,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="sect2"><h3 id="_1_8_淘汰二面人员"><a class="anchor" href="#_1_8_淘汰二面人员"></a><a class="link"
-																								 href="#_1_8_淘汰二面人员">1.8.&nbsp;淘汰二面人员</a>
+			<div class="sect2"><h3 id="_1_9_淘汰二面人员"><a class="anchor" href="#_1_9_淘汰二面人员"></a><a class="link"
+																								 href="#_1_9_淘汰二面人员">1.9.&nbsp;淘汰二面人员</a>
 			</h3>
 				<div class="paragraph"><p><strong>URL:</strong><a
 						href="http://localhost:8080/interview/second/eliminate" class="bare">&nbsp;http://localhost:8080/interview/second/eliminate</a>
@@ -1859,7 +1996,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/interview/second/eliminate  --data 'userId=56&departmentId=538'</pre>
+						<pre>curl -X POST -i http://localhost:8080/interview/second/eliminate  --data 'userId=888&departmentId=826'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -1902,8 +2039,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":500,
-	"msg":"ca14hi",
+	"code":990,
+	"msg":"v2ttux",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -1992,7 +2129,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/data/count/906</pre>
+						<pre>curl -X GET -i http://localhost:8080/data/count/804</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -2035,8 +2172,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":507,
-	"msg":"959tnj",
+	"code":837,
+	"msg":"34z5sn",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -2135,8 +2272,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":791,
-	"msg":"erxom4",
+	"code":498,
+	"msg":"o02e09",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -2235,846 +2372,939 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":89,
-	"msg":"uur8s1",
-	"data":{
-		"waring":"You may have used non-display generics."
-	}
-}</pre></div></div></div></div></div><div class="sect1"><h2 id="_登录/激活"><a class="anchor" href="#_登录/激活"></a><a
-		class="link" href="#_登录/激活">3.&nbsp;登录/激活</a></h2>
-	<div class="sectionbody">
-		<div class="sect2"><h3 id="_3_1_用户微信小程序登录"><a class="anchor" href="#_3_1_用户微信小程序登录"></a><a class="link"
-																								   href="#_3_1_用户微信小程序登录">3.1.&nbsp;用户微信小程序登录</a>
-		</h3>
-			<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/login/wx" class="bare">&nbsp;http://localhost:8080/login/wx</a>
-			</p></div>
-			<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
-			<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/json; charset=utf-8</p></div>
-			<div class="paragraph"><p><strong>Description:</strong>&nbsp;用户微信小程序登录</p></div>
-			<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Header</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Required</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
-						credentials(Global)</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Parameter</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Required</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Request-example:</strong></p></div>
-			<div class="listingblock">
-				<div class="content"><pre>curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8080/login/wx --data '{
-	"code":"57154"
-}'</pre>
-				</div>
-			</div>
-			<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Field</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">└─userId</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">└─token</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Response-example:</strong></p></div>
-			<div class="listingblock">
-				<div class="content"><pre>{
-	"code":47,
-	"msg":"o7dwx3",
-	"data":{
-		"userId":11,
-		"token":"wqpyh4"
-	}
-}</pre>
-				</div>
-			</div>
-		</div>
-		<div class="sect2"><h3 id="_3_2_管理员PC端登录接口"><a class="anchor" href="#_3_2_管理员PC端登录接口"></a><a class="link"
-																									 href="#_3_2_管理员PC端登录接口">3.2.&nbsp;管理员PC端登录接口</a>
-		</h3>
-			<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/login/pc" class="bare">&nbsp;http://localhost:8080/login/pc</a>
-			</p></div>
-			<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
-			<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
-			</p></div>
-			<div class="paragraph"><p><strong>Description:</strong>&nbsp;管理员PC端登录接口</p></div>
-			<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Header</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Required</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
-						credentials(Global)</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Parameter</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Required</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userTel</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userPwd</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Request-example:</strong></p></div>
-			<div class="listingblock">
-				<div class="content">
-					<pre>curl -X POST -i http://localhost:8080/login/pc  --data 'userTel=o7wgjm&userPwd=664dlq'</pre>
-				</div>
-			</div>
-			<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Field</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">└─userId</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">└─token</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Response-example:</strong></p></div>
-			<div class="listingblock">
-				<div class="content"><pre>{
-	"code":826,
-	"msg":"ju964d",
-	"data":{
-		"userId":968,
-		"token":"9qhayr"
-	}
-}</pre>
-				</div>
-			</div>
-		</div>
-		<div class="sect2"><h3 id="_3_3_管理员账户激活"><a class="anchor" href="#_3_3_管理员账户激活"></a><a class="link"
-																							   href="#_3_3_管理员账户激活">3.3.&nbsp;管理员账户激活</a>
-		</h3>
-			<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/login/activate" class="bare">&nbsp;http://localhost:8080/login/activate</a>
-			</p></div>
-			<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
-			<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
-			</p></div>
-			<div class="paragraph"><p><strong>Description:</strong>&nbsp;管理员账户激活</p></div>
-			<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Header</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Required</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
-						credentials(Global)</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-					<col style="width: 20%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Parameter</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Required</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">用户唯一id</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userName</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">用户姓名</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userSex</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">用户性别</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userTel</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">电话</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">permissionId</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">权限Id</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">部门Id</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userPwd</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">PC端登录密码</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userProfession</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">用户专业</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">userCollege</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">学院</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">inviteCode</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Request-example:</strong></p></div>
-			<div class="listingblock">
-				<div class="content">
-					<pre>curl -X POST -i http://localhost:8080/login/activate  --data 'userId=358&userName=文.姚&userSex=htcc71&userTel=8nc3qo&permissionId=906&departmentId=733&userPwd=n2lxq6&userProfession=zbri9c&userCollege=edimej&inviteCode=57154'</pre>
-				</div>
-			</div>
-			<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
-			<table class="tableblock frame-all grid-all spread">
-				<colgroup>
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-					<col style="width: 25%;">
-				</colgroup>
-				<thead>
-				<tr>
-					<th class="tableblock halign-left valign-top">Field</th>
-					<th class="tableblock halign-left valign-top">Type</th>
-					<th class="tableblock halign-left valign-top">Description</th>
-					<th class="tableblock halign-left valign-top">Since</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				<tr>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
-					<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-				</tr>
-				</tbody>
-			</table>
-			<div class="paragraph"><p><strong>Response-example:</strong></p></div>
-			<div class="listingblock">
-				<div class="content"><pre>{
-	"code":626,
-	"msg":"9x1eb6",
+	"code":990,
+	"msg":"2vdmxc",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
 }</pre>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div></div><div class="sect1"><h2 id="_部员"><a class="anchor" href="#_部员"></a><a class="link"                                                                                           href="#_部员">4.&nbsp;部员</a></h2><div class="sectionbody"><div class="sect2"><h3 id="_4_1_录取部员"><a class="anchor"                                                                                  href="#_4_1_录取部员"></a><a class="link"                                                                            href="#_4_1_录取部员">4.1.&nbsp;录取部员</a></h3><div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/manager/enroll" class="bare">&nbsp;http://localhost:8080/manager/enroll</a></p></div><div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div><div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/json; charset=utf-8</p></div><div class="paragraph"><p><strong>Description:</strong>&nbsp;录取部员</p></div><div class="paragraph"><p><strong>Request-headers:</strong></p></div><table class="tableblock frame-all grid-all spread"><colgroup><col style="width: 20%;"><col style="width: 20%;"><col style="width: 20%;"><col style="width: 20%;"><col style="width: 20%;"></colgroup><thead><tr><th class="tableblock halign-left valign-top">Header</th><th class="tableblock halign-left valign-top">Type</th><th class="tableblock halign-left valign-top">Description</th><th class="tableblock halign-left valign-top">Required</th><th class="tableblock halign-left valign-top">Since</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth credentials(Global)</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td></tr></tbody></table><div class="paragraph"><p><strong>Request-parameters:</strong></p></div><table class="tableblock frame-all grid-all spread"><colgroup><col style="width: 20%;"><col style="width: 20%;"><col style="width: 20%;"><col style="width: 20%;"><col style="width: 20%;"></colgroup><thead><tr><th class="tableblock halign-left valign-top">Parameter</th><th class="tableblock halign-left valign-top">Type</th><th class="tableblock halign-left valign-top">Description</th><th class="tableblock halign-left valign-top">Required</th><th class="tableblock halign-left valign-top">Since</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td></tr><tr><td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td></tr></tbody></table><div class="paragraph"><p><strong>Request-example:</strong></p></div><div class="listingblock"><div class="content"><pre>curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8080/manager/enroll --data '{
-	"userId":[
-		24
-	],
-	"departmentId":788
-}'</pre>
-</div>
-</div>
-	<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
-	<table class="tableblock frame-all grid-all spread">
-		<colgroup>
-			<col style="width: 25%;">
-			<col style="width: 25%;">
-			<col style="width: 25%;">
-			<col style="width: 25%;">
-		</colgroup>
-		<thead>
-		<tr>
-			<th class="tableblock halign-left valign-top">Field</th>
-			<th class="tableblock halign-left valign-top">Type</th>
-			<th class="tableblock halign-left valign-top">Description</th>
-			<th class="tableblock halign-left valign-top">Since</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-		</tr>
-		<tr>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-		</tr>
-		<tr>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
-			<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-		</tr>
-		</tbody>
-	</table>
-	<div class="paragraph"><p><strong>Response-example:</strong></p></div>
-	<div class="listingblock">
-		<div class="content"><pre>{
-	"code":275,
-	"msg":"7dbwok",
-	"data":{
-		"waring":"You may have used non-display generics."
-	}
-}</pre>
 		</div>
 	</div>
-</div>
-	<div class="sect2"><h3 id="_4_2_分页查询部员数据"><a class="anchor" href="#_4_2_分页查询部员数据"></a><a class="link"
-																							 href="#_4_2_分页查询部员数据">4.2.&nbsp;分页查询部员数据</a>
-	</h3>
-		<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/manager/members" class="bare">&nbsp;http://localhost:8080/manager/members</a>
-		</p></div>
-		<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
-		<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
-		</p></div>
-		<div class="paragraph"><p><strong>Description:</strong>&nbsp;分页查询部员数据</p></div>
-		<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
-		<table class="tableblock frame-all grid-all spread">
-			<colgroup>
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-			</colgroup>
-			<thead>
-			<tr>
-				<th class="tableblock halign-left valign-top">Header</th>
-				<th class="tableblock halign-left valign-top">Type</th>
-				<th class="tableblock halign-left valign-top">Description</th>
-				<th class="tableblock halign-left valign-top">Required</th>
-				<th class="tableblock halign-left valign-top">Since</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth credentials(Global)</p>
-				</td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			</tbody>
-		</table>
-		<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
-		<table class="tableblock frame-all grid-all spread">
-			<colgroup>
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-			</colgroup>
-			<thead>
-			<tr>
-				<th class="tableblock halign-left valign-top">Parameter</th>
-				<th class="tableblock halign-left valign-top">Type</th>
-				<th class="tableblock halign-left valign-top">Description</th>
-				<th class="tableblock halign-left valign-top">Required</th>
-				<th class="tableblock halign-left valign-top">Since</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">pageNum</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			</tbody>
-		</table>
-		<div class="paragraph"><p><strong>Request-example:</strong></p></div>
-		<div class="listingblock">
-			<div class="content">
-				<pre>curl -X POST -i http://localhost:8080/manager/members  --data 'departmentId=149&pageNum=196&pageSize=10'</pre>
+	<div class="sect1"><h2 id="_登录/激活"><a class="anchor" href="#_登录/激活"></a><a class="link"
+																			   href="#_登录/激活">3.&nbsp;登录/激活</a></h2>
+		<div class="sectionbody">
+			<div class="sect2"><h3 id="_3_1_用户微信小程序登录"><a class="anchor" href="#_3_1_用户微信小程序登录"></a><a class="link"
+																									   href="#_3_1_用户微信小程序登录">3.1.&nbsp;用户微信小程序登录</a>
+			</h3>
+				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/login/wx" class="bare">&nbsp;http://localhost:8080/login/wx</a>
+				</p></div>
+				<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
+				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/json; charset=utf-8</p></div>
+				<div class="paragraph"><p><strong>Description:</strong>&nbsp;用户微信小程序登录</p></div>
+				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Header</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
+							credentials(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Parameter</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8080/login/wx --data '{
+	"code":"15424"
+}'</pre>
+					</div>
+				</div>
+				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Field</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>{
+	"code":86,
+	"msg":"xa9kkz",
+	"data":{
+		"userId":816,
+		"token":"4wr7nt"
+	}
+}</pre>
+					</div>
+				</div>
+			</div>
+			<div class="sect2"><h3 id="_3_2_管理员PC端登录接口"><a class="anchor" href="#_3_2_管理员PC端登录接口"></a><a class="link"
+																										 href="#_3_2_管理员PC端登录接口">3.2.&nbsp;管理员PC端登录接口</a>
+			</h3>
+				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/login/pc" class="bare">&nbsp;http://localhost:8080/login/pc</a>
+				</p></div>
+				<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
+				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
+				</p></div>
+				<div class="paragraph"><p><strong>Description:</strong>&nbsp;管理员PC端登录接口</p></div>
+				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Header</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
+							credentials(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Parameter</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userTel</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userPwd</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content">
+						<pre>curl -X POST -i http://localhost:8080/login/pc  --data 'userTel=1cpal7&userPwd=ji460b'</pre>
+					</div>
+				</div>
+				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Field</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>{
+	"code":931,
+	"msg":"4w0r79",
+	"data":{
+		"userId":52,
+		"token":"rlmbwg"
+	}
+}</pre>
+					</div>
+				</div>
+			</div>
+			<div class="sect2"><h3 id="_3_3_管理员账户激活"><a class="anchor" href="#_3_3_管理员账户激活"></a><a class="link"
+																								   href="#_3_3_管理员账户激活">3.3.&nbsp;管理员账户激活</a>
+			</h3>
+				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/login/activate"
+																  class="bare">&nbsp;http://localhost:8080/login/activate</a>
+				</p></div>
+				<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
+				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
+				</p></div>
+				<div class="paragraph"><p><strong>Description:</strong>&nbsp;管理员账户激活</p></div>
+				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Header</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
+							credentials(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Parameter</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户唯一id</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userName</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户姓名</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userSex</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户性别</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userTel</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">电话</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">permissionId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">权限Id</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">部门Id</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userPwd</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">PC端登录密码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userProfession</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户专业</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userCollege</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">学院</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">inviteCode</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content">
+						<pre>curl -X POST -i http://localhost:8080/login/activate  --data 'userId=498&userName=文轩.赵&userSex=4qqtx3&userTel=p7z10d&permissionId=947&departmentId=83&userPwd=wdkiz2&userProfession=6qzaq5&userCollege=rx3jbd&inviteCode=15424'</pre>
+					</div>
+				</div>
+				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Field</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>{
+	"code":997,
+	"msg":"4ddi89",
+	"data":{
+		"waring":"You may have used non-display generics."
+	}
+}</pre>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
-		<table class="tableblock frame-all grid-all spread">
-			<colgroup>
-				<col style="width: 25%;">
-				<col style="width: 25%;">
-				<col style="width: 25%;">
-				<col style="width: 25%;">
-			</colgroup>
-			<thead>
-			<tr>
-				<th class="tableblock halign-left valign-top">Field</th>
-				<th class="tableblock halign-left valign-top">Type</th>
-				<th class="tableblock halign-left valign-top">Description</th>
-				<th class="tableblock halign-left valign-top">Since</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─userId</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">用户唯一id</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─userName</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">用户姓名</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─userSex</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">用户性别</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─userTel</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">电话</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─permissionId</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">权限Id</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─departmentId</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">部门Id</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─userPwd</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">PC端登录密码</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─userProfession</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">用户专业</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">└─userCollege</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">学院</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			</tbody>
-		</table>
-		<div class="paragraph"><p><strong>Response-example:</strong></p></div>
-		<div class="listingblock">
-			<div class="content"><pre>{
-	"code":320,
-	"msg":"ezge8s",
+	</div>
+	<div class="sect1"><h2 id="_部员"><a class="anchor" href="#_部员"></a><a class="link" href="#_部员">4.&nbsp;部员</a></h2>
+		<div class="sectionbody">
+			<div class="sect2"><h3 id="_4_1_录取部员"><a class="anchor" href="#_4_1_录取部员"></a><a class="link"
+																							 href="#_4_1_录取部员">4.1.&nbsp;录取部员</a>
+			</h3>
+				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/manager/enroll"
+																  class="bare">&nbsp;http://localhost:8080/manager/enroll</a>
+				</p></div>
+				<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
+				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/json; charset=utf-8</p></div>
+				<div class="paragraph"><p><strong>Description:</strong>&nbsp;录取部员</p></div>
+				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Header</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
+							credentials(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Parameter</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8080/manager/enroll --data '{
+	"userId":[
+		362
+	],
+	"departmentId":786
+}'</pre>
+					</div>
+				</div>
+				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Field</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>{
+	"code":12,
+	"msg":"hufiya",
+	"data":{
+		"waring":"You may have used non-display generics."
+	}
+}</pre>
+					</div>
+				</div>
+			</div>
+			<div class="sect2"><h3 id="_4_2_分页查询部员数据"><a class="anchor" href="#_4_2_分页查询部员数据"></a><a class="link"
+																									 href="#_4_2_分页查询部员数据">4.2.&nbsp;分页查询部员数据</a>
+			</h3>
+				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/manager/members"
+																  class="bare">&nbsp;http://localhost:8080/manager/members</a>
+				</p></div>
+				<div class="paragraph"><p><strong>Type:</strong>&nbsp;POST</p></div>
+				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
+				</p></div>
+				<div class="paragraph"><p><strong>Description:</strong>&nbsp;分页查询部员数据</p></div>
+				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Header</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
+							credentials(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Parameter</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">pageNum</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">pageSize</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content">
+						<pre>curl -X POST -i http://localhost:8080/manager/members  --data 'departmentId=508&pageNum=128&pageSize=10'</pre>
+					</div>
+				</div>
+				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Field</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户唯一id</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userName</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户姓名</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userSex</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户性别</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userTel</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">电话</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─permissionId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">权限Id</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─departmentId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">部门Id</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userPwd</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">PC端登录密码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userProfession</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户专业</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userCollege</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">学院</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>{
+	"code":282,
+	"msg":"48e00p",
 	"data":[
 		{
-			"userId":845,
-			"userName":"文.姚",
-			"userSex":"1hwu64",
-			"userTel":"uzp5p8",
-			"permissionId":317,
-			"departmentId":395,
-			"userPwd":"32g6fl",
-			"userProfession":"p5kugy",
-			"userCollege":"5odfrq"
+			"userId":366,
+			"userName":"文轩.赵",
+			"userSex":"tpgroz",
+			"userTel":"l5xaug",
+			"permissionId":57,
+			"departmentId":489,
+			"userPwd":"lpoaxz",
+			"userProfession":"byy4bi",
+			"userCollege":"ebdxvl"
 		}
 	]
 }</pre>
+					</div>
+				</div>
+			</div>
+			<div class="sect2"><h3 id="_4_3_导出该部门所有部员详细信息"><a class="anchor" href="#_4_3_导出该部门所有部员详细信息"></a><a
+					class="link" href="#_4_3_导出该部门所有部员详细信息">4.3.&nbsp;导出该部门所有部员详细信息</a></h3>
+				<div class="paragraph"><p><strong>URL:</strong><a
+						href="http://localhost:8080/manager/export/{departmentId}" class="bare">&nbsp;http://localhost:8080/manager/export/{departmentId}</a>
+				</p></div>
+				<div class="paragraph"><p><strong>Type:</strong>&nbsp;GET</p></div>
+				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
+				</p></div>
+				<div class="paragraph"><p><strong>Description:</strong>&nbsp;导出该部门所有部员详细信息</p></div>
+				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Header</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
+							credentials(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Parameter</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content">
+						<pre>curl -X GET -i http://localhost:8080/manager/export/267</pre>
+					</div>
+				</div>
+				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content">
+						<pre>This api return nothing.</pre>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="sect2"><h3 id="_4_3_导出该部门所有部员详细信息"><a class="anchor" href="#_4_3_导出该部门所有部员详细信息"></a><a class="link"
-																									   href="#_4_3_导出该部门所有部员详细信息">4.3.&nbsp;导出该部门所有部员详细信息</a>
-	</h3>
-		<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/manager/export/{departmentId}"
-														  class="bare">&nbsp;http://localhost:8080/manager/export/{departmentId}</a>
-		</p></div>
-		<div class="paragraph"><p><strong>Type:</strong>&nbsp;GET</p></div>
-		<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
-		</p></div>
-		<div class="paragraph"><p><strong>Description:</strong>&nbsp;导出该部门所有部员详细信息</p></div>
-		<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
-		<table class="tableblock frame-all grid-all spread">
-			<colgroup>
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-			</colgroup>
-			<thead>
-			<tr>
-				<th class="tableblock halign-left valign-top">Header</th>
-				<th class="tableblock halign-left valign-top">Type</th>
-				<th class="tableblock halign-left valign-top">Description</th>
-				<th class="tableblock halign-left valign-top">Required</th>
-				<th class="tableblock halign-left valign-top">Since</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth credentials(Global)</p>
-				</td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			</tbody>
-		</table>
-		<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
-		<table class="tableblock frame-all grid-all spread">
-			<colgroup>
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-				<col style="width: 20%;">
-			</colgroup>
-			<thead>
-			<tr>
-				<th class="tableblock halign-left valign-top">Parameter</th>
-				<th class="tableblock halign-left valign-top">Type</th>
-				<th class="tableblock halign-left valign-top">Description</th>
-				<th class="tableblock halign-left valign-top">Required</th>
-				<th class="tableblock halign-left valign-top">Since</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-				<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-			</tr>
-			</tbody>
-		</table>
-		<div class="paragraph"><p><strong>Request-example:</strong></p></div>
-		<div class="listingblock">
-			<div class="content">
-				<pre>curl -X GET -i http://localhost:8080/manager/export/609</pre>
-			</div>
-		</div>
-		<div class="paragraph"><p><strong>Response-example:</strong></p></div>
-		<div class="listingblock">
-			<div class="content">
-				<pre>This api return nothing.</pre>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
 	<div class="sect1"><h2 id="_短信"><a class="anchor" href="#_短信"></a><a class="link" href="#_短信">5.&nbsp;短信</a></h2>
 		<div class="sectionbody">
 			<div class="sect2"><h3 id="_5_1_发送一面面试短信"><a class="anchor" href="#_5_1_发送一面面试短信"></a><a class="link"
@@ -3182,12 +3412,12 @@
 				<div class="listingblock">
 					<div class="content"><pre>curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8080/messages/interview/first --data '{
 	"userId":[
-		698
+		907
 	],
-	"departmentId":436,
-	"timeSlot":"jv7k61",
-	"place":"7zqyqe",
-	"telNo":"tjm0ws"
+	"departmentId":81,
+	"timeSlot":"ieejgo",
+	"place":"p47kok",
+	"telNo":"pjk5sv"
 }'</pre>
 					</div>
 				</div>
@@ -3231,8 +3461,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":585,
-	"msg":"pd8npl",
+	"code":656,
+	"msg":"cpf89x",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -3345,7 +3575,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/messages/interview/second  --data 'userId.[]=c3rizv&departmentId=293&timeSlot=hq0syh&place=4epbq7&telNo=u6669r'</pre>
+						<pre>curl -X POST -i http://localhost:8080/messages/interview/second  --data 'userId.[]=ibjwgr&departmentId=200&timeSlot=j53x57&place=r81r4v&telNo=kjtti7'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -3388,8 +3618,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":842,
-	"msg":"5r1pnp",
+	"code":179,
+	"msg":"fsqaj0",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -3489,7 +3719,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/messages/enroll  --data 'userId.[]=wxzu9h&departmentId=844&secret=8y7tcx'</pre>
+						<pre>curl -X POST -i http://localhost:8080/messages/enroll  --data 'userId.[]=oiiwm1&departmentId=749&secret=uahbhu'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -3532,8 +3762,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":849,
-	"msg":"0rqhjq",
+	"code":219,
+	"msg":"m2c2am",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -3706,7 +3936,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/resume/apply  --data 'userId=171&sex=egydyo&userName=文.姚&userStuNum=twbftg&userQq=z7qbb9&userTel=8yo83w&profession=lryzbx&college=c1pzii&firstIntentionId=285&secondIntentionId=865&userHobby=mwh9gr&userIntroduction=y87b0u&secondDepartmentId=58'</pre>
+						<pre>curl -X POST -i http://localhost:8080/resume/apply  --data 'userId=962&sex=1o72r0&userName=文轩.赵&userStuNum=6ena3a&userQq=obi7rt&userTel=uo0w8x&profession=m6a4ui&college=kycuck&firstIntentionId=722&secondIntentionId=372&userHobby=a841sc&userIntroduction=vjpj38&secondDepartmentId=575'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -3749,8 +3979,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":795,
-	"msg":"jkvfdt",
+	"code":6,
+	"msg":"o19o59",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -3841,7 +4071,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/resume/view?departmentId=749&userTel=zcioec</pre>
+						<pre>curl -X GET -i http://localhost:8080/resume/view?departmentId=587&userTel=y4fptx</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -3963,22 +4193,22 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":890,
-	"msg":"0ehq2a",
+	"code":701,
+	"msg":"qq9vax",
 	"data":{
-		"userId":466,
-		"sex":"lsfa5b",
-		"userName":"文.姚",
-		"userStuNum":"6mjh84",
-		"userQq":"u59gzy",
-		"userTel":"8896ou",
-		"profession":"px56re",
-		"college":"a82b0r",
-		"firstIntentionId":717,
-		"secondIntentionId":46,
-		"userHobby":"v9yf8r",
-		"userIntroduction":"5nflxf",
-		"secondDepartmentId":570
+		"userId":279,
+		"sex":"gizay1",
+		"userName":"文轩.赵",
+		"userStuNum":"mjhmpi",
+		"userQq":"ede1y3",
+		"userTel":"75pe9e",
+		"profession":"jbk95i",
+		"college":"jpvef1",
+		"firstIntentionId":585,
+		"secondIntentionId":374,
+		"userHobby":"8tmlsh",
+		"userIntroduction":"ibx348",
+		"secondDepartmentId":656
 	}
 }</pre>
 					</div>
@@ -4138,7 +4368,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/resume/score  --data 'userId=358&departmentId=84&userCharacter=fujrs7&paramScore1=278&paramScore2=295&paramScore3=327&paramScore4=990&paramScore5=326&paramScore6=956&note=e4m1y3&overview=2sym01&userName=文.姚'</pre>
+						<pre>curl -X POST -i http://localhost:8080/resume/score  --data 'userId=26&departmentId=41&userCharacter=nitzpc&paramScore1=598&paramScore2=746&paramScore3=249&paramScore4=117&paramScore5=948&paramScore6=693&note=u297nw&overview=7wq06m&userName=文轩.赵'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -4181,8 +4411,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":605,
-	"msg":"5d7yae",
+	"code":134,
+	"msg":"r3dc75",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -4393,7 +4623,7 @@
 			</div>
 		</div>
 	</div>
-	<footer class="page-footer"><span class="copyright">Generated by smart-doc at 2020-02-18 14:47:03</span><span
+	<footer class="page-footer"><span class="copyright">Generated by smart-doc at 2020-02-19 08:04:45</span><span
 			class="footer-modification">Suggestions,contact,support and error reporting on<a
 			href="https://gitee.com/sunyurepository/smart-doc" target="_blank">&nbsp;Gitee</a>&nbsp;or<a
 			href="https://github.com/shalousun/smart-doc" target="_blank">&nbsp;Github</a></span></footer>

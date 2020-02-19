@@ -80,14 +80,27 @@ public class InterviewController {
      */
     @MinisterLogin
     @PostMapping("/first/eliminate")
-    public UniversalResponseBody FirstEliminate(Integer userId,Integer departmentId){
+    public UniversalResponseBody FirstEliminate(Integer userId, Integer departmentId) {
+        return null;
+    }
+
+    /**
+     * 通过一面人员
+     *
+     * @param userId
+     * @param departmentId
+     * @return
+     */
+    @MinisterLogin
+    @PostMapping("/first/pass")
+    public UniversalResponseBody FirstPass(Integer userId, Integer departmentId) {
         return null;
     }
 
 
-
     /**
      * 二面签到
+     *
      * @param userTel
      * @param departmentId
      * @return
