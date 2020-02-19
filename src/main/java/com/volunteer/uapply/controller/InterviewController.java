@@ -12,7 +12,9 @@ import com.volunteer.uapply.pojo.SearchInterviewPojo;
 import com.volunteer.uapply.pojo.User;
 
 import com.volunteer.uapply.service.FirstInterviewService;
+import com.volunteer.uapply.service.ResumeService;
 import com.volunteer.uapply.service.SecondInterviewService;
+import com.volunteer.uapply.service.impl.ResumeServiceImpl;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -41,15 +43,20 @@ public class InterviewController {
     @Qualifier("firstInterviewServiceImpl")
     private FirstInterviewService firstInterviewService;
 
+    @Autowired
+    @Qualifier("resumeServiceImpl")
+    private ResumeService resumeService;
+
     /**
      * 查询面试状态
+     *
      * @param userId
      * @return
      */
     @GetMapping("/status")
     @UserLogin
-    public UniversalResponseBody applyStatus(Integer userId){
-        return null;
+    public UniversalResponseBody applyStatus(Integer userId) {
+        return resumeService.viewApplyStatus(userId);
     }
 
     /**

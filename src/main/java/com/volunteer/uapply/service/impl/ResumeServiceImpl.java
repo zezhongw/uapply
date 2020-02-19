@@ -2,9 +2,12 @@ package com.volunteer.uapply.service.impl;
 
 import com.volunteer.uapply.mapper.ApplyMsgMapper;
 import com.volunteer.uapply.mapper.InterviewMsgMapper;
+import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.service.ResumeService;
+import com.volunteer.uapply.utils.enums.PermissionIdEnum;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import lombok.extern.slf4j.Slf4j;
@@ -25,19 +28,39 @@ public class ResumeServiceImpl implements ResumeService {
     private ApplyMsgMapper applyMsgMapper;
     @Resource
     private InterviewMsgMapper interviewMsgMapper;
+    @Resource
+    private UserMapper userMapper;
+
     /**
      * 用户报名
+     *
      * @param applyPO
      * @return
      */
     @Override
     public UniversalResponseBody applyMessage(ApplyPO applyPO) {
-        if(applyMsgMapper.insertApplyMsg(applyPO) > 0){
-            return new UniversalResponseBody(ResponseResultEnum.SUCCEED_APPLY.getCode(),ResponseResultEnum.SUCCEED_APPLY.getMsg());
-        }else {
-            log.error("数据库插入applymessage信息失败");
-            return new UniversalResponseBody(ResponseResultEnum.USER_INSERT_FAILED.getCode(),ResponseResultEnum.USER_INSERT_FAILED.getMsg());
+        User user = new User();
+        user.setUserId(applyPO.getUserId());
+        user.setUserName(applyPO.getUserName());
+        user.setUserSex(applyPO.getUserSex());
+        user.setUserTel(applyPO.getUserSex());
+        user.setUserCollege(applyPO.getCollege());
+        user.setUserProfession(applyPO.getProfession());
+        user.setPermissionId(PermissionIdEnum.PENDING_APPLY.getPermissionId());
+        //判断usermessage表插入信息是否成功
+        if (userMapper.InsertUser(user) > 0) {
+            //判断applymessage表信息插入是否成功
+            if (applyMsgMapper.insertApplyMsg(applyPO) > 0) {
+                return new UniversalResponseBody(ResponseResultEnum.SUCCEED_APPLY.getCode(), ResponseResultEnum.SUCCEED_APPLY.getMsg());
+            } else {
+                log.error("数据库插入applymessage信息失败");
+                return new UniversalResponseBody(ResponseResultEnum.NOT_APPLY.getCode(), ResponseResultEnum.NOT_APPLY.getMsg());
+            }
+        } else {
+            log.error("数据库插入usermessage信息失败");
+            return new UniversalResponseBody(ResponseResultEnum.NOT_APPLY.getCode(), ResponseResultEnum.NOT_APPLY.getMsg());
         }
+
     }
 
     /**
@@ -56,10 +79,10 @@ public class ResumeServiceImpl implements ResumeService {
             //判断用户是否是二面
             if(applyPO.getSecondDepartmentId() == null){
                 //一面查看简历
-                if(departmentId == applyPO.getFirstIntentionId() ||departmentId == applyPO.getSecondIntentionId()){
-                    return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg(),applyPO);
-                }else {
-                    return new UniversalResponseBody(ResponseResultEnum.FAILED.getCode(),ResponseResultEnum.FAILED.getMsg(),"未报本部门志愿");
+                if (departmentId == applyPO.getFirstIntentionId() || departmentId == applyPO.getSecondIntentionId()) {
+                    return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(), applyPO);
+                } else {
+                    return new UniversalResponseBody(ResponseResultEnum.FAILED.getCode(), ResponseResultEnum.FAILED.getMsg(), "未报本部门志愿");
                 }
 
             }else {
@@ -90,13 +113,13 @@ public class ResumeServiceImpl implements ResumeService {
             //一面未面
             if(interviewPO == null) {
                 return new UniversalResponseBody(ResponseResultEnum.SUCCEED_APPLY.getCode(), ResponseResultEnum.SUCCEED_APPLY.getMsg());
-            }else {
-                //一面已面试，二面为面试
-                if(applyPO.getSecondDepartmentId()==null){
-                    return new UniversalResponseBody(ResponseResultEnum.FINISH_FIRST_INTERVIEW.getCode(),ResponseResultEnum.FINISH_FIRST_INTERVIEW.getMsg());
-                }else {
+            } else {
+                //一面已面试，二面面试
+                if (applyPO.getSecondDepartmentId() == null) {
+                    return new UniversalResponseBody(ResponseResultEnum.FINISH_FIRST_INTERVIEW.getCode(), ResponseResultEnum.FINISH_FIRST_INTERVIEW.getMsg());
+                } else {
                     //二面已面
-                    return new UniversalResponseBody(ResponseResultEnum.FINISH_SECOND_INTERVIEW.getCode(),ResponseResultEnum.FINISH_SECOND_INTERVIEW.getMsg());
+                    return new UniversalResponseBody(ResponseResultEnum.FINISH_SECOND_INTERVIEW.getCode(), ResponseResultEnum.FINISH_SECOND_INTERVIEW.getMsg());
                 }
             }
         }
