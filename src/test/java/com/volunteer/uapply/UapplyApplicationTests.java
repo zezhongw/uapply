@@ -13,6 +13,7 @@ import com.volunteer.uapply.mapper.ApplyMsgMapper;
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.service.impl.ResumeServiceImpl;
 import com.volunteer.uapply.utils.enums.DepartmentEnum;
+import com.volunteer.uapply.utils.enums.InterviewStatusEnum;
 import com.volunteer.uapply.utils.enums.PermissionIdEnum;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
@@ -85,15 +86,16 @@ class UapplyApplicationTests {
                         .setDescField("msg")//错误码描述
         );
 
-
-
         config.setDataDictionaries(
-                ApiDataDictionary.dict().setTitle("部门Id").setEnumClass(DepartmentEnum.class)
+                ApiDataDictionary.dict().setTitle("部门").setEnumClass(DepartmentEnum.class)
                         .setCodeField("departmentId") //字典码值字段名
                         .setDescField("departmentName"),
-                ApiDataDictionary.dict().setTitle("用户权限Id").setEnumClass(PermissionIdEnum.class)
+                ApiDataDictionary.dict().setTitle("用户权限").setEnumClass(PermissionIdEnum.class)
                         .setCodeField("permissionId") //字典码值字段名
-                        .setDescField("permissionName") //字段码
+                        .setDescField("permissionName"),//字段码
+                ApiDataDictionary.dict().setTitle("面试状态").setEnumClass(InterviewStatusEnum.class)
+                        .setCodeField("InterviewStatusId") //字典码值字段名
+                        .setDescField("InterviewStatus")
         );
 
 

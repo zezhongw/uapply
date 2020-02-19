@@ -23,13 +23,32 @@ public interface ApplyMsgMapper {
 
     List<ApplyPO> listApplyPOSecondedInterviewed(Integer departmentId);
 
-    List<User> listUserEnrollMembers(@Param("ids") Integer[] userId,@Param("departmentId") Integer departmentId);
+    List<User> listUserEnrollMembers(@Param("ids") Integer[] userId, @Param("departmentId") Integer departmentId);
 
-    int SecondEliminate(@Param("userId") Integer userId,@Param("departmentId") Integer departmentId);
+    int SecondEliminate(@Param("userId") Integer userId, @Param("departmentId") Integer departmentId);
 
     int insertApplyMsg(ApplyPO applyPO);
 
     ApplyPO findApplyMsgByUserTel(String userTel);
 
     ApplyPO findApplyMsgByUserId(int userId);
+
+    /**
+     * 更改用户第一志愿的状态
+     *
+     * @param userId
+     * @param status
+     * @return
+     */
+    Integer ChangeFirstIntentionStatus(Integer userId, Integer status);
+
+
+    /**
+     * 更改用户第二志愿的状态
+     *
+     * @param userId
+     * @param status
+     * @return
+     */
+    Integer ChangeSecondIntentionStatus(Integer userId, Integer status);
 }

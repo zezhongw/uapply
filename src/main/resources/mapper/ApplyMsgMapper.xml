@@ -3,7 +3,7 @@
 <mapper namespace="com.volunteer.uapply.mapper.ApplyMsgMapper">
 
     <update id="UpdateSecondDepartment">
-        UPDATE applymessage SET secondDepartment_id = #{departmentId,jdbcType=INTEGER} WHERE user_tel = #{userTel,jdbcType=VARCHAR}
+        UPDATE applymessage SET secondDepartment_id = #{departmentId,jdbcType=INTEGER},secondInterview_status = 6 WHERE user_tel = #{userTel,jdbcType=VARCHAR}
     </update>
 
     <select id="GetUserByUserId" resultType="com.volunteer.uapply.pojo.User">
@@ -29,11 +29,21 @@
         WHERE secondDepartment_id = #{departmentId,jdbcType=INTEGER}
     </select>
 
-    <update id="SecondEliminate" parameterType="java.lang.Integer" >
+    <update id="SecondEliminate" parameterType="java.lang.Integer">
         UPDATE applymessage
         SET secondDepartment_id = -1
         WHERE secondDepartment_id = #{departmentId,jdbcType=INTEGER}
         AND user_id = #{userId,jdbcType = INTEGER }
+    </update>
+    <update id="ChangeFirstIntentionStatus">
+     UPDATE applymessage SET
+    first_status = #{status,jdbcType=INTEGER}
+    WHERE user_id = #{userId,jdbcType=INTEGER}
+    </update>
+    <update id="ChangeSecondIntentionStatus">
+        UPDATE applymessage SET
+    second_status = #{status,jdbcType=INTEGER}
+    WHERE user_id = #{userId,jdbcType=INTEGER}
     </update>
 
     <select id="listUserEnrollMembers" parameterType="java.util.List" resultType="com.volunteer.uapply.pojo.User">
@@ -69,5 +79,7 @@
         FROM applymessage
         WHERE user_id=#{userId,jdbcType=INTEGER}
     </select>
+
+
 </mapper>
 

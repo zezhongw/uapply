@@ -44,7 +44,7 @@ public class LoginController {
      * @return
      */
     @PassToken
-    @PostMapping("/login")
+    @PostMapping("/pc")
     public UniversalResponseBody<TokenPO> ManagerPcLogin(@RequestParam("userTel")String userTel, @RequestParam("userPwd") String userPwd){
         return managerService.userPcLogin(userTel,userPwd);
     }

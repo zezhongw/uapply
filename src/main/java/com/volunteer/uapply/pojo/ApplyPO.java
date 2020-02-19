@@ -19,7 +19,7 @@ public class ApplyPO {
     /**
      * 性别
      */
-    private String sex;
+    private String userSex;
 
     /**
      * 姓名
@@ -29,7 +29,7 @@ public class ApplyPO {
     /**
      * 学号
      */
-    private String userStunum;
+    private String userStuNum;
 
     /**
      * QQ
