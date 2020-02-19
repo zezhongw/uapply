@@ -19,6 +19,7 @@ import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
@@ -111,7 +112,6 @@ class UapplyApplicationTests {
 
     @Test
     public void MessageTest() throws ClientException {
-
     }
 
 
