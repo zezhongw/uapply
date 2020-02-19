@@ -41,4 +41,6 @@ public interface UserMapper {
      * @return
      */
     int insertBatch(List<User> users);
+
+
 }

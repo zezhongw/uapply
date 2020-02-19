@@ -7,6 +7,8 @@ import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
 import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.service.FirstInterviewService;
+import com.volunteer.uapply.utils.enums.InterviewStatusEnum;
+import com.volunteer.uapply.utils.enums.PermissionIdEnum;
 import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import lombok.extern.slf4j.Slf4j;
@@ -28,15 +30,28 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
     @Resource
     InterviewMsgMapper interviewMsgMapper;
 
+    @Resource
+    ApplyMsgMapper applyMsgMapper;
+
     /**
-     * 插入面试评分
+     * 插入面试评分,并更改面试状态
+     *
      * @param interviewPO
      * @return
      */
     @Override
     public UniversalResponseBody scoreResume(InterviewPO interviewPO) {
-        if (interviewMsgMapper.InsertInterview(interviewPO)>0){
-            return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg());
+        if (interviewMsgMapper.InsertInterview(interviewPO) > 0) {
+            //并修改用户报名信息相应的状态
+            ApplyPO applyPO = applyMsgMapper.findApplyMsgByUserId(interviewPO.getUserId());
+            if (applyPO.getFirstIntentionId().equals(interviewPO.getDepartmentId())) {
+                applyMsgMapper.ChangeFirstIntentionStatus(interviewPO.getUserId(), InterviewStatusEnum.FIRST_INTENTION_INTERVIEW.getInterviewStatusId());
+            } else if (applyPO.getSecondIntentionId().equals(interviewPO.getDepartmentId())) {
+                applyMsgMapper.ChangeSecondIntentionStatus(interviewPO.getUserId(), InterviewStatusEnum.SECOND_INTENTION_INTERVIEW.getInterviewStatusId());
+            } else {
+                return new UniversalResponseBody(ResponseResultEnum.FAILED.getCode(), ResponseResultEnum.FAILED.getMsg());
+            }
+            return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg());
         }else{
             return new UniversalResponseBody(ResponseResultEnum.FAILED.getCode(),ResponseResultEnum.FAILED.getMsg());
         }

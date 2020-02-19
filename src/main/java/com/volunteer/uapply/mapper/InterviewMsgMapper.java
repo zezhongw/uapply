@@ -20,6 +20,7 @@ public interface InterviewMsgMapper {
      * @return
      */
     int InsertInterview(InterviewPO interviewPO);
+
     /**
      * 查询未一面，先在 applymessage查询全部，再根据interviewmessge筛选
     */
