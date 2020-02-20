@@ -55,8 +55,8 @@ public class InterviewController {
      */
     @GetMapping("/status")
     @UserLogin
-    public UniversalResponseBody applyStatus(Integer userId) {
-        return resumeService.viewApplyStatus(userId);
+    public UniversalResponseBody<ApplyPO> applyStatus(Integer userId) {
+        return null;
     }
 
     /**
