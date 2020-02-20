@@ -7,7 +7,7 @@
 	<title>API Reference</title>
 	<link rel="stylesheet"
 		  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
-	<link rel="stylesheet" href="AllInOne.css?v=1582079708269"/>
+	<link rel="stylesheet" href="AllInOne.css?v=1582195224315"/>
 	<script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.js"></script>
 </head>
 <body class="book toc2 toc-left">
@@ -154,136 +154,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/status?userId=594</pre>
-					</div>
-				</div>
-				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
-				<table class="tableblock frame-all grid-all spread">
-					<colgroup>
-						<col style="width: 25%;">
-						<col style="width: 25%;">
-						<col style="width: 25%;">
-						<col style="width: 25%;">
-					</colgroup>
-					<thead>
-					<tr>
-						<th class="tableblock halign-left valign-top">Field</th>
-						<th class="tableblock halign-left valign-top">Type</th>
-						<th class="tableblock halign-left valign-top">Description</th>
-						<th class="tableblock halign-left valign-top">Since</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-					</tr>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-					</tr>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-					</tr>
-					</tbody>
-				</table>
-				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
-				<div class="listingblock">
-					<div class="content"><pre>{
-	"code":790,
-	"msg":"lavffr",
-	"data":{
-		"waring":"You may have used non-display generics."
-	}
-}</pre>
-					</div>
-				</div>
-			</div>
-			<div class="sect2"><h3 id="_1_2_待一面"><a class="anchor" href="#_1_2_待一面"></a><a class="link"
-																						   href="#_1_2_待一面">1.2.&nbsp;待一面</a>
-			</h3>
-				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/interview/first/un"
-																  class="bare">&nbsp;http://localhost:8080/interview/first/un</a>
-				</p></div>
-				<div class="paragraph"><p><strong>Type:</strong>&nbsp;GET</p></div>
-				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
-				</p></div>
-				<div class="paragraph"><p><strong>Description:</strong>&nbsp;待一面</p></div>
-				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
-				<table class="tableblock frame-all grid-all spread">
-					<colgroup>
-						<col style="width: 20%;">
-						<col style="width: 20%;">
-						<col style="width: 20%;">
-						<col style="width: 20%;">
-						<col style="width: 20%;">
-					</colgroup>
-					<thead>
-					<tr>
-						<th class="tableblock halign-left valign-top">Header</th>
-						<th class="tableblock halign-left valign-top">Type</th>
-						<th class="tableblock halign-left valign-top">Description</th>
-						<th class="tableblock halign-left valign-top">Required</th>
-						<th class="tableblock halign-left valign-top">Since</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
-							credentials(Global)</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-					</tr>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-					</tr>
-					</tbody>
-				</table>
-				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
-				<table class="tableblock frame-all grid-all spread">
-					<colgroup>
-						<col style="width: 20%;">
-						<col style="width: 20%;">
-						<col style="width: 20%;">
-						<col style="width: 20%;">
-						<col style="width: 20%;">
-					</colgroup>
-					<thead>
-					<tr>
-						<th class="tableblock halign-left valign-top">Parameter</th>
-						<th class="tableblock halign-left valign-top">Type</th>
-						<th class="tableblock halign-left valign-top">Description</th>
-						<th class="tableblock halign-left valign-top">Required</th>
-						<th class="tableblock halign-left valign-top">Since</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-					</tr>
-					</tbody>
-				</table>
-				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
-				<div class="listingblock">
-					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/first/un?departmentId=237</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/status?userId=582</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -394,10 +265,29 @@
 						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 					</tr>
 					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─firstStatus</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第一志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondStatus</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondDepartmentId</p>
 						</td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">二面部门</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondInterviewStatus</p>
+						</td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿状态</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 					</tr>
 					</tbody>
@@ -405,23 +295,268 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":366,
-	"msg":"qc49g3",
+	"code":418,
+	"msg":"m0s3sb",
+	"data":{
+		"userId":27,
+		"userSex":"4hr9le",
+		"userName":"浩然.罗",
+		"userStuNum":"3teybp",
+		"userQq":"pfkzyi",
+		"userTel":"5xe970",
+		"profession":"cezrfe",
+		"college":"9i9nmq",
+		"firstIntentionId":172,
+		"secondIntentionId":238,
+		"userHobby":"v6asqm",
+		"userIntroduction":"k2xvyj",
+		"firstStatus":507,
+		"secondStatus":92,
+		"secondDepartmentId":112,
+		"secondInterviewStatus":175
+	}
+}</pre>
+					</div>
+				</div>
+			</div>
+			<div class="sect2"><h3 id="_1_2_待一面"><a class="anchor" href="#_1_2_待一面"></a><a class="link"
+																						   href="#_1_2_待一面">1.2.&nbsp;待一面</a>
+			</h3>
+				<div class="paragraph"><p><strong>URL:</strong><a href="http://localhost:8080/interview/first/un"
+																  class="bare">&nbsp;http://localhost:8080/interview/first/un</a>
+				</p></div>
+				<div class="paragraph"><p><strong>Type:</strong>&nbsp;GET</p></div>
+				<div class="paragraph"><p><strong>Content-Type:</strong>&nbsp;application/x-www-form-urlencoded;charset=utf-8
+				</p></div>
+				<div class="paragraph"><p><strong>Description:</strong>&nbsp;待一面</p></div>
+				<div class="paragraph"><p><strong>Request-headers:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Header</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Basic auth
+							credentials(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户全局Id(Global)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-parameters:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+						<col style="width: 20%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Parameter</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Required</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">departmentId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">No comments found.</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content">
+						<pre>curl -X GET -i http://localhost:8080/interview/first/un?departmentId=736</pre>
+					</div>
+				</div>
+				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
+				<table class="tableblock frame-all grid-all spread">
+					<colgroup>
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+						<col style="width: 25%;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th class="tableblock halign-left valign-top">Field</th>
+						<th class="tableblock halign-left valign-top">Type</th>
+						<th class="tableblock halign-left valign-top">Description</th>
+						<th class="tableblock halign-left valign-top">Since</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果代码</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">msg</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">结果信息</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">data</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">数据</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">用户id</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userSex</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">性别</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userName</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">姓名</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userStuNum</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">学号</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userQq</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">QQ</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userTel</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">手机号</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─profession</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">专业</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─college</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">学院</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─firstIntentionId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">意向部门一(部门Id）</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondIntentionId</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">意向部门二(部门Id)</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userHobby</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">爱好特长</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─userIntroduction</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">自我介绍</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─firstStatus</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第一志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondStatus</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondDepartmentId</p>
+						</td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">二面部门</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondInterviewStatus</p>
+						</td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
+				<div class="listingblock">
+					<div class="content"><pre>{
+	"code":165,
+	"msg":"k9cwn1",
 	"data":[
 		{
-			"userId":483,
-			"userSex":"m49ubo",
-			"userName":"立诚.石",
-			"userStuNum":"5k9x4n",
-			"userQq":"fuenh6",
-			"userTel":"dgmsj1",
-			"profession":"2sepiw",
-			"college":"flopnp",
-			"firstIntentionId":958,
-			"secondIntentionId":711,
-			"userHobby":"qaxn68",
-			"userIntroduction":"nik6td",
-			"secondDepartmentId":549
+			"userId":953,
+			"userSex":"6ilg0v",
+			"userName":"浩然.罗",
+			"userStuNum":"fbjipd",
+			"userQq":"3pjbwh",
+			"userTel":"iav5lj",
+			"profession":"gii3p6",
+			"college":"dnanyt",
+			"firstIntentionId":391,
+			"secondIntentionId":291,
+			"userHobby":"0uk8n9",
+			"userIntroduction":"t77ei1",
+			"firstStatus":321,
+			"secondStatus":150,
+			"secondDepartmentId":498,
+			"secondInterviewStatus":324
 		}
 	]
 }</pre>
@@ -505,7 +640,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/first/finish?departmentId=157</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/first/finish?departmentId=967</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -746,40 +881,40 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":992,
-	"msg":"7ys579",
+	"code":336,
+	"msg":"awu4jd",
 	"data":[
 		{
-			"userId":326,
-			"userSex":"do87k4",
-			"userTel":"24wrca",
+			"userId":932,
+			"userSex":"i8o2db",
+			"userTel":"3oe5ru",
 			"myInterview":{
-				"userId":755,
-				"departmentId":189,
-				"userCharacter":"y26e93",
-				"paramScore1":480,
-				"paramScore2":634,
-				"paramScore3":258,
-				"paramScore4":57,
-				"paramScore5":185,
-				"paramScore6":366,
-				"note":"hu9es6",
+				"userId":599,
+				"departmentId":669,
+				"userCharacter":"rd2m8s",
+				"paramScore1":74,
+				"paramScore2":914,
+				"paramScore3":328,
+				"paramScore4":678,
+				"paramScore5":900,
+				"paramScore6":441,
+				"note":"xk4pr0",
 				"overview":"ABCD",
-				"userName":"立诚.石"
+				"userName":"浩然.罗"
 			},
 			"elseInterview":{
-				"userId":703,
-				"departmentId":865,
-				"userCharacter":"la65r7",
-				"paramScore1":136,
-				"paramScore2":774,
-				"paramScore3":271,
-				"paramScore4":946,
-				"paramScore5":525,
-				"paramScore6":952,
-				"note":"x9o8lo",
+				"userId":442,
+				"departmentId":20,
+				"userCharacter":"xupmhp",
+				"paramScore1":427,
+				"paramScore2":205,
+				"paramScore3":552,
+				"paramScore4":175,
+				"paramScore5":223,
+				"paramScore6":421,
+				"note":"wzvegv",
 				"overview":"ABCD",
-				"userName":"立诚.石"
+				"userName":"浩然.罗"
 			}
 		}
 	]
@@ -871,7 +1006,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/interview/first/eliminate  --data 'userId=744&departmentId=465'</pre>
+						<pre>curl -X POST -i http://localhost:8080/interview/first/eliminate  --data 'userId=367&departmentId=734'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -914,8 +1049,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":503,
-	"msg":"l4jgdi",
+	"code":290,
+	"msg":"4h6wha",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -1007,7 +1142,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/interview/first/pass  --data 'userId=12&departmentId=289'</pre>
+						<pre>curl -X POST -i http://localhost:8080/interview/first/pass  --data 'userId=242&departmentId=646'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -1050,8 +1185,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":824,
-	"msg":"jood2i",
+	"code":973,
+	"msg":"oa6qsw",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -1143,7 +1278,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/interview/second/check  --data 'userTel=hpravg&departmentId=862'</pre>
+						<pre>curl -X POST -i http://localhost:8080/interview/second/check  --data 'userTel=ckz4fo&departmentId=708'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -1186,8 +1321,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":745,
-	"msg":"qoyars",
+	"code":776,
+	"msg":"bgsc34",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -1272,7 +1407,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/second/un?departmentId=233</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/second/un?departmentId=201</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -1513,40 +1648,40 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":627,
-	"msg":"toxjrc",
+	"code":402,
+	"msg":"hsdwr4",
 	"data":[
 		{
-			"userId":550,
-			"userSex":"au1u1n",
-			"userTel":"zs1ojq",
+			"userId":824,
+			"userSex":"s9efe3",
+			"userTel":"o7fs9i",
 			"myInterview":{
-				"userId":317,
-				"departmentId":453,
-				"userCharacter":"iknlww",
-				"paramScore1":812,
-				"paramScore2":330,
-				"paramScore3":873,
-				"paramScore4":189,
-				"paramScore5":316,
-				"paramScore6":327,
-				"note":"q7i9zv",
+				"userId":620,
+				"departmentId":983,
+				"userCharacter":"72o4ky",
+				"paramScore1":861,
+				"paramScore2":398,
+				"paramScore3":400,
+				"paramScore4":269,
+				"paramScore5":609,
+				"paramScore6":955,
+				"note":"bn311k",
 				"overview":"ABCD",
-				"userName":"立诚.石"
+				"userName":"浩然.罗"
 			},
 			"elseInterview":{
-				"userId":616,
-				"departmentId":96,
-				"userCharacter":"3fsrtk",
-				"paramScore1":216,
-				"paramScore2":126,
-				"paramScore3":206,
-				"paramScore4":282,
-				"paramScore5":418,
-				"paramScore6":823,
-				"note":"nr5ywx",
+				"userId":810,
+				"departmentId":984,
+				"userCharacter":"35t0e8",
+				"paramScore1":73,
+				"paramScore2":746,
+				"paramScore3":82,
+				"paramScore4":622,
+				"paramScore5":218,
+				"paramScore6":498,
+				"note":"b042u1",
 				"overview":"ABCD",
-				"userName":"立诚.石"
+				"userName":"浩然.罗"
 			}
 		}
 	]
@@ -1631,7 +1766,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/interview/second/finish?departmentId=716</pre>
+						<pre>curl -X GET -i http://localhost:8080/interview/second/finish?departmentId=61</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -1872,40 +2007,40 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":802,
-	"msg":"x4vn4e",
+	"code":112,
+	"msg":"l0mzqn",
 	"data":[
 		{
-			"userId":725,
-			"userSex":"oqwfqz",
-			"userTel":"ea8kyo",
+			"userId":683,
+			"userSex":"ipppyg",
+			"userTel":"egiod2",
 			"myInterview":{
-				"userId":272,
-				"departmentId":715,
-				"userCharacter":"1hlq1x",
-				"paramScore1":840,
-				"paramScore2":236,
-				"paramScore3":516,
-				"paramScore4":157,
-				"paramScore5":141,
-				"paramScore6":653,
-				"note":"87pp9x",
+				"userId":979,
+				"departmentId":543,
+				"userCharacter":"ze80xj",
+				"paramScore1":631,
+				"paramScore2":269,
+				"paramScore3":243,
+				"paramScore4":695,
+				"paramScore5":265,
+				"paramScore6":232,
+				"note":"m9rqg4",
 				"overview":"ABCD",
-				"userName":"立诚.石"
+				"userName":"浩然.罗"
 			},
 			"elseInterview":{
-				"userId":656,
-				"departmentId":763,
-				"userCharacter":"hcfmmn",
-				"paramScore1":692,
+				"userId":972,
+				"departmentId":785,
+				"userCharacter":"g3arm5",
+				"paramScore1":221,
 				"paramScore2":855,
-				"paramScore3":509,
-				"paramScore4":77,
-				"paramScore5":163,
-				"paramScore6":580,
-				"note":"8iazj4",
+				"paramScore3":928,
+				"paramScore4":372,
+				"paramScore5":732,
+				"paramScore6":445,
+				"note":"w5o1zg",
 				"overview":"ABCD",
-				"userName":"立诚.石"
+				"userName":"浩然.罗"
 			}
 		}
 	]
@@ -1997,7 +2132,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/interview/second/eliminate  --data 'userId=550&departmentId=401'</pre>
+						<pre>curl -X POST -i http://localhost:8080/interview/second/eliminate  --data 'userId=808&departmentId=534'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -2040,8 +2175,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":148,
-	"msg":"t58lvq",
+	"code":179,
+	"msg":"jqod3u",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -2130,7 +2265,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/data/count/137</pre>
+						<pre>curl -X GET -i http://localhost:8080/data/count/111</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -2173,8 +2308,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":439,
-	"msg":"awdb1z",
+	"code":854,
+	"msg":"ycc11d",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -2273,8 +2408,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":250,
-	"msg":"r3cml0",
+	"code":736,
+	"msg":"giwthv",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -2373,8 +2508,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":467,
-	"msg":"293e6z",
+	"code":466,
+	"msg":"46vq6l",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -2462,7 +2597,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8080/login/wx --data '{
-	"code":"57451"
+	"code":"53057"
 }'</pre>
 					</div>
 				</div>
@@ -2518,11 +2653,11 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":539,
-	"msg":"426wxn",
+	"code":978,
+	"msg":"9jfj3n",
 	"data":{
-		"userId":192,
-		"token":"ejbhsx"
+		"userId":520,
+		"token":"t0klya"
 	}
 }</pre>
 					</div>
@@ -2611,7 +2746,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/login/pc  --data 'userTel=073g06&userPwd=y8h9if'</pre>
+						<pre>curl -X POST -i http://localhost:8080/login/pc  --data 'userTel=f5soi1&userPwd=1tl8mu'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -2666,11 +2801,11 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":577,
-	"msg":"d8nv2t",
+	"code":185,
+	"msg":"s65kf7",
 	"data":{
-		"userId":345,
-		"token":"ppooyj"
+		"userId":511,
+		"token":"ll0tc8"
 	}
 }</pre>
 					</div>
@@ -2816,7 +2951,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/login/activate  --data 'userId=894&userName=立诚.石&userSex=2su0rg&userTel=72h7jg&permissionId=998&departmentId=435&userPwd=n6a28o&userProfession=uydn4x&userCollege=w12on6&inviteCode=57451'</pre>
+						<pre>curl -X POST -i http://localhost:8080/login/activate  --data 'userId=456&userName=浩然.罗&userSex=wjs0bc&userTel=38vbhc&permissionId=153&departmentId=962&userPwd=239np1&userProfession=l2poq2&userCollege=42yabw&inviteCode=53057'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -2859,8 +2994,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":251,
-	"msg":"vr6osg",
+	"code":689,
+	"msg":"ystbcz",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -2956,9 +3091,9 @@
 				<div class="listingblock">
 					<div class="content"><pre>curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8080/manager/enroll --data '{
 	"userId":[
-		422
+		682
 	],
-	"departmentId":109
+	"departmentId":442
 }'</pre>
 					</div>
 				</div>
@@ -3002,8 +3137,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":355,
-	"msg":"t58ynz",
+	"code":27,
+	"msg":"wmsmz6",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -3102,7 +3237,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/manager/members  --data 'departmentId=588&pageNum=884&pageSize=10'</pre>
+						<pre>curl -X POST -i http://localhost:8080/manager/members  --data 'departmentId=95&pageNum=683&pageSize=10'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -3316,38 +3451,38 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":319,
-	"msg":"x2geov",
+	"code":504,
+	"msg":"gqcoxd",
 	"data":{
-		"total":991,
+		"total":228,
 		"list":[
 			{
-				"userId":600,
-				"userName":"立诚.石",
-				"userSex":"m7xgv8",
-				"userTel":"gpexkf",
-				"permissionId":202,
-				"departmentId":847,
-				"userPwd":"hk0qs2",
-				"userProfession":"xb5c5p",
-				"userCollege":"43vcyo"
+				"userId":869,
+				"userName":"浩然.罗",
+				"userSex":"5pq09k",
+				"userTel":"t3zyal",
+				"permissionId":859,
+				"departmentId":4,
+				"userPwd":"8yb94c",
+				"userProfession":"mk27v0",
+				"userCollege":"77jq94"
 			}
 		],
-		"pageNum":167,
+		"pageNum":623,
 		"pageSize":10,
 		"size":10,
-		"startRow":704,
-		"endRow":508,
-		"pages":523,
+		"startRow":836,
+		"endRow":57,
+		"pages":239,
 		"prePage":1,
 		"nextPage":1,
 		"isFirstPage":true,
 		"isLastPage":true,
 		"hasPreviousPage":true,
 		"hasNextPage":true,
-		"navigatePages":738,
+		"navigatePages":639,
 		"navigatepageNums":[
-			575
+			737
 		],
 		"navigateFirstPage":1,
 		"navigateLastPage":1
@@ -3432,7 +3567,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/manager/export/373</pre>
+						<pre>curl -X GET -i http://localhost:8080/manager/export/13</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
@@ -3551,12 +3686,12 @@
 				<div class="listingblock">
 					<div class="content"><pre>curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8080/messages/interview/first --data '{
 	"userId":[
-		345
+		141
 	],
-	"departmentId":538,
-	"timeSlot":"i16v3g",
-	"place":"lnsoy5",
-	"telNo":"2wy21e"
+	"departmentId":702,
+	"timeSlot":"cuqif0",
+	"place":"msz9cc",
+	"telNo":"xcfubq"
 }'</pre>
 					</div>
 				</div>
@@ -3600,8 +3735,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":668,
-	"msg":"cckh80",
+	"code":533,
+	"msg":"1orxuh",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -3714,7 +3849,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/messages/interview/second  --data 'userId.[]=1mce3u&departmentId=182&timeSlot=upzfx2&place=kgj40i&telNo=2mnezi'</pre>
+						<pre>curl -X POST -i http://localhost:8080/messages/interview/second  --data 'userId.[]=q89i6l&departmentId=309&timeSlot=5hpp7g&place=dbwqnk&telNo=2ok9r2'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -3757,8 +3892,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":819,
-	"msg":"wufyht",
+	"code":976,
+	"msg":"lwv7l6",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -3858,7 +3993,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/messages/enroll  --data 'userId.[]=gf7i4m&departmentId=512&secret=7uowba'</pre>
+						<pre>curl -X POST -i http://localhost:8080/messages/enroll  --data 'userId.[]=y5xqsd&departmentId=642&secret=dz24ja'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -3901,8 +4036,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":634,
-	"msg":"9nah1f",
+	"code":273,
+	"msg":"qi26tr",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -4064,9 +4199,31 @@
 						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 					</tr>
 					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">firstStatus</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第一志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">secondStatus</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">secondDepartmentId</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">二面部门</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">secondInterviewStatus</p>
+						</td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿状态</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 					</tr>
@@ -4075,7 +4232,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/resume/apply  --data 'userId=214&userSex=iamsyy&userName=立诚.石&userStuNum=2uv6dm&userQq=4m6kia&userTel=7ebw61&profession=6g0x3l&college=6e0ecg&firstIntentionId=969&secondIntentionId=212&userHobby=liao8j&userIntroduction=twgpaf&secondDepartmentId=461'</pre>
+						<pre>curl -X POST -i http://localhost:8080/resume/apply  --data 'userId=984&userSex=g9kaaw&userName=浩然.罗&userStuNum=tbm1db&userQq=i5evyj&userTel=pvmbvl&profession=jgnanw&college=pewhrr&firstIntentionId=712&secondIntentionId=651&userHobby=gdt6iu&userIntroduction=h8ftqk&firstStatus=637&secondStatus=999&secondDepartmentId=302&secondInterviewStatus=721'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -4118,8 +4275,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":793,
-	"msg":"uqhqpu",
+	"code":532,
+	"msg":"wjtllg",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -4210,7 +4367,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X GET -i http://localhost:8080/resume/view?departmentId=475&userTel=dciyb4</pre>
+						<pre>curl -X GET -i http://localhost:8080/resume/view?departmentId=498&userTel=47c0ec</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -4321,10 +4478,29 @@
 						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 					</tr>
 					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─firstStatus</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第一志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondStatus</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿状态</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondDepartmentId</p>
 						</td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">二面部门</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+					</tr>
+					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">└─secondInterviewStatus</p>
+						</td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿状态</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 					</tr>
 					</tbody>
@@ -4332,22 +4508,25 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":512,
-	"msg":"zvupda",
+	"code":781,
+	"msg":"pob94x",
 	"data":{
-		"userId":484,
-		"userSex":"blfdui",
-		"userName":"立诚.石",
-		"userStuNum":"kj3qkb",
-		"userQq":"npfq7c",
-		"userTel":"ayl7sz",
-		"profession":"a875u4",
-		"college":"bhzd2y",
-		"firstIntentionId":361,
-		"secondIntentionId":554,
-		"userHobby":"0loue9",
-		"userIntroduction":"ttasbn",
-		"secondDepartmentId":847
+		"userId":304,
+		"userSex":"pfwv7w",
+		"userName":"浩然.罗",
+		"userStuNum":"8qow04",
+		"userQq":"thindq",
+		"userTel":"jzjtul",
+		"profession":"cwevab",
+		"college":"ev35rd",
+		"firstIntentionId":320,
+		"secondIntentionId":275,
+		"userHobby":"49e2va",
+		"userIntroduction":"u4chca",
+		"firstStatus":461,
+		"secondStatus":123,
+		"secondDepartmentId":513,
+		"secondInterviewStatus":551
 	}
 }</pre>
 					</div>
@@ -4507,7 +4686,7 @@
 				<div class="paragraph"><p><strong>Request-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content">
-						<pre>curl -X POST -i http://localhost:8080/resume/score  --data 'userId=277&departmentId=611&userCharacter=5lkina&paramScore1=925&paramScore2=420&paramScore3=480&paramScore4=667&paramScore5=674&paramScore6=298&note=o54jse&overview=rfx7vk&userName=立诚.石'</pre>
+						<pre>curl -X POST -i http://localhost:8080/resume/score  --data 'userId=245&departmentId=209&userCharacter=dlyy8v&paramScore1=27&paramScore2=192&paramScore3=292&paramScore4=541&paramScore5=350&paramScore6=150&note=axzar4&overview=4gai6y&userName=浩然.罗'</pre>
 					</div>
 				</div>
 				<div class="paragraph"><p><strong>Response-fields:</strong></p></div>
@@ -4550,8 +4729,8 @@
 				<div class="paragraph"><p><strong>Response-example:</strong></p></div>
 				<div class="listingblock">
 					<div class="content"><pre>{
-	"code":551,
-	"msg":"f0qq89",
+	"code":521,
+	"msg":"4rcylx",
 	"data":{
 		"waring":"You may have used non-display generics."
 	}
@@ -4777,51 +4956,31 @@
 					</thead>
 					<tbody>
 					<tr>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">未面试</p></td>
+					</tr>
+					<tr>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">第一志愿已经面试</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">已经面试</p></td>
 					</tr>
 					<tr>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">第一志愿通过</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">淘汰</p></td>
 					</tr>
 					<tr>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
 						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">第一志愿淘汰</p></td>
-					</tr>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿已经面试</p></td>
-					</tr>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿通过</p></td>
-					</tr>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">第二志愿淘汰</p></td>
-					</tr>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">二面已经签到</p></td>
-					</tr>
-					<tr>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-						<td class="tableblock halign-left valign-top"><p class="tableblock">二面淘汰</p></td>
+						<td class="tableblock halign-left valign-top"><p class="tableblock">通过</p></td>
 					</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
-	<footer class="page-footer"><span class="copyright">Generated by smart-doc at 2020-02-19 10:35:08</span><span
+	<footer class="page-footer"><span class="copyright">Generated by smart-doc at 2020-02-20 18:40:24</span><span
 			class="footer-modification">Suggestions,contact,support and error reporting on<a
 			href="https://gitee.com/sunyurepository/smart-doc" target="_blank">&nbsp;Gitee</a>&nbsp;or<a
 			href="https://github.com/shalousun/smart-doc" target="_blank">&nbsp;Github</a></span></footer>
