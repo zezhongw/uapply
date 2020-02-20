@@ -18,7 +18,6 @@ public interface ApplyMsgMapper {
 
     int UpdateSecondDepartment(String userTel,Integer departmentId);
 
-    User GetUserByUserId(Integer userId);
 
     int insertApplyMsg(ApplyPO applyPO);
 

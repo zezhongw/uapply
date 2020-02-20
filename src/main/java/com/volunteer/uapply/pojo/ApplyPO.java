@@ -72,9 +72,23 @@ public class ApplyPO {
      */
     private String userIntroduction;
 
+    /**
+     * 第一志愿状态
+     */
+    private Integer firstStatus;
+
+    /**
+     * 第二志愿状态
+     */
+    private Integer secondStatus;
 
     /**
      * 二面部门
      */
     private Integer secondDepartmentId;
+
+    /**
+     * 第二志愿状态
+     */
+    private Integer secondInterviewStatus;
 }
