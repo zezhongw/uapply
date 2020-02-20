@@ -146,7 +146,7 @@
 
 ### interviewmessge(存储面试信息)
 
-* uer_id
+* user_id
 * department_id
 * character 性格
 * param_score1

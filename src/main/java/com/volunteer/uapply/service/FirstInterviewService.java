@@ -2,6 +2,7 @@ package com.volunteer.uapply.service;
 
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.pojo.SearchInterviewPojo;
 import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 
@@ -29,7 +30,7 @@ public interface FirstInterviewService {
     /**
      * 查询已一面
      */
-    UniversalResponseBody<List<ApplyPO>> SelectFirstInterviewed(Integer departmentId);
+    UniversalResponseBody<List<SearchInterviewPojo>> SelectFirstInterviewed(Integer departmentId);
 
     /**
      * 淘汰一面
@@ -38,4 +39,13 @@ public interface FirstInterviewService {
      * @return
      */
     UniversalResponseBody EliminateFirst(Integer userId,Integer departmentId);
+
+    /**
+     * 通过一面
+     *
+     * @param userId
+     * @param departmentId
+     * @return
+     */
+    UniversalResponseBody PassFirst(Integer userId, Integer departmentId);
 }

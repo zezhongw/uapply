@@ -13,3 +13,4 @@ target/classes/com/volunteer/uapply/pojo/SearchInterviewPojo.class
 target/classes/com/volunteer/uapply/utils/response/ResponseException.class
 target/generated-sources/
 target/generated-test-sources/
+/.idea/

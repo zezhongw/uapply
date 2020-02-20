@@ -2,6 +2,7 @@ package com.volunteer.uapply.mapper;
 
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.pojo.SearchInterviewPojo;
 import com.volunteer.uapply.pojo.User;
 
 import java.util.List;
@@ -35,16 +36,32 @@ public interface InterviewMsgMapper {
     /**
      * 查询已一面
      */
-    List<ApplyPO> SelectFirstInterviewed(Integer departmentId);
+    List<InterviewPO> FindInterviewMsgsByDepartmentId(Integer departmentId);
+
+    /**
+     * @param userId
+     * @return
+     */
+    List<InterviewPO> FindInterviewMsgsByUserId(Integer userId);
+
     /**
      * 淘汰一面
      */
-    int EliminateFirst(Integer userId,Integer departmentId);
+    int EliminateFirstIntention(Integer userId, Integer departmentId);
+
+    int EliminateSecondIntention(Integer userId, Integer departmentId);
+
+    /**
+     * 通过一面
+     */
+    int PassFirstIntention(Integer userId, Integer departmentId);
+
+    int PassSecondIntention(Integer userId, Integer departmentId);
 
     /**
      * 通过userId查interviewmessage
      * @param userId
      * @return
      */
-    InterviewPO findInterviewMsgByUserId(int userId);
+    InterviewPO findInterviewMsgByUserId(Integer userId);
 }

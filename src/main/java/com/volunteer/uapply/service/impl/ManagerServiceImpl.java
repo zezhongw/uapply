@@ -84,6 +84,7 @@ public class ManagerServiceImpl implements ManagerService {
 
 
     @Override
+
     public UniversalResponseBody<PageInfo<User>> allMembers(Integer departmentId, Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         PageInfo<User> pageInfo = new PageInfo<>(managgerMapper.allMembers(departmentId));

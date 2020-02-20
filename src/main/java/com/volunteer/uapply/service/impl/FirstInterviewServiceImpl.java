@@ -5,6 +5,7 @@ import com.volunteer.uapply.mapper.InterviewMsgMapper;
 import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.pojo.SearchInterviewPojo;
 import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.service.FirstInterviewService;
 import com.volunteer.uapply.utils.enums.InterviewStatusEnum;
@@ -20,8 +21,8 @@ import java.util.List;
 
 /**
  * @author 武泽中
- * @version 1.00
- * @date 2020/2/10/10:18
+ * @version 2.00
+ * @date 2020/2/20/18:18
  */
 @Slf4j
 @Service
@@ -32,6 +33,9 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
 
     @Resource
     ApplyMsgMapper applyMsgMapper;
+
+    @Resource
+    UserMapper userMapper;
 
     /**
      * 插入面试评分,并更改面试状态
@@ -89,9 +93,24 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
      * @return
      */
     @Override
-    public UniversalResponseBody<List<ApplyPO>> SelectFirstInterviewed(Integer departmentId) {
-        List<ApplyPO> applyPOs=interviewMsgMapper.SelectFirstInterviewed(departmentId);
-        return new UniversalResponseBody<>(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg(),applyPOs);
+    public UniversalResponseBody<List<SearchInterviewPojo>> SelectFirstInterviewed(Integer departmentId) {
+        List<SearchInterviewPojo> searchInterviewPojos = new LinkedList<>();
+        List<InterviewPO> myInterviews = interviewMsgMapper.FindInterviewMsgsByDepartmentId(departmentId);
+        for (InterviewPO myInterview : myInterviews) {
+            List<InterviewPO> elseInterviews = interviewMsgMapper.FindInterviewMsgsByUserId(myInterview.getUserId());
+            InterviewPO elseInterview = null;
+            if (elseInterviews.size() == 1)
+                elseInterview = null;
+            else if (elseInterviews.size() == 2) {
+                if (myInterview.getDepartmentId().equals(elseInterviews.get(0).getDepartmentId()))
+                    elseInterview = elseInterviews.get(1);
+                else elseInterview = elseInterviews.get(0);
+            }
+            User user = userMapper.findUserByUserId(myInterview.getUserId());
+            SearchInterviewPojo searchInterviewPojo = new SearchInterviewPojo(user.getUserId(), user.getUserName(), user.getUserSex(), user.getUserTel(), myInterview, elseInterview);
+            searchInterviewPojos.add(searchInterviewPojo);
+        }
+        return new UniversalResponseBody<>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(), searchInterviewPojos);
     }
 
     /**
@@ -102,7 +121,34 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
      */
     @Override
     public UniversalResponseBody EliminateFirst(Integer userId, Integer departmentId) {
-        int result=interviewMsgMapper.EliminateFirst(userId,departmentId);
+        ApplyPO applyPO = applyMsgMapper.findApplyMsgByUserId(userId);
+        int result;
+        if (applyPO.getFirstIntentionId().equals(departmentId))
+            result = interviewMsgMapper.EliminateFirstIntention(userId, departmentId);
+        else
+            result = interviewMsgMapper.EliminateSecondIntention(userId, departmentId);
+        if (result != 0) {
+            return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg());
+        } else {
+            return new UniversalResponseBody(ResponseResultEnum.FAILED.getCode(), ResponseResultEnum.FAILED.getMsg());
+        }
+    }
+
+    /**
+     * 通过一面人员
+     *
+     * @param userId
+     * @param departmentId
+     * @return
+     */
+    @Override
+    public UniversalResponseBody PassFirst(Integer userId, Integer departmentId) {
+        ApplyPO applyPO = applyMsgMapper.findApplyMsgByUserId(userId);
+        int result;
+        if (applyPO.getFirstIntentionId().equals(departmentId))
+            result = interviewMsgMapper.PassFirstIntention(userId, departmentId);
+        else
+            result = interviewMsgMapper.PassSecondIntention(userId, departmentId);
         if (result!=0){
             return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(),ResponseResultEnum.SUCCESS.getMsg());
         }else{

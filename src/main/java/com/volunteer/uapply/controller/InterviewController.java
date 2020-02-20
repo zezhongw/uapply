@@ -78,7 +78,7 @@ public class InterviewController {
     @UserLogin
     @GetMapping("/first/finish")
     public UniversalResponseBody<List<SearchInterviewPojo>> FirstInterviewed(Integer departmentId) {
-        return null;
+        return firstInterviewService.SelectFirstInterviewed(departmentId);
     }
 
     /**
@@ -90,7 +90,7 @@ public class InterviewController {
     @MinisterLogin
     @PostMapping("/first/eliminate")
     public UniversalResponseBody FirstEliminate(Integer userId, Integer departmentId) {
-        return null;
+        return firstInterviewService.EliminateFirst(userId, departmentId);
     }
 
     /**
@@ -103,7 +103,7 @@ public class InterviewController {
     @MinisterLogin
     @PostMapping("/first/pass")
     public UniversalResponseBody FirstPass(Integer userId, Integer departmentId) {
-        return null;
+        return firstInterviewService.PassFirst(userId, departmentId);
     }
 
 
