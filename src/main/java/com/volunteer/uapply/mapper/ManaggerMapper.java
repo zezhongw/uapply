@@ -1,7 +1,12 @@
 package com.volunteer.uapply.mapper;
 
+import com.volunteer.uapply.pojo.User;
+
+import java.util.List;
+
 /**
  * 管理员相关的mapper
+ *
  * @author 郭树耸
  * @version 1.0
  * @date 2020/2/6 15:22
@@ -18,4 +23,6 @@ public interface ManaggerMapper {
      * 查询部门激活码
      */
     String searchCodeByDepartId(Integer departmentId);
+
+    List<User> allMembers(Integer departmentId);
 }

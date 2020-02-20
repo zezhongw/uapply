@@ -13,4 +13,9 @@
         WHERE department_id = #{departmentId,jdbcType=INTEGER}
     </select>
 
+
+    <select id="allMembers" resultType="com.volunteer.uapply.pojo.User">
+        SELECT user_id,user_name,user_sex,user_tel,user_profession,user_college FROM usermessage WHERE departmen_id = #{deparmentId,jdbcType=INTEGER}
+    </select>
+
 </mapper>

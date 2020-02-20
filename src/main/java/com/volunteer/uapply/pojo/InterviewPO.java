@@ -58,10 +58,7 @@ public class InterviewPO {
      */
     private Integer paramScore6;
 
-    /**
-     * 评价人
-     */
-    private String userName;
+
 
     /**
      * 备注
@@ -74,9 +71,9 @@ public class InterviewPO {
      */
     private String overview;
 
+
     /**
-     * 此次面试是否通过
-     * @mock 1通过 0不通过
+     * 评价人
      */
-    private Integer interviewPass;
+    private String userName;
 }

@@ -22,6 +22,7 @@
         WHERE user_tel = #{userTel,jdbcType=VARCHAR}
     </select>
 
+
     <insert id="insertBatch" useGeneratedKeys="false" keyProperty="userId" parameterType="com.volunteer.uapply.pojo.User" >
         INSERT INTO
         usermessage(user_id,user_name,user_tel,permission_id,department_id,user_pwd)

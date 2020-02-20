@@ -1,11 +1,14 @@
 package com.volunteer.uapply.controller;
 
 
+import com.github.pagehelper.PageInfo;
 import com.volunteer.uapply.annotation.MinisterLogin;
 import com.volunteer.uapply.annotation.UserLogin;
+import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.pojo.dto.EnrollMembersDTO;
 import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.service.impl.ManagerServiceImpl;
+import com.volunteer.uapply.utils.enums.DepartmentEnum;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  *
@@ -48,6 +52,7 @@ public class MembersController {
 
     /**
      * 分页查询部员数据
+     *
      * @param departmentId
      * @param pageNum
      * @param pageSize
@@ -55,8 +60,8 @@ public class MembersController {
      */
     @UserLogin
     @PostMapping("/members")
-    public UniversalResponseBody FindMembers(@RequestParam("departmentId")Integer departmentId, @RequestParam("pageNum")Integer pageNum, @RequestParam("pageSize")Integer pageSize){
-        return null;
+    public UniversalResponseBody<PageInfo<User>> FindMembers(@RequestParam("departmentId") Integer departmentId, @RequestParam("pageNum") Integer pageNum, @RequestParam("pageSize") Integer pageSize) {
+        return managerService.allMembers(departmentId, pageNum, pageSize);
     }
 
 
@@ -67,6 +72,6 @@ public class MembersController {
      */
     @GetMapping("/export/{departmentId}")
     public void exportMessages(@PathVariable("departmentId")Integer departmentId, HttpServletResponse response){
-
+        managerService.exportMembersExcel(departmentId, response);
     }
 }
