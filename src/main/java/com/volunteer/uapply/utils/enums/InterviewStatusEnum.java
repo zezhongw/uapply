@@ -9,10 +9,10 @@ package com.volunteer.uapply.utils.enums;
  */
 public enum InterviewStatusEnum {
 
-    INTENTION_NO_INTERVIEW(0, "未面试"),
-    INTENTION_INTERVIEW(1, "已经面试"),
-    INTENTION_ELIMINATE(2, "淘汰"),
-    INTENTION_PASS(3, "通过");
+    NO_INTERVIEW(0, "未面试"),
+    INTERVIEWED(1, "已经面试"),
+    INTERVIEW_ELIMINATE(2, "淘汰"),
+    INTERVIEW_PASS(3, "通过");
 
     /**
      * 面试状态id
