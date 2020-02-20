@@ -34,7 +34,7 @@ public interface ManagerService {
 
 
     /**
-     * 查询部门所有成员
+     * 分页查询部门所有成员
      *
      * @param departmentId
      * @return

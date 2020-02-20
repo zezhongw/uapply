@@ -3,7 +3,7 @@
 <mapper namespace="com.volunteer.uapply.mapper.ApplyMsgMapper">
 
     <update id="UpdateSecondDepartment">
-        UPDATE applymessage SET secondDepartment_id = #{departmentId,jdbcType=INTEGER},secondInterview_status = 6 WHERE user_tel = #{userTel,jdbcType=VARCHAR}
+        UPDATE applymessage SET secondDepartment_id = #{departmentId,jdbcType=INTEGER},secondInterview_status = 1 WHERE user_tel = #{userTel,jdbcType=VARCHAR}
     </update>
 
 
