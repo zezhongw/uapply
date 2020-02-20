@@ -1,10 +1,8 @@
 package com.volunteer.uapply.service.impl;
 
 import com.volunteer.uapply.mapper.ApplyMsgMapper;
-import com.volunteer.uapply.mapper.InterviewMsgMapper;
 import com.volunteer.uapply.mapper.UserMapper;
 import com.volunteer.uapply.pojo.ApplyPO;
-import com.volunteer.uapply.pojo.InterviewPO;
 import com.volunteer.uapply.pojo.User;
 import com.volunteer.uapply.service.ResumeService;
 import com.volunteer.uapply.utils.enums.PermissionIdEnum;
@@ -26,8 +24,6 @@ import javax.annotation.Resource;
 public class ResumeServiceImpl implements ResumeService {
     @Resource
     private ApplyMsgMapper applyMsgMapper;
-    @Resource
-    private InterviewMsgMapper interviewMsgMapper;
     @Resource
     private UserMapper userMapper;
 
@@ -105,23 +101,11 @@ public class ResumeServiceImpl implements ResumeService {
     @Override
     public UniversalResponseBody viewApplyStatus(int userId) {
         ApplyPO applyPO = applyMsgMapper.findApplyMsgByUserId(userId);
-        InterviewPO interviewPO = interviewMsgMapper.findInterviewMsgByUserId(userId);
         if(applyPO == null){
             //未报名
-            return new UniversalResponseBody(ResponseResultEnum.NOT_APPLY.getCode(),ResponseResultEnum.NOT_APPLY.getMsg());
+            return new UniversalResponseBody(ResponseResultEnum.FAILED.getCode(), ResponseResultEnum.FAILED.getMsg(), null);
         }else {
-            //一面未面
-            if(interviewPO == null) {
-                return new UniversalResponseBody(ResponseResultEnum.SUCCEED_APPLY.getCode(), ResponseResultEnum.SUCCEED_APPLY.getMsg());
-            } else {
-                //一面已面试，二面面试
-                if (applyPO.getSecondDepartmentId() == null) {
-                    return new UniversalResponseBody(ResponseResultEnum.FINISH_FIRST_INTERVIEW.getCode(), ResponseResultEnum.FINISH_FIRST_INTERVIEW.getMsg());
-                } else {
-                    //二面已面
-                    return new UniversalResponseBody(ResponseResultEnum.FINISH_SECOND_INTERVIEW.getCode(), ResponseResultEnum.FINISH_SECOND_INTERVIEW.getMsg());
-                }
-            }
+            return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(), applyPO);
         }
     }
 }
