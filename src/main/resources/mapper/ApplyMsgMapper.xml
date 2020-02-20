@@ -6,11 +6,6 @@
         UPDATE applymessage SET secondDepartment_id = #{departmentId,jdbcType=INTEGER},secondInterview_status = 6 WHERE user_tel = #{userTel,jdbcType=VARCHAR}
     </update>
 
-    <select id="GetUserByUserId" resultType="com.volunteer.uapply.pojo.User">
-        SELECT user_id,user_name,user_sex,user_tel,userStu_num,user_qq,user_college,user_profession,firstIntention_id,first_status,secondIntention_id,second_status,user_hobby,user_introduction,secondDepartment_id,secpndInterview_status
-        FROM applymessage
-        WHERE user_id = #{userId,jdbcType=INTEGER}
-    </select>
 
     <select id="listApplyPOUnSecondInterview" parameterType="java.lang.Integer" resultType="com.volunteer.uapply.pojo.ApplyPO">
         SELECT a.*
