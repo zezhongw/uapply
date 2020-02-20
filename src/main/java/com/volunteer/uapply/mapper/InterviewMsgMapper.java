@@ -2,7 +2,9 @@ package com.volunteer.uapply.mapper;
 
 import com.volunteer.uapply.pojo.ApplyPO;
 import com.volunteer.uapply.pojo.InterviewPO;
+import com.volunteer.uapply.pojo.SearchInterviewPojo;
 import com.volunteer.uapply.pojo.User;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -12,6 +14,7 @@ import java.util.List;
  * @version 1.0
  * @date 2020/2/8 10:17
  */
+@Mapper
 public interface InterviewMsgMapper {
 
     /**
@@ -47,4 +50,14 @@ public interface InterviewMsgMapper {
      * @return
      */
     InterviewPO findInterviewMsgByUserId(int userId);
+
+    /**
+     * 根据 部门 id 查询面试信息，封装为 SearchInterviewPojo
+     *
+     * @param departmentId
+     * @return
+     */
+    List<SearchInterviewPojo> listSecondUnInterviewInfoByUserId(int departmentId);
+
+    List<SearchInterviewPojo> listSecondInterviewedInfoByUserId(int departmentId);
 }

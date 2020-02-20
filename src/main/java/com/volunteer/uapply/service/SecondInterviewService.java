@@ -1,6 +1,6 @@
 package com.volunteer.uapply.service;
 
-import com.volunteer.uapply.pojo.ApplyPO;
+import com.volunteer.uapply.pojo.SearchInterviewPojo;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 
 import java.util.List;
@@ -20,11 +20,23 @@ public interface SecondInterviewService {
      */
     UniversalResponseBody SecondCheck(String userTel, Integer departmentId);
 
-    UniversalResponseBody<List<ApplyPO>> listUserUnSecondInterview(Integer departmentId);
+    /**
+     * 根据部门查询所有二面还没面试的成员，封装到 SearchInterviewPojo
+     *
+     * @param departmentId
+     * @return
+     */
+    UniversalResponseBody<List<SearchInterviewPojo>> listUnSecondInterviewInfo(Integer departmentId);
 
-    UniversalResponseBody<List<ApplyPO>> listUserSecondedInterviewed(Integer departmentId);
+    /**
+     * 根据部门查询所有二面已经面试的成员，封装到 SearchInterviewPojo
+     *
+     * @param departmentId
+     * @return
+     */
+    UniversalResponseBody<List<SearchInterviewPojo>> listSecondedInterviewedInfo(Integer departmentId);
 
-    UniversalResponseBody EnrollMembers(Integer[] userId,Integer departmentId);
+    UniversalResponseBody secondEliminate(Integer userId, Integer departmentId);
 
-    UniversalResponseBody SecondEliminate(Integer userId,Integer departmentId);
+    UniversalResponseBody enrollMembers(Integer[] ids, Integer departmentId);
 }

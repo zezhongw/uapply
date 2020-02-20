@@ -1,11 +1,12 @@
 package com.volunteer.uapply.mapper;
 
 import com.volunteer.uapply.pojo.ApplyPO;
+import com.volunteer.uapply.pojo.SearchInterviewPojo;
 import com.volunteer.uapply.pojo.User;
-import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
+
 /**
  * 表applymessage相关的mapper
  * @author 郭树耸
@@ -18,14 +19,6 @@ public interface ApplyMsgMapper {
     int UpdateSecondDepartment(String userTel,Integer departmentId);
 
     User GetUserByUserId(Integer userId);
-
-    List<ApplyPO> listApplyPOUnSecondInterview(Integer departmentId);
-
-    List<ApplyPO> listApplyPOSecondedInterviewed(Integer departmentId);
-
-    List<User> listUserEnrollMembers(@Param("ids") Integer[] userId, @Param("departmentId") Integer departmentId);
-
-    int SecondEliminate(@Param("userId") Integer userId, @Param("departmentId") Integer departmentId);
 
     int insertApplyMsg(ApplyPO applyPO);
 
@@ -51,4 +44,13 @@ public interface ApplyMsgMapper {
      * @return
      */
     Integer ChangeSecondIntentionStatus(Integer userId, Integer status);
+
+    /**
+     * 二面淘汰，根据用户 id 和部门 id ，查找相关人员，将二面部门id设置为-1，表示淘汰
+     *
+     * @param userId
+     * @param departmentId
+     * @return
+     */
+    Integer secondEliminate(Integer userId, Integer departmentId);
 }

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.volunteer.uapply.mapper.InterviewMsgMapper">
+    <sql id="BaseInterviewMessage">
+        user_id,department_id,user_character,param_score1,param_score2,
+        param_score3,param_score4,param_score5,param_score6,note,overview,user_name
+    </sql>
+    <resultMap id="SecondInterviewInfoMap" type="com.volunteer.uapply.pojo.SearchInterviewPojo">
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="user_sex" property="userSex" jdbcType="VARCHAR"/>
+        <result column="user_tel" property="userTel" jdbcType="VARCHAR"/>
+        <association property="myInterview" column="{userId=user_id,departmentId=secondDepartment_id}"
+                     select="getMyInterview" javaType="com.volunteer.uapply.pojo.InterviewPO">
+
+        </association>
+        <association property="elseInterview" column="{userId=user_id,departmentId=secondDepartment_id}"
+                     select="getElseInterview" javaType="com.volunteer.uapply.pojo.InterviewPO">
+
+        </association>
+    </resultMap>
+
 
     <insert id="InsertInterview">
         INSERT INTO interviewmessage(user_id,department_id,user_character,param_score1,param_score2,param_score3,param_score4,param_score5,param_score6,note,overview,user_name)
@@ -42,4 +61,31 @@
         SELECT * FROM interviewmessage WHERE user_id=#{userId,jdbcType=INTEGER}
     </select>
 
+
+    <select id="listSecondUnInterviewInfoByUserId" resultMap="SecondInterviewInfoMap" parameterType="java.lang.Integer">
+        SELECT user_id,user_name,user_sex,user_tel,secondDepartment_id
+        FROM applymessage
+        WHERE secondDepartment_id = #{departmentId,jdbcType=INTEGER}
+        AND secondInterview_status = 0
+    </select>
+    <select id="listSecondInterviewedInfoByUserId" resultMap="SecondInterviewInfoMap" parameterType="java.lang.Integer">
+        SELECT user_id,user_name,user_sex,user_tel,secondDepartment_id
+        FROM applymessage
+        WHERE secondDepartment_id = #{departmentId,jdbcType=INTEGER}
+        AND secondInterview_status = 1
+    </select>
+    <select id="getMyInterview">
+        SELECT
+        <include refid="BaseInterviewMessage"></include>
+        FROM interviewmessage
+        WHERE user_id = #{userId,jdbcType=INTEGER}
+        AND department_id=#{departmentId,jdbcType=INTEGER}
+    </select>
+    <select id="getElseInterview">
+        SELECT
+        <include refid="BaseInterviewMessage"></include>
+        FROM interviewmessage
+        WHERE user_id = #{userId,jdbcType=INTEGER}
+        AND department_id &lt;&gt; #{departmentId,jdbcType=INTEGER}
+    </select>
 </mapper>
