@@ -41,7 +41,7 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
      */
     @Override
     public UniversalResponseBody scoreResume(InterviewPO interviewPO) {
-        if (interviewMsgMapper.InsertInterview(interviewPO) > 0) {
+        /*if (interviewMsgMapper.InsertInterview(interviewPO) > 0) {
             //并修改用户报名信息相应的状态
             ApplyPO applyPO = applyMsgMapper.findApplyMsgByUserId(interviewPO.getUserId());
             if (applyPO.getFirstIntentionId().equals(interviewPO.getDepartmentId())) {
@@ -54,7 +54,8 @@ public class FirstInterviewServiceImpl implements FirstInterviewService {
             return new UniversalResponseBody(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg());
         }else{
             return new UniversalResponseBody(ResponseResultEnum.FAILED.getCode(),ResponseResultEnum.FAILED.getMsg());
-        }
+        }*/
+        return null;
     }
 
     /**
