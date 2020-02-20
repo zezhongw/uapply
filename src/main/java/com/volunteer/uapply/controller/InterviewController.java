@@ -72,7 +72,6 @@ public class InterviewController {
 
     /**
      * 已经一面
-     *
      * @param departmentId
      * @return
      */
