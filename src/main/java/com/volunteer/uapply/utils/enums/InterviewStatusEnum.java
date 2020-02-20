@@ -9,14 +9,10 @@ package com.volunteer.uapply.utils.enums;
  */
 public enum InterviewStatusEnum {
 
-    FIRST_INTENTION_INTERVIEW(1, "第一志愿已经面试"),
-    FIRST_INTENTION_PASS(2, "第一志愿通过"),
-    FIRST_INTENTION_ELIMINATE(3, "第一志愿淘汰"),
-    SECOND_INTENTION_INTERVIEW(6, "第二志愿已经面试"),
-    SECOND_INTENTION_PASS(4, "第二志愿通过"),
-    SECOND_INTENTION_ELIMINATE(5, "第二志愿淘汰"),
-    SECOND_INTERVIEW(6, "二面已经签到"),
-    SECOND_INTERVIEW_ELIMINATE(7, "二面淘汰");
+    INTENTION_NO_INTERVIEW(0, "未面试"),
+    INTENTION_INTERVIEW(1, "已经面试"),
+    INTENTION_ELIMINATE(2, "淘汰"),
+    INTENTION_PASS(3, "通过");
 
     /**
      * 面试状态id
