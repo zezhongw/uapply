@@ -15,6 +15,7 @@ import com.volunteer.uapply.service.FirstInterviewService;
 import com.volunteer.uapply.service.ResumeService;
 import com.volunteer.uapply.service.SecondInterviewService;
 import com.volunteer.uapply.service.impl.ResumeServiceImpl;
+import com.volunteer.uapply.utils.enums.ResponseResultEnum;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -129,7 +130,9 @@ public class InterviewController {
     @UserLogin
     @GetMapping("/second/un")
     public UniversalResponseBody<List<SearchInterviewPojo>> UnSecondInterview(Integer departmentId) {
-        return null;
+        if (departmentId == null || departmentId < 0 || departmentId > 9)
+            return new UniversalResponseBody<>(ResponseResultEnum.PARAM_IS_INVALID.getCode(), ResponseResultEnum.PARAM_IS_INVALID.getMsg());
+        return secondInterviewService.listUnSecondInterviewInfo(departmentId);
     }
 
     /**
@@ -141,7 +144,9 @@ public class InterviewController {
     @UserLogin
     @GetMapping("/second/finish")
     public UniversalResponseBody<List<SearchInterviewPojo>> SecondedInterviewed(Integer departmentId) {
-        return null;
+        if (departmentId == null || departmentId < 0 || departmentId > 9)
+            return new UniversalResponseBody<>(ResponseResultEnum.PARAM_IS_INVALID.getCode(), ResponseResultEnum.PARAM_IS_INVALID.getMsg());
+        return secondInterviewService.listSecondedInterviewedInfo(departmentId);
     }
 
 
@@ -154,6 +159,10 @@ public class InterviewController {
     @MinisterLogin
     @PostMapping("/second/eliminate")
     public UniversalResponseBody SecondEliminate(Integer userId,Integer departmentId) {
-        return null;
+        if (departmentId == null || departmentId < 0 || departmentId > 9)
+            return new UniversalResponseBody<>(ResponseResultEnum.PARAM_IS_INVALID.getCode(), ResponseResultEnum.PARAM_IS_INVALID.getMsg());
+        if (userId == null || userId <= 0)
+            return new UniversalResponseBody<>(ResponseResultEnum.PARAM_IS_INVALID.getCode(), ResponseResultEnum.PARAM_IS_INVALID.getMsg());
+        return secondInterviewService.secondEliminate(userId, departmentId);
     }
 }

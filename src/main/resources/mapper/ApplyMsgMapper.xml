@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.volunteer.uapply.mapper.ApplyMsgMapper">
+
     <update id="UpdateSecondDepartment">
         UPDATE applymessage SET secondDepartment_id = #{departmentId,jdbcType=INTEGER},secondInterview_status = 1 WHERE user_tel = #{userTel,jdbcType=VARCHAR}
     </update>
@@ -8,7 +9,7 @@
 
     <update id="secondEliminate" parameterType="java.lang.Integer">
         UPDATE applymessage
-        SET secondDepartment_id = -1
+        SET secondInterview_status = 2
         WHERE secondDepartment_id = #{departmentId,jdbcType=INTEGER}
         AND user_id = #{userId,jdbcType = INTEGER }
     </update>
@@ -23,27 +24,17 @@
     WHERE user_id = #{userId,jdbcType=INTEGER}
     </update>
 
-   <!-- <select id="listUserEnrollMembers" parameterType="java.util.List" resultType="com.volunteer.uapply.pojo.User">
+    <select id="listUserEnrollMembers" parameterType="java.util.List" resultType="com.volunteer.uapply.pojo.User">
          SELECT DISTINCT
-         user_id,user_stunum as user_name,user_tel ,4 as permissionId,
-         #{departmentId} as department_id,user_stunum as user_pwd
+        user_id,user_name,user_sex,user_tel,user_college,user_profession,4 as permissionId,
+        #{departmentId} as department_id
          FROM applymessage
          WHERE user_id in
          <foreach collection="ids" item="item" index="index"
                   open="(" close=")" separator=",">
              #{item,jdbcType=INTEGER}
          </foreach>
-     </select>-->
-
-     <insert id="insertApplyMsg">
-         INSERT  INTO applymessage (user_id,user_tel,user_name,sex,user_stunum,user_qq,college,profession,firstIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id)
-         VALUES
-         (#{userId,jdbcType=INTEGER},#{userTel,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR},
-         #{sex,jdbcType=VARCHAR},#{userStunum,jdbcType=VARCHAR},#{userQq,jdbcType=VARCHAR},
-         #{college,jdbcType=VARCHAR},#{profession,jdbcType=VARCHAR},#{firstIntentionId,jdbcType=INTEGER},
-         #{secondIntentionId,jdbcType=INTEGER},#{userHobby,jdbcType=VARCHAR},#{userIntroduction,jdbcType=VARCHAR},
-         #{secondDepartmentId,jdbcType=INTEGER})
-     </insert>
+    </select>
 
     <insert id="insertApplyMsg">
         INSERT  INTO applymessage (user_id,user_tel,user_name,sex,user_stunum,user_qq,college,profession,firstIntention_id,secondIntention_id,user_hobby,user_introduction,secondDepartment_id,first_status,second_status,secondInterview_status)

@@ -52,12 +52,18 @@ public interface InterviewMsgMapper {
     InterviewPO findInterviewMsgByUserId(int userId);
 
     /**
-     * 根据 部门 id 查询面试信息，封装为 SearchInterviewPojo
+     * 根据 部门 id 查询二面未面试信息，封装为 SearchInterviewPojo
      *
      * @param departmentId
      * @return
      */
     List<SearchInterviewPojo> listSecondUnInterviewInfoByUserId(int departmentId);
 
+    /**
+     * 根据 部门 id 查询二面已面试信息，封装为 SearchInterviewPojo
+     *
+     * @param departmentId
+     * @return
+     */
     List<SearchInterviewPojo> listSecondInterviewedInfoByUserId(int departmentId);
 }

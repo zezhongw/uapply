@@ -36,7 +36,21 @@ public interface SecondInterviewService {
      */
     UniversalResponseBody<List<SearchInterviewPojo>> listSecondedInterviewedInfo(Integer departmentId);
 
+    /**
+     * 二面淘汰，根据用户id与部门id设置状态为2，表示淘汰
+     *
+     * @param userId
+     * @param departmentId
+     * @return
+     */
     UniversalResponseBody secondEliminate(Integer userId, Integer departmentId);
 
+    /**
+     * 录取为部员，根据部门id与用户id，封装user后批量插入，pwd密码字段为空
+     *
+     * @param ids
+     * @param departmentId
+     * @return
+     */
     UniversalResponseBody enrollMembers(Integer[] ids, Integer departmentId);
 }

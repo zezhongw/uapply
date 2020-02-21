@@ -74,14 +74,14 @@
         WHERE secondDepartment_id = #{departmentId,jdbcType=INTEGER}
         AND secondInterview_status = 1
     </select>
-    <select id="getMyInterview">
+    <select id="getMyInterview" resultType="com.volunteer.uapply.pojo.InterviewPO">
         SELECT
         <include refid="BaseInterviewMessage"></include>
         FROM interviewmessage
         WHERE user_id = #{userId,jdbcType=INTEGER}
         AND department_id=#{departmentId,jdbcType=INTEGER}
     </select>
-    <select id="getElseInterview">
+    <select id="getElseInterview" resultType="com.volunteer.uapply.pojo.InterviewPO">
         SELECT
         <include refid="BaseInterviewMessage"></include>
         FROM interviewmessage

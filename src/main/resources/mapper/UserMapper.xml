@@ -25,11 +25,12 @@
 
     <insert id="insertBatch" useGeneratedKeys="false" keyProperty="userId" parameterType="com.volunteer.uapply.pojo.User" >
         INSERT INTO
-        usermessage(user_id,user_name,user_tel,permission_id,department_id,user_pwd)
+        usermessage(user_id,user_name,user_sex,user_tel,permission_id,department_id,user_profession,user_college)
         VALUES
         <foreach collection="list" item="user" index="index" separator=",">
-            (#{user.userId,jdbcType=INTEGER}, #{user.userName,jdbcType=VARCHAR}, #{user.userTel,jdbcType=VARCHAR},
-            #{user.permissionId,jdbcType=INTEGER},#{user.departmentId,jdbcType=INTEGER},#{user.userPwd,jdbcType=VARCHAR})
+            (#{user.userId,jdbcType=INTEGER}, #{user.userName,jdbcType=VARCHAR},
+            #{user.userSex,jdbcType=VARCHAR},#{user.userTel,jdbcType=VARCHAR},
+            #{user.permissionId,jdbcType=INTEGER},#{user.departmentId,jdbcType=INTEGER},#{user.userProfession,jdbcType=VARCHAR},#{user.userCollege,jdbcType=VARCHAR})
         </foreach>
     </insert>
 </mapper>
