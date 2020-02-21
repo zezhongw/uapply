@@ -11,11 +11,13 @@ import com.volunteer.uapply.pojo.User;
 public interface TokenMapper {
 
     /**
-     * 将token插入数据库
-     * @param tokenPO
+     * 将生成的token插入数据库
+     *
+     * @param userId
+     * @param token
      * @return
      */
-    int insertToken(TokenPO tokenPO);
+    int insertToken(Integer userId, String token);
 
     /**
      * 根据userId查找token

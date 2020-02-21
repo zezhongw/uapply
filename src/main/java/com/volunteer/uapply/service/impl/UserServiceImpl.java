@@ -55,18 +55,22 @@ public class UserServiceImpl implements UserService {
         TokenPO tokenPO = null;
         //该用户在数据库中的数据
         WxResponseInfo wxResponseInfoDB = wxResponseMapper.searchByOpenid(wxResponseInfo.getOpenid());
-        //数据库中已经存在该用户
-        if(wxResponseInfoDB!=null){
-            userId=wxResponseInfoDB.getUserId();
+        //微信数据库中已经存在该用户
+        if(wxResponseInfoDB!=null) {
+            userId = wxResponseInfoDB.getUserId();
             token = tokenMapper.findTokenByUserId(wxResponseInfoDB.getUserId());
-            tokenPO = new TokenPO(userId,token);
-        }else{
+            //检查在用户数据库中是否已经存在该对象
+            User user = userMapper.findUserByUserId(userId);
+            //以防不存在的情况，此处对userId进行赋值
+            user.setUserId(userId);
+            tokenPO = new TokenPO(new User(userId), token);
+        }else {
             //将微信返回结果插入数据库并返回数据库递增id(userId)
             wxResponseMapper.InsertWxResponse(wxResponseInfo);
-            userId =  wxResponseInfo.getUserId();
+            userId = wxResponseInfo.getUserId();
             token = tokenutil.TokenByUserId(userId);
-            tokenPO = new TokenPO(userId,token);
-            tokenMapper.insertToken(tokenPO);
+            tokenPO = new TokenPO(new User(userId), token);
+            tokenMapper.insertToken(userId, token);
         }
         return new UniversalResponseBody<TokenPO>(1,"success",tokenPO);
     }
