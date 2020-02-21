@@ -1,6 +1,6 @@
 package com.volunteer.uapply.service;
 
-import com.volunteer.uapply.pojo.ApplyPO;
+import com.volunteer.uapply.pojo.SearchInterviewPojo;
 import com.volunteer.uapply.utils.response.UniversalResponseBody;
 
 import java.util.List;
@@ -20,11 +20,37 @@ public interface SecondInterviewService {
      */
     UniversalResponseBody SecondCheck(String userTel, Integer departmentId);
 
-    UniversalResponseBody<List<ApplyPO>> listUserUnSecondInterview(Integer departmentId);
+    /**
+     * 根据部门查询所有二面还没面试的成员，封装到 SearchInterviewPojo
+     *
+     * @param departmentId
+     * @return
+     */
+    UniversalResponseBody<List<SearchInterviewPojo>> listUnSecondInterviewInfo(Integer departmentId);
 
-    UniversalResponseBody<List<ApplyPO>> listUserSecondedInterviewed(Integer departmentId);
+    /**
+     * 根据部门查询所有二面已经面试的成员，封装到 SearchInterviewPojo
+     *
+     * @param departmentId
+     * @return
+     */
+    UniversalResponseBody<List<SearchInterviewPojo>> listSecondedInterviewedInfo(Integer departmentId);
 
-    UniversalResponseBody EnrollMembers(Integer[] userId,Integer departmentId);
+    /**
+     * 二面淘汰，根据用户id与部门id设置状态为2，表示淘汰
+     *
+     * @param userId
+     * @param departmentId
+     * @return
+     */
+    UniversalResponseBody secondEliminate(Integer userId, Integer departmentId);
 
-    UniversalResponseBody SecondEliminate(Integer userId,Integer departmentId);
+    /**
+     * 录取为部员，根据部门id与用户id，封装user后批量插入，pwd密码字段为空
+     *
+     * @param ids
+     * @param departmentId
+     * @return
+     */
+    UniversalResponseBody enrollMembers(Integer[] ids, Integer departmentId);
 }

@@ -1,10 +1,13 @@
 package com.volunteer.uapply.pojo;
 
+import lombok.Data;
+
 /**
  * @author 郭树耸
  * @version 1.0
  * @date 2020/2/18 14:23
  */
+@Data
 public class SearchInterviewPojo {
 
 
@@ -12,6 +15,11 @@ public class SearchInterviewPojo {
      * 用户id
      */
     private Integer userId;
+
+    /**
+     * 姓名
+     */
+    private String userName;
 
     /**
      * 性别
