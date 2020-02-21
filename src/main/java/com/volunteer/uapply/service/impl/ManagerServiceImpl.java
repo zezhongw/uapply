@@ -43,23 +43,23 @@ public class ManagerServiceImpl implements ManagerService {
     @Override
     public UniversalResponseBody<TokenPO> userPcLogin(String userTel, String userPwd) {
         User user = userMapper.findUserByUserTel(userTel);
-        if(user == null){
-            return new UniversalResponseBody(ResponseResultEnum.USER_LOGIN_ERROR.getCode(),ResponseResultEnum.USER_LOGIN_ERROR.getMsg());
+        if (user == null) {
+            return new UniversalResponseBody(ResponseResultEnum.USER_LOGIN_ERROR.getCode(), ResponseResultEnum.USER_LOGIN_ERROR.getMsg());
         }
         Integer userId = user.getUserId();
         String truePwd = user.getUserPwd();
         //密码相同
-        if (truePwd.equals(userPwd)){
+        if (truePwd.equals(userPwd)) {
             String trueToken = tokenMapper.findTokenByUserId(userId);
             //已经存在该用户的token
-            if (trueToken!=null){
-                return new UniversalResponseBody<TokenPO>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(),new TokenPO(userId,trueToken));
-            }else{
+            if (trueToken != null) {
+                return new UniversalResponseBody<TokenPO>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(), new TokenPO(user, trueToken));
+            } else {
                 String token = tokenutil.TokenByUserId(userId);
-                TokenPO tokenPO = new TokenPO(userId,token);
-                tokenMapper.insertToken(tokenPO);
+                TokenPO tokenPO = new TokenPO(user, token);
+                tokenMapper.insertToken(userId, token);
                 //返回token和userId
-                return new UniversalResponseBody<TokenPO>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(),tokenPO);
+                return new UniversalResponseBody<TokenPO>(ResponseResultEnum.SUCCESS.getCode(), ResponseResultEnum.SUCCESS.getMsg(), tokenPO);
             }
         }else{
             return new UniversalResponseBody(ResponseResultEnum.USER_LOGIN_ERROR.getCode(), ResponseResultEnum.USER_LOGIN_ERROR.getMsg());
