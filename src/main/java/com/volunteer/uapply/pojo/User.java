@@ -67,4 +67,12 @@ public class User {
      */
     @Excel(name = "学院", orderNum = "4")
     private String userCollege;
+
+
+    public User(Integer userId) {
+        this.userId = userId;
+    }
+
+    public User() {
+    }
 }

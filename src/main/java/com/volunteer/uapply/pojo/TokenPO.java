@@ -17,13 +17,12 @@ import org.springframework.stereotype.Component;
 public class TokenPO {
 
 
-    private Integer userId;
+    private User user;
 
     private String token;
 
-    public TokenPO(Integer userId,String token) {
+    public TokenPO(User user, String token) {
+        this.user = user;
         this.token = token;
-        this.userId = userId;
     }
-
 }
